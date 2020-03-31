@@ -22,7 +22,7 @@ public class Innova {
 		}
 	}
 	
-	public double calcularCVD(VentasSemanal ventas, String producto) {
+	public static double calcularCVD(VentasSemanal ventas, String producto) {
 		return calcularDesviacionEstandar(ventas, producto) / calcularMedia(producto, ventas);
 	}
 	
@@ -32,17 +32,17 @@ public class Innova {
 		int n = 0;
 		for (int i = 0; i < ventas.getProductosVendidos().size(); i++) {
 			if(producto.equals(ventas.getProductosVendidos().get(i).getNombre())) {
-				sumatoria = Math.pow(ventas.getProductosVendidos().get(i).getCantidad(), 2);
+				sumatoria = Math.pow(ventas.getProductosVendidos().get(i).getCantidad() - calcularMedia(producto, ventas), 2);
 				varianza += sumatoria;
 				n++;
 			}
 		}
-		varianza/=(n-1);
+		varianza/=(n);
 		double desviacion = Math.sqrt(varianza);
 		return desviacion;
 	}
 	
-	public double calcularMedia(String producto, VentasSemanal ventas) {
+	public static double calcularMedia(String producto, VentasSemanal ventas) {
 		double suma = 0;
 		int n = 0;
 		for (int i = 0; i < ventas.getProductosVendidos().size(); i++) {
@@ -131,7 +131,13 @@ public class Innova {
 		}
 		System.out.println("======================= CVD DE PRODUCTO POR SEMANA ============================");
 		for (int i = 0; i < ventas.length; i++) {
-		
+			System.out.println("Para la semana "+(i+1));
+			System.out.println("=========================================");
+			for (int j = 0; j < ventas[i].getProductosVendidos().size(); j++) {
+				System.out.println("CVD para el producto "+ventas[i].getProductosVendidos().get(j).getNombre()+" es: "+
+						calcularCVD(ventas[i], ventas[i].getProductosVendidos().get(j).getNombre()));
+			}
+			
 		}
 	}
 
