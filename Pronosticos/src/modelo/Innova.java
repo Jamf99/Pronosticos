@@ -4,6 +4,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Scanner;
 
 
@@ -20,6 +21,24 @@ public class Innova {
 		for (int i = 0; i < ventas.length; i++) {
 			ventas[i] = new VentasSemanal(i+1+"", new ArrayList<Producto>());
 		}
+	}
+	
+	public static String patron(double cvd, VentasSemanal ventas, String producto) {
+		if(cvd >= 0 && cvd <= 0.1) {
+			return "Horizontal";
+		}else if(cvd > 1) {
+			return "Errático "+pendiente(ventas, producto);
+		}else {
+			return "Tendencia";
+		}
+	}
+	
+	public static String pendiente(VentasSemanal ventas, String producto) {
+		double pendiente = 0;
+		for (int i = 0; i < ventas.getProductosVendidos().size(); i++) {
+			Producto p = ventas.getProductosVendidos().get(i);
+		}
+		return "";
 	}
 	
 	public static double calcularCVD(VentasSemanal ventas, String producto) {
@@ -111,15 +130,22 @@ public class Innova {
 			input.close();
 		}
 	}
+	
+	public static HashMap<String, Producto> unificar(ArrayList<Producto> productos) {
+		HashMap<String, Producto> hash = new HashMap<String, Producto>();
+		for (int i = 0; i < productos.size(); i++) {
+			if(!hash.containsKey(productos.get(i).getNombre())) {
+				hash.put(productos.get(i).getNombre(), productos.get(i));
+			}
+		}
+		return hash;
+	}
 
 	public VentasSemanal[] getVentas() {
 		return ventas;
 	}
 	
-	public static void main(String[] args) {
-		@SuppressWarnings("unused")
-		Innova n = new Innova();
-		leerDatos();
+	public static void punto1() {
 		for (int i = 0; i < ventas.length; i++) {
 			System.out.println("Ventas semana "+(i+1)+" = "+ventas[i].getProductosVendidos().size());
 			System.out.println("=========================================");
@@ -129,16 +155,29 @@ public class Innova {
 			}
 			System.out.println("=========================================");
 		}
+	}
+	
+	public static void punto2(){
 		System.out.println("======================= CVD DE PRODUCTO POR SEMANA ============================");
 		for (int i = 0; i < ventas.length; i++) {
-			System.out.println("Para la semana "+(i+1));
+			HashMap<String, Producto> map = unificar(ventas[i].getProductosVendidos());
+			System.out.println("Para la semana "+(i+1)+":");
 			System.out.println("=========================================");
-			for (int j = 0; j < ventas[i].getProductosVendidos().size(); j++) {
-				System.out.println("CVD para el producto "+ventas[i].getProductosVendidos().get(j).getNombre()+" es: "+
-						calcularCVD(ventas[i], ventas[i].getProductosVendidos().get(j).getNombre()));
+			for(Producto producto : map.values()) {
+				double cvd = calcularCVD(ventas[i], producto.getNombre());
+				String patron = patron(cvd, ventas[i], producto.getNombre());
+				System.out.println("CVD para el producto "+producto.getNombre()+" es: "+cvd+" ("+patron+")");
 			}
-			
+			System.out.println("=========================================");
 		}
+	}
+	
+	public static void main(String[] args) {
+		@SuppressWarnings("unused")
+		Innova n = new Innova();
+		leerDatos();
+		punto1();
+		punto2();
 	}
 
 }
