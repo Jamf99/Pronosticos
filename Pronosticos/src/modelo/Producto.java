@@ -4,9 +4,11 @@ public class Producto {
 	
 	private String nombre;
 	private int cantidad;
+	private int dia;
 	
-	public Producto(String nombre, int cantidad) {
+	public Producto(String nombre, int cantidad, int dia) {
 		super();
+		this.dia = dia;
 		this.nombre = nombre;
 		this.cantidad = cantidad;
 	}
@@ -25,6 +27,14 @@ public class Producto {
 
 	public void setCantidad(int cantidad) {
 		this.cantidad = cantidad;
+	}
+
+	public int getDia() {
+		return dia;
+	}
+
+	public void setDia(int dia) {
+		this.dia = dia;
 	}
 
 }

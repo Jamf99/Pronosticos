@@ -23,13 +23,24 @@ public class Innova {
 	}
 	
 	@SuppressWarnings("deprecation")
-	public static int calcularSemana(int mes, int dia) {
+	public static int calcularSemanaAnio(int mes, int dia) {
 		Date date = new Date(120, mes - 1, dia);
 		Calendar calendar = Calendar.getInstance();
 		calendar.setFirstDayOfWeek( Calendar.MONDAY);
-		calendar.setMinimalDaysInFirstWeek( 4 );
+		calendar.setMinimalDaysInFirstWeek( 7 );
 		calendar.setTime(date);
 		int semana = calendar.get(Calendar.WEEK_OF_YEAR);
+		return semana;
+	}
+	
+	@SuppressWarnings("deprecation")
+	public static int calcularDiaSemana(int mes, int dia) {
+		Date date = new Date(120, mes - 1, dia);
+		Calendar calendar = Calendar.getInstance();
+		calendar.setFirstDayOfWeek( Calendar.MONDAY);
+		calendar.setMinimalDaysInFirstWeek( 7 );
+		calendar.setTime(date);
+		int semana = calendar.get(Calendar.DAY_OF_WEEK);
 		return semana;
 	}
 
@@ -40,7 +51,7 @@ public class Innova {
 	        while (input.hasNextLine()) {
 	        	String[] lines = input.nextLine().split("\t");
 	        	String fecha = lines[0];
-	        	int semana = calcularSemana(Integer.parseInt(fecha.split("/")[1]), Integer.parseInt(fecha.split("/")[0]));
+	        	int semana = calcularSemanaAnio(Integer.parseInt(fecha.split("/")[1]), Integer.parseInt(fecha.split("/")[0]));
 	        	String[] producto = new String[2];
 	        	boolean flag = false;
 	        	for (int i = 1; i < lines.length; i++) {
@@ -53,7 +64,8 @@ public class Innova {
 	        			}
 	        		}
 				}
-	        	ventas[semana].agregarProducto(new Producto(producto[0], Integer.parseInt(producto[1])));
+	        	int diaSemana = calcularDiaSemana(Integer.parseInt(fecha.split("/")[1]), Integer.parseInt(fecha.split("/")[0]));
+	        	ventas[semana].agregarProducto(new Producto(producto[0], Integer.parseInt(producto[1]), diaSemana));
 	        }
 	    } catch (Exception ex) {
 	    	ex.printStackTrace();
@@ -65,19 +77,16 @@ public class Innova {
 	public VentasSemanal[] getVentas() {
 		return ventas;
 	}
-
-	public void setVentas(VentasSemanal[] ventas) {
-		this.ventas = ventas;
-	}
 	
 	public static void main(String[] args) {
+		@SuppressWarnings("unused")
 		Innova n = new Innova();
 		leerDatos();
 		for (int i = 0; i < ventas.length; i++) {
 			System.out.println("Ventas semana "+(i+1)+" = "+ventas[i].getProductosVendidos().size());
 			System.out.println("=========================================");
 			for (int j = 0; j < ventas[i].getProductosVendidos().size(); j++) {
-				System.out.println("PRODUCTO: "+ventas[i].getProductosVendidos().get(j).getNombre()+" cantidad: "
+				System.out.println("PRODUCTO Día: "+ventas[i].getProductosVendidos().get(j).getDia()+" -> "+ventas[i].getProductosVendidos().get(j).getNombre()+" cantidad: "
 						+ventas[i].getProductosVendidos().get(j).getCantidad());
 			}
 			System.out.println("=========================================");

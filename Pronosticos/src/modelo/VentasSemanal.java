@@ -21,13 +21,13 @@ public class VentasSemanal {
 		boolean repetido = false;
 		for (int i = 0; i < productosVendidos.size() && !repetido; i++) {
 			Producto p2 = productosVendidos.get(i);
-			if(p.getNombre().equals(p2.getNombre())) {
+			if(p2.getDia() == p.getDia()) {
 				p2.setCantidad(p2.getCantidad()+p.getCantidad());
 				repetido = true;
 			}
 		}
 		if(!repetido) {
-			productosVendidos.add(p);
+		productosVendidos.add(p);
 		}
 	}
 	
