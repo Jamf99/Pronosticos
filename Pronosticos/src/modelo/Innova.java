@@ -12,7 +12,7 @@ public class Innova {
 	private static VentasSemanal[] ventas;
 	
 	public Innova() {
-		ventas = new VentasSemanal[54];
+		ventas = new VentasSemanal[52];
 		inicializarVentas();
 	}
 	
@@ -22,12 +22,45 @@ public class Innova {
 		}
 	}
 	
+	public double calcularCVD(VentasSemanal ventas, String producto) {
+		return calcularDesviacionEstandar(ventas, producto) / calcularMedia(producto, ventas);
+	}
+	
+	public static double calcularDesviacionEstandar(VentasSemanal ventas, String producto) {
+		double varianza = 0;
+		double sumatoria;
+		int n = 0;
+		for (int i = 0; i < ventas.getProductosVendidos().size(); i++) {
+			if(producto.equals(ventas.getProductosVendidos().get(i).getNombre())) {
+				sumatoria = Math.pow(ventas.getProductosVendidos().get(i).getCantidad(), 2);
+				varianza += sumatoria;
+				n++;
+			}
+		}
+		varianza/=(n-1);
+		double desviacion = Math.sqrt(varianza);
+		return desviacion;
+	}
+	
+	public double calcularMedia(String producto, VentasSemanal ventas) {
+		double suma = 0;
+		int n = 0;
+		for (int i = 0; i < ventas.getProductosVendidos().size(); i++) {
+			if(producto.equals(ventas.getProductosVendidos().get(i).getNombre())) {
+				suma+=ventas.getProductosVendidos().get(i).getCantidad();
+				n++;
+			}
+		}
+		double promedio =suma/n;
+		return promedio;
+	}
+	
 	@SuppressWarnings("deprecation")
 	public static int calcularSemanaAnio(int mes, int dia) {
-		Date date = new Date(120, mes - 1, dia);
+		Date date = new Date(119, mes - 1, dia);
 		Calendar calendar = Calendar.getInstance();
 		calendar.setFirstDayOfWeek( Calendar.MONDAY);
-		calendar.setMinimalDaysInFirstWeek( 7 );
+		calendar.setMinimalDaysInFirstWeek( 1 );
 		calendar.setTime(date);
 		int semana = calendar.get(Calendar.WEEK_OF_YEAR);
 		return semana;
@@ -35,13 +68,15 @@ public class Innova {
 	
 	@SuppressWarnings("deprecation")
 	public static int calcularDiaSemana(int mes, int dia) {
-		Date date = new Date(120, mes - 1, dia);
+		Date date = new Date(119, mes - 1, dia);
 		Calendar calendar = Calendar.getInstance();
-		calendar.setFirstDayOfWeek( Calendar.MONDAY);
-		calendar.setMinimalDaysInFirstWeek( 7 );
+		calendar.setFirstDayOfWeek(Calendar.MONDAY);
 		calendar.setTime(date);
-		int semana = calendar.get(Calendar.DAY_OF_WEEK);
-		return semana;
+		if(calendar.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY) {
+			return 0;
+		}else {
+			return calendar.get(Calendar.DAY_OF_WEEK) - 1;
+		}
 	}
 
 	public static void leerDatos() {
@@ -51,7 +86,8 @@ public class Innova {
 	        while (input.hasNextLine()) {
 	        	String[] lines = input.nextLine().split("\t");
 	        	String fecha = lines[0];
-	        	int semana = calcularSemanaAnio(Integer.parseInt(fecha.split("/")[1]), Integer.parseInt(fecha.split("/")[0]));
+	        	String[] fecha2 = fecha.split("/");
+	        	int semana = calcularSemanaAnio(Integer.parseInt(fecha2[1]), Integer.parseInt(fecha2[0]));
 	        	String[] producto = new String[2];
 	        	boolean flag = false;
 	        	for (int i = 1; i < lines.length; i++) {
@@ -65,7 +101,9 @@ public class Innova {
 	        		}
 				}
 	        	int diaSemana = calcularDiaSemana(Integer.parseInt(fecha.split("/")[1]), Integer.parseInt(fecha.split("/")[0]));
-	        	ventas[semana].agregarProducto(new Producto(producto[0], Integer.parseInt(producto[1]), diaSemana));
+	        	if(diaSemana != 0) {
+	        		ventas[semana-1].agregarProducto(new Producto(producto[0], Integer.parseInt(producto[1]), diaSemana));
+	        	}
 	        }
 	    } catch (Exception ex) {
 	    	ex.printStackTrace();
@@ -91,7 +129,10 @@ public class Innova {
 			}
 			System.out.println("=========================================");
 		}
+		System.out.println("======================= CVD DE PRODUCTO POR SEMANA ============================");
+		for (int i = 0; i < ventas.length; i++) {
 		
+		}
 	}
 
 }
