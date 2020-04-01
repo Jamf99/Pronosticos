@@ -3,8 +3,10 @@ package modelo;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collections;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Scanner;
 
 
@@ -27,18 +29,35 @@ public class Innova {
 		if(cvd >= 0 && cvd <= 0.1) {
 			return "Horizontal";
 		}else if(cvd > 1) {
-			return "Errático "+pendiente(ventas, producto);
+			return "Errático";
 		}else {
-			return "Tendencia";
+			return "Tendencia "+pendiente(ventas, producto);
 		}
 	}
 	
 	public static String pendiente(VentasSemanal ventas, String producto) {
-		double pendiente = 0;
+		boolean flag = false;
+		int x1 = 0;
+		int x2 = 0;
+		int y1 = 0;
+		int y2 = 0;
 		for (int i = 0; i < ventas.getProductosVendidos().size(); i++) {
 			Producto p = ventas.getProductosVendidos().get(i);
+			if(producto.equals(p.getNombre()) && !flag) {
+				x1 = p.getDia();
+				y1 = p.getCantidad();
+				flag = true;
+			}else {
+				x2 =  p.getDia();
+				y2 = p.getCantidad();
+			}
 		}
-		return "";
+		double pendiente = (y2-y1)/(x2-x1);
+		if(pendiente >= 0) {
+			return "Creciente";
+		}else {
+			return "Decreciente";
+		}
 	}
 	
 	public static double calcularCVD(VentasSemanal ventas, String producto) {
@@ -82,6 +101,9 @@ public class Innova {
 		calendar.setMinimalDaysInFirstWeek( 1 );
 		calendar.setTime(date);
 		int semana = calendar.get(Calendar.WEEK_OF_YEAR);
+		if(mes == 12 && dia == 30) {
+			semana = 52;
+		}
 		return semana;
 	}
 	
@@ -131,6 +153,16 @@ public class Innova {
 		}
 	}
 	
+	public static String identificarPronostico(String patron) {
+		if(patron.equals("Tendencia Creciente") || patron.equals("Tendencia Decreciente")) {
+			return "Proyección de tendencia o Suavización exponencial doble";
+		}else if(patron.equals("Horizontal")){
+			return "Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simple";
+		}else {
+			return "Métodos cualitativos";
+		}
+	}
+	
 	public static HashMap<String, Producto> unificar(ArrayList<Producto> productos) {
 		HashMap<String, Producto> hash = new HashMap<String, Producto>();
 		for (int i = 0; i < productos.size(); i++) {
@@ -140,12 +172,9 @@ public class Innova {
 		}
 		return hash;
 	}
-
-	public VentasSemanal[] getVentas() {
-		return ventas;
-	}
 	
 	public static void punto1() {
+		System.out.println("======================= VENTAS DE PRODUCTOS SEMANALES ============================");
 		for (int i = 0; i < ventas.length; i++) {
 			System.out.println("Ventas semana "+(i+1)+" = "+ventas[i].getProductosVendidos().size());
 			System.out.println("=========================================");
@@ -167,6 +196,89 @@ public class Innova {
 				double cvd = calcularCVD(ventas[i], producto.getNombre());
 				String patron = patron(cvd, ventas[i], producto.getNombre());
 				System.out.println("CVD para el producto "+producto.getNombre()+" es: "+cvd+" ("+patron+")");
+				System.out.println("--> Se aconsejan los métodos de pronóstico: \n"+identificarPronostico(patron)+"\n");
+			}
+			System.out.println("=========================================");
+		}
+	}
+	
+	public static HashMap<Integer, Producto> ordenarPorDia(ArrayList<Producto> productos){
+		HashMap<Integer, Producto> map = new HashMap<Integer, Producto>();
+		for (int i = 0; i < productos.size(); i++) {
+			if(!map.containsKey(productos.get(i).getDia())) {
+				map.put(productos.get(i).getDia(), productos.get(i));
+			}
+		}
+		return map;
+	}
+	
+	public static double[] exponencialSimple(VentasSemanal ventas, String producto) {
+		HashMap<Integer, Producto> map = ordenarPorDia(ventas.getProductosVendidos());
+		List<Producto> lista = new ArrayList<Producto>(map.values());
+		ArrayList<Double> pronosticos1 = new ArrayList<Double>();
+		ArrayList<Double> pronosticos2 = new ArrayList<Double>();
+		boolean flag1 = false;
+		boolean flag2 = false;
+		double alfa2 = 0.3;
+		double alfa1 = 0.1;
+		for (int i = 0; i < lista.size(); i++) {
+			Producto p = lista.get(i);
+			if(p.getNombre().equals(producto) && !flag1) {
+				pronosticos1.add((double) p.getCantidad());
+				flag1 = true;
+			}else if(flag1 && p.getNombre().equals(producto) ) {
+				int tamanio = pronosticos1.size();
+				int posicion = i - tamanio;
+				int resultado = i - (posicion+1);
+				pronosticos1.add(pronosticos1.get(resultado)+alfa1*(p.getCantidad()-pronosticos1.get(resultado)));
+			}
+		}
+		for (int i = 0; i < lista.size(); i++) {
+			Producto p = lista.get(i);
+			if(p.getNombre().equals(producto) && !flag2) {
+				pronosticos2.add((double) p.getCantidad());
+				flag2 = true;
+			}else if(flag2 && p.getNombre().equals(producto) ) {
+				int tamanio = pronosticos2.size();
+				int posicion = i - tamanio;
+				int resultado = i - (posicion+1);
+				pronosticos2.add(pronosticos2.get(resultado)+alfa2*(p.getCantidad()-pronosticos2.get(resultado)));
+			}
+		}
+		double pronosticoAlfa1 = pronosticos1.get(pronosticos1.size() - 1);
+		double pronosticoAlfa2 = pronosticos2.get(pronosticos2.size() - 1);
+		double[] resultado = {pronosticoAlfa1, pronosticoAlfa2};
+		return resultado;
+		
+	}
+	
+	public double[] promedioMovilSimple(VentasSemanal ventas, String producto) {
+		HashMap<Integer, Producto> map = ordenarPorDia(ventas.getProductosVendidos());
+		List<Producto> lista = new ArrayList<Producto>(map.values());
+		
+		
+		double[] resultado = {};
+		return resultado;
+	}
+	
+	public static void punto3() {
+		System.out.println("======================= MÉTODOS DE PRONÓSTICO POR CADA PRODUCTO EN CADA SEMANA  ============================");
+		for (int i = 0; i < ventas.length; i++) {
+			HashMap<String, Producto> map = unificar(ventas[i].getProductosVendidos());
+			System.out.println("|| Para la semana "+(i+1)+": ||");
+			System.out.println("=========================================");
+			for(Producto producto : map.values()) {
+				System.out.println("- Para el producto: "+producto.getNombre());
+				double cvd = calcularCVD(ventas[i], producto.getNombre());
+				String patron = patron(cvd, ventas[i], producto.getNombre());
+				if(patron.equals("Horizontal")) {
+					System.out.println("\t<< Método de pronóstico Suavización Exponencial Simple>>");
+					double alfa1 = exponencialSimple(ventas[i], producto.getNombre())[0];
+					double alfa2 = exponencialSimple(ventas[i], producto.getNombre())[1];
+					System.out.println("\t\tPara la semana "+(i+2)+" la cantidad de ventas será para alfa1: "+alfa1+" unidades y para alfa2: "+alfa2+" unidades");
+					System.out.println("\t<< Método de pronóstico Promedio Móvil Simple>>");
+					System.out.println("\t<< Método de pronóstico Promedio Móvil Ponderado>>");
+				}
 			}
 			System.out.println("=========================================");
 		}
@@ -178,6 +290,7 @@ public class Innova {
 		leerDatos();
 		punto1();
 		punto2();
+		punto3();
 	}
 
 }
