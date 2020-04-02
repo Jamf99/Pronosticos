@@ -251,7 +251,7 @@ public class Innova {
 		
 	}
 	
-	public double[] promedioMovilSimple(VentasSemanal ventas, String producto) {
+	public static double[] promedioMovilSimple(VentasSemanal ventas, String producto) {
 		HashMap<Integer, Producto> map = ordenarPorDia(ventas.getProductosVendidos());
 		List<Producto> lista = new ArrayList<Producto>(map.values());
 		if (lista.size() < 2) {
@@ -300,7 +300,7 @@ public class Innova {
 		}
 	}
 	
-	public double[] promedioMovilPonderado(VentasSemanal ventas, String producto) {
+	public static double[] promedioMovilPonderado(VentasSemanal ventas, String producto) {
 		HashMap<Integer, Producto> map = ordenarPorDia(ventas.getProductosVendidos());
 		List<Producto> lista = new ArrayList<Producto>(map.values());
 		if (lista.size() < 2) {
@@ -342,7 +342,11 @@ public class Innova {
 					double alfa2 = exponencialSimple(ventas[i], producto.getNombre())[1];
 					System.out.println("\t\tPara la semana "+(i+2)+" la cantidad de ventas será para alfa1: "+alfa1+" unidades y para alfa2: "+alfa2+" unidades");
 					System.out.println("\t<< Método de pronóstico Promedio Móvil Simple>>");
-					System.out.println("\t<< Método de pronóstico Promedio Móvil Ponderado>>");
+					double movilSimple = promedioMovilSimple(ventas[i], producto.getNombre())[0];
+					System.out.println("\t\tPara la semana "+(i+2)+" la cantidad de ventas será para un N = 2, de:  "+movilSimple+" unidades");
+//					System.out.println("\t<< Método de pronóstico Promedio Móvil Ponderado>>");
+//					double movilPonderado = promedioMovilPonderado(ventas[i], producto.getNombre())[0];
+//					System.out.println("\t\tPara la semana "+(i+2)+" la cantidad de ventas será para un N = 2, de:  "+movilPonderado+" unidades");
 				}
 			}
 			System.out.println("=========================================");
