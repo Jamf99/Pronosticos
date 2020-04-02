@@ -257,7 +257,7 @@ public class Innova {
 		if (lista.size() > 2) {
 			double[] resultado = {lista.get(0).getCantidad(), 0};
 			return resultado;
-		}
+		} else {
 			double[] pronosticos = new double[lista.size()-1];
 			for (int i = 2; i < lista.size() + 1; i++) {
 				int cantidad1 = lista.get(i-2).getCantidad();
