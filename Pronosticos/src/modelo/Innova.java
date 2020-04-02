@@ -3,7 +3,6 @@ package modelo;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Collections;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -255,8 +254,11 @@ public class Innova {
 	public double[] promedioMovilSimple(VentasSemanal ventas, String producto) {
 		HashMap<Integer, Producto> map = ordenarPorDia(ventas.getProductosVendidos());
 		List<Producto> lista = new ArrayList<Producto>(map.values());
-		
-		
+		double mad = 0;
+		int n = 2;	
+		for (int i = 4	; i < lista.size(); i++) {
+			
+		}
 		double[] resultado = {};
 		return resultado;
 	}
