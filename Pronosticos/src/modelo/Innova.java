@@ -347,6 +347,10 @@ public class Innova {
 					System.out.println("\t<< Método de pronóstico Promedio Móvil Ponderado>>");
 					double movilPonderado = promedioMovilPonderado(ventas[i], producto.getNombre())[0];
 					System.out.println("\t\tPara la semana "+(i+2)+" la cantidad de ventas será para un N = 2, de:  "+movilPonderado+" unidades");
+				}else if(patron.equals("Tendencia Creciente") || patron.equals("Tendencia Decreciente")) {
+					System.out.println("\t<< Método de Proyección de Tendencia>>");
+					System.out.println("\t<< Método de pronóstico Suavización Exponencial Ponderada>>");
+					
 				}
 			}
 			System.out.println("=========================================");
