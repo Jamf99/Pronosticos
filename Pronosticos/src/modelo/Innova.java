@@ -254,7 +254,7 @@ public class Innova {
 	public double[] promedioMovilSimple(VentasSemanal ventas, String producto) {
 		HashMap<Integer, Producto> map = ordenarPorDia(ventas.getProductosVendidos());
 		List<Producto> lista = new ArrayList<Producto>(map.values());
-		if (lista.size() > 2) {
+		if (lista.size() < 2) {
 			double[] resultado = {lista.get(0).getCantidad(), 0};
 			return resultado;
 		} else {
