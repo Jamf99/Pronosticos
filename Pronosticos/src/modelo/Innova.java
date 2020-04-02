@@ -275,6 +275,32 @@ public class Innova {
 		return resultado;
 	}
 	
+	public double[] suavizacionExponencialDoble(VentasSemanal ventas, String producto) {
+		HashMap<Integer, Producto> map = ordenarPorDia(ventas.getProductosVendidos());
+		List<Producto> lista = new ArrayList<Producto>(map.values());
+		
+		double[] pronosticos = new double[lista.size()+1];
+		double alpha = 0.2;
+		pronosticos[0] = lista.get(0).getCantidad();
+		
+		for (int i = 1; i < lista.size() + 1; i++) {
+			pronosticos[i] = pronosticos[i-1] + alpha * (lista.get(i-1).getCantidad() - pronosticos[i-1]);
+		}
+		double sumMad = 0;
+		for (int i = 0; i < pronosticos.length - 2; i++) {
+			double pr = pronosticos[i+1];
+			double li = lista.get(i+1).getCantidad();
+			double er = Math.abs(pr - li);
+			sumMad += er;
+		}
+		
+		System.out.println(sumMad);
+		double mad = sumMad / (pronosticos.length-2);
+		
+		double[] resultado = {pronosticos[pronosticos.length - 1], mad};
+		return resultado;
+	}
+	
 	public static void punto3() {
 		System.out.println("======================= MÉTODOS DE PRONÓSTICO POR CADA PRODUCTO EN CADA SEMANA  ============================");
 		for (int i = 0; i < ventas.length; i++) {
