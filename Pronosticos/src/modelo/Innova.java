@@ -122,7 +122,7 @@ public class Innova {
 	public static void leerDatos() {
 		Scanner input = null;
 		try {
-			input = new Scanner(new File("datos/datosPrimarios.txt"));
+			input = new Scanner(new File("Pronosticos/datos/datosPrimarios.txt"));
 	        while (input.hasNextLine()) {
 	        	String[] lines = input.nextLine().split("\t");
 	        	String fecha = lines[0];
@@ -344,9 +344,9 @@ public class Innova {
 					System.out.println("\t<< Método de pronóstico Promedio Móvil Simple>>");
 					double movilSimple = promedioMovilSimple(ventas[i], producto.getNombre())[0];
 					System.out.println("\t\tPara la semana "+(i+2)+" la cantidad de ventas será para un N = 2, de:  "+movilSimple+" unidades");
-//					System.out.println("\t<< Método de pronóstico Promedio Móvil Ponderado>>");
-//					double movilPonderado = promedioMovilPonderado(ventas[i], producto.getNombre())[0];
-//					System.out.println("\t\tPara la semana "+(i+2)+" la cantidad de ventas será para un N = 2, de:  "+movilPonderado+" unidades");
+					System.out.println("\t<< Método de pronóstico Promedio Móvil Ponderado>>");
+					double movilPonderado = promedioMovilPonderado(ventas[i], producto.getNombre())[0];
+					System.out.println("\t\tPara la semana "+(i+2)+" la cantidad de ventas será para un N = 2, de:  "+movilPonderado+" unidades");
 				}
 			}
 			System.out.println("=========================================");
