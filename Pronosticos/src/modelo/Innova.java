@@ -254,19 +254,24 @@ public class Innova {
 	public double[] promedioMovilSimple(VentasSemanal ventas, String producto) {
 		HashMap<Integer, Producto> map = ordenarPorDia(ventas.getProductosVendidos());
 		List<Producto> lista = new ArrayList<Producto>(map.values());
-		double[] pronosticos = new double[lista.size()-1];
-		for (int i = 2; i < lista.size() + 1; i++) {
-			int cantidad1 = lista.get(i-2).getCantidad();
-			int cantidad2 = lista.get(i-1).getCantidad();
-			pronosticos[i - 2] = (cantidad1 + cantidad2) / 2;
+		if (lista.size() > 2) {
+			double[] resultado = {lista.get(0).getCantidad(), 0};
+			return resultado;
 		}
-		double sumMad = 0;
-		for (int i = 0; i < pronosticos.length-1; i++) {
-			sumMad += Math.abs(pronosticos[i] - lista.get(i+2).getCantidad());
+			double[] pronosticos = new double[lista.size()-1];
+			for (int i = 2; i < lista.size() + 1; i++) {
+				int cantidad1 = lista.get(i-2).getCantidad();
+				int cantidad2 = lista.get(i-1).getCantidad();
+				pronosticos[i - 2] = (cantidad1 + cantidad2) / 2;
+			}
+			double sumMad = 0;
+			for (int i = 0; i < pronosticos.length-1; i++) {
+				sumMad += Math.abs(pronosticos[i] - lista.get(i+2).getCantidad());
+			}
+			double mad = sumMad / (pronosticos.length-1);
+			double[] resultado = {pronosticos[pronosticos.length - 1], mad};
+			return resultado;
 		}
-		double mad = sumMad / (pronosticos.length-1);
-		double[] resultado = {pronosticos[pronosticos.length - 1], mad};
-		return resultado;
 	}
 	
 	public double[] suavizacionExponencialDoble(VentasSemanal ventas, String producto) {
