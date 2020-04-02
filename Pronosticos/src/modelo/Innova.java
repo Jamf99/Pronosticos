@@ -122,7 +122,7 @@ public class Innova {
 	public static void leerDatos() {
 		Scanner input = null;
 		try {
-			input = new Scanner(new File("datos/datosPrimarios.txt"));
+			input = new Scanner(new File("Pronosticos/datos/datosPrimarios.txt"));
 	        while (input.hasNextLine()) {
 	        	String[] lines = input.nextLine().split("\t");
 	        	String fecha = lines[0];
@@ -272,7 +272,38 @@ public class Innova {
 		}
 	}
 	
-	
+	public static double[] suavizacionExponencialDoble(VentasSemanal ventas, String producto) {
+		HashMap<Integer, Producto> map = ordenarPorDia(ventas.getProductosVendidos());
+		List<Producto> lista = new ArrayList<Producto>(map.values());
+		if (lista.size() < 2) {
+			double[] resultado = {lista.get(0).getCantidad(), 0};
+			return resultado;
+		} else {	
+			double alpha = 0.3;
+			double beta = 0.7;
+			double[] ft = new double[lista.size()];
+			ft[0] = lista.get(0).getCantidad();
+			double[] tt = new double[lista.size()];
+			tt[0] = 2;
+			double[] fift = new double[lista.size()];
+			fift[0] = ft[0] + tt[0];
+			for (int i = 1; i < lista.size(); i++) {
+				ft[i] = ft[i-1] + alpha * (lista.get(i).getCantidad() - ft[i-1]);
+				tt[i] = beta * (ft[i] - ft[i-1]) + (1 - beta) * tt[i-1];
+				fift[i] = ft[i] + tt[i];
+			}
+			
+			double sumMad = 0;
+			for (int i = 0; i < fift.length - 2; i++) {
+				double er = Math.abs(fift[i+1] - lista.get(i+1).getCantidad());
+				sumMad += er;
+			}
+			double mad = sumMad / (fift.length-2);
+			
+			double[] resultado = {fift[fift.length - 1], mad};
+			return resultado; 
+		}
+	}
 	
 	public static double[] promedioMovilPonderado(VentasSemanal ventas, String producto) {
 		HashMap<Integer, Producto> map = ordenarPorDia(ventas.getProductosVendidos());
