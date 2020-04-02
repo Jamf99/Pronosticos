@@ -122,7 +122,7 @@ public class Innova {
 	public static void leerDatos() {
 		Scanner input = null;
 		try {
-			input = new Scanner(new File("Pronosticos/datos/datosPrimarios.txt"));
+			input = new Scanner(new File("datos/datosPrimarios.txt"));
 	        while (input.hasNextLine()) {
 	        	String[] lines = input.nextLine().split("\t");
 	        	String fecha = lines[0];
@@ -229,7 +229,7 @@ public class Innova {
 				sumMad += Math.abs(pronosticos[i] - lista.get(i+2).getCantidad());
 			}
 			double mad = sumMad / (pronosticos.length-1);
-			double[] resultado = {pronosticos[pronosticos.length - 1], mad};
+			double[] resultado = {pronosticos[pronosticos.length - 1], (double)Math.round(mad * 100d) / 100d};
 			return resultado;
 		}
 	}
@@ -238,7 +238,7 @@ public class Innova {
 		HashMap<Integer, Producto> map = ordenarPorDia(ventas.getProductosVendidos());
 		List<Producto> lista = new ArrayList<Producto>(map.values());
 		if (lista.size() < 2) {
-			double[] resultado = {lista.get(0).getCantidad(), 0};
+			double[] resultado = {lista.get(0).getCantidad(), 0, lista.get(0).getCantidad(), 0};
 			return resultado;
 		} else {	
 			double[] pronosticos = new double[lista.size()+1];
@@ -267,7 +267,7 @@ public class Innova {
 			}
 			double mad2 = sumMad2 / (pronosticos2.length-2);
 			
-			double[] resultado = {pronosticos[pronosticos.length - 1], mad, pronosticos2[pronosticos2.length - 1], mad2};
+			double[] resultado = {(double)Math.round(pronosticos[pronosticos.length - 1] * 100d) / 100d, (double)Math.round(mad * 100d) / 100d, (double)Math.round(pronosticos2[pronosticos2.length - 1] * 100d) / 100d, (double)Math.round(mad2 * 100d) / 100d};
 			return resultado;
 		}
 	}
@@ -300,7 +300,7 @@ public class Innova {
 			}
 			double mad = sumMad / (fift.length-2);
 			
-			double[] resultado = {fift[fift.length - 1], mad};
+			double[] resultado = {(double)Math.round(fift[fift.length - 1] * 100d) / 100d, (double)Math.round(mad * 100d) / 100d};
 			return resultado; 
 		}
 	}
@@ -326,7 +326,7 @@ public class Innova {
 				sumMad += er;
 			}
 			double mad = sumMad / (pronosticos.length-2);
-			double[] resultado = {pronosticos[pronosticos.length - 1], mad};
+			double[] resultado = {(double)Math.round(pronosticos[pronosticos.length - 1] * 100d) / 100d, (double)Math.round(mad * 100d) / 100d};
 			return resultado;
 		}
 	}
@@ -343,8 +343,8 @@ public class Innova {
 				String patron = patron(cvd, ventas[i], producto.getNombre());
 				if(patron.equals("Horizontal")) {
 					System.out.println("\t<< Método de pronóstico Suavización Exponencial Simple>>");
-					double[] resultado1 = suavizacionExponencialSimple(ventas[i], producto.getNombre());
-					System.out.println("\t\tPara la semana "+(i+2)+" la cantidad de ventas será para un alfa de 0.1 son: "+resultado1[0]+" unidades y un alfa de 0.3 son: "+resultado1[1]+" unidades. MAD = ");
+					double[] suavizacionSimple = suavizacionExponencialSimple(ventas[i], producto.getNombre());
+					System.out.println("\t\tPara la semana "+(i+2)+" la cantidad de ventas será para un alfa de 0.1 son: "+suavizacionSimple[0]+" unidades y un MAD de: +"+suavizacionSimple[1]+". Para un alfa de 0.3 son: "+suavizacionSimple[2]+" unidades y un MAD de: "+suavizacionSimple[3]);
 					System.out.println("\t<< Método de pronóstico Promedio Móvil Simple>>");
 					double[] movilSimple = promedioMovilSimple(ventas[i], producto.getNombre());
 					System.out.println("\t\tPara la semana "+(i+2)+" la cantidad de ventas será para un N = 2, de:  "+movilSimple[0]+" unidades. MAD = "+movilSimple[1]);
@@ -354,12 +354,16 @@ public class Innova {
 				}else if(patron.equals("Tendencia Creciente") || patron.equals("Tendencia Decreciente")) {
 					System.out.println("\t<< Método de pronóstico Suavización Exponencial Doble>>");
 					double suavizacionDoble[] = suavizacionExponencialDoble(ventas[i], producto.getNombre());
-					System.out.println("\t\tPara la semana "+(i+2)+" la cantidad de ventas será para un alfa de 0.2 son: "+suavizacionDoble[0]+" unidades. MAD = "+suavizacionDoble[1]);
+					System.out.println("\t\tPara la semana "+(i+2)+" la cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: "+suavizacionDoble[0]+" unidades. MAD = "+suavizacionDoble[1]);
 					System.out.println("\t<< Método de Proyección de Tendencia>>");
 				}
 			}
 			System.out.println("=========================================");
 		}
+	}
+	
+	public static void escribirEnDocumento() {
+		
 	}
 	
 	public static void main(String[] args) {
@@ -369,6 +373,7 @@ public class Innova {
 		punto1();
 		punto2();
 		punto3();
+		escribirEnDocumento();
 	}
 
 }
