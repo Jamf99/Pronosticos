@@ -338,19 +338,18 @@ public class Innova {
 				String patron = patron(cvd, ventas[i], producto.getNombre());
 				if(patron.equals("Horizontal")) {
 					System.out.println("\t<< Método de pronóstico Suavización Exponencial Simple>>");
-					double alfa1 = exponencialSimple(ventas[i], producto.getNombre())[0];
-					double alfa2 = exponencialSimple(ventas[i], producto.getNombre())[1];
-					System.out.println("\t\tPara la semana "+(i+2)+" la cantidad de ventas será para alfa1: "+alfa1+" unidades y para alfa2: "+alfa2+" unidades");
+					double[] resultado1 = exponencialSimple(ventas[i], producto.getNombre());
+					System.out.println("\t\tPara la semana "+(i+2)+" la cantidad de ventas será para un alfa de 0.1 son: "+resultado1[0]+" unidades y un alfa de 0.3 son: "+resultado1[1]+" unidades. MAD = ");
 					System.out.println("\t<< Método de pronóstico Promedio Móvil Simple>>");
-					double movilSimple = promedioMovilSimple(ventas[i], producto.getNombre())[0];
-					System.out.println("\t\tPara la semana "+(i+2)+" la cantidad de ventas será para un N = 2, de:  "+movilSimple+" unidades");
+					double[] movilSimple = promedioMovilSimple(ventas[i], producto.getNombre());
+					System.out.println("\t\tPara la semana "+(i+2)+" la cantidad de ventas será para un N = 2, de:  "+movilSimple[0]+" unidades. MAD = "+movilSimple[1]);
 					System.out.println("\t<< Método de pronóstico Promedio Móvil Ponderado>>");
-					double movilPonderado = promedioMovilPonderado(ventas[i], producto.getNombre())[0];
-					System.out.println("\t\tPara la semana "+(i+2)+" la cantidad de ventas será para un N = 2, de:  "+movilPonderado+" unidades");
+					double[] movilPonderado = promedioMovilPonderado(ventas[i], producto.getNombre());
+					System.out.println("\t\tPara la semana "+(i+2)+" la cantidad de ventas será para un N = 2, de:  "+movilPonderado[0]+" unidades. MAD = "+movilPonderado[1]);
 				}else if(patron.equals("Tendencia Creciente") || patron.equals("Tendencia Decreciente")) {
 					System.out.println("\t<< Método de pronóstico Suavización Exponencial Doble>>");
-					double alfa1 = suavizacionExponencialDoble(ventas[i], producto.getNombre())[0];
-					System.out.println("\t\tPara la semana "+(i+2)+" la cantidad de ventas será para alfa1: "+alfa1+" unidades");
+					double suavizacionDoble[] = suavizacionExponencialDoble(ventas[i], producto.getNombre());
+					System.out.println("\t\tPara la semana "+(i+2)+" la cantidad de ventas será para un alfa de 0.2 son: "+suavizacionDoble[0]+" unidades. MAD = "+suavizacionDoble[1]);
 					System.out.println("\t<< Método de Proyección de Tendencia>>");
 				}
 			}
