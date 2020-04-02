@@ -122,7 +122,7 @@ public class Innova {
 	public static void leerDatos() {
 		Scanner input = null;
 		try {
-			input = new Scanner(new File("Pronosticos/datos/datosPrimarios.txt"));
+			input = new Scanner(new File("datos/datosPrimarios.txt"));
 	        while (input.hasNextLine()) {
 	        	String[] lines = input.nextLine().split("\t");
 	        	String fecha = lines[0];
@@ -274,7 +274,7 @@ public class Innova {
 		}
 	}
 	
-	public double[] suavizacionExponencialDoble(VentasSemanal ventas, String producto) {
+	public static double[] suavizacionExponencialDoble(VentasSemanal ventas, String producto) {
 		HashMap<Integer, Producto> map = ordenarPorDia(ventas.getProductosVendidos());
 		List<Producto> lista = new ArrayList<Producto>(map.values());
 		if (lista.size() < 2) {
@@ -348,9 +348,10 @@ public class Innova {
 					double movilPonderado = promedioMovilPonderado(ventas[i], producto.getNombre())[0];
 					System.out.println("\t\tPara la semana "+(i+2)+" la cantidad de ventas será para un N = 2, de:  "+movilPonderado+" unidades");
 				}else if(patron.equals("Tendencia Creciente") || patron.equals("Tendencia Decreciente")) {
+					System.out.println("\t<< Método de pronóstico Suavización Exponencial Doble>>");
+					double alfa1 = suavizacionExponencialDoble(ventas[i], producto.getNombre())[0];
+					System.out.println("\t\tPara la semana "+(i+2)+" la cantidad de ventas será para alfa1: "+alfa1+" unidades");
 					System.out.println("\t<< Método de Proyección de Tendencia>>");
-					System.out.println("\t<< Método de pronóstico Suavización Exponencial Ponderada>>");
-					
 				}
 			}
 			System.out.println("=========================================");
