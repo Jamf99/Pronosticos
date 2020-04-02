@@ -277,43 +277,53 @@ public class Innova {
 	public double[] suavizacionExponencialDoble(VentasSemanal ventas, String producto) {
 		HashMap<Integer, Producto> map = ordenarPorDia(ventas.getProductosVendidos());
 		List<Producto> lista = new ArrayList<Producto>(map.values());
-		double[] pronosticos = new double[lista.size()+1];
-		double alpha = 0.2;
-		pronosticos[0] = lista.get(0).getCantidad();
-		for (int i = 1; i < lista.size() + 1; i++) {
-			pronosticos[i] = pronosticos[i-1] + alpha * (lista.get(i-1).getCantidad() - pronosticos[i-1]);
+		if (lista.size() < 2) {
+			double[] resultado = {lista.get(0).getCantidad(), 0};
+			return resultado;
+		} else {	
+			double[] pronosticos = new double[lista.size()+1];
+			double alpha = 0.2;
+			pronosticos[0] = lista.get(0).getCantidad();
+			for (int i = 1; i < lista.size() + 1; i++) {
+				pronosticos[i] = pronosticos[i-1] + alpha * (lista.get(i-1).getCantidad() - pronosticos[i-1]);
+			}
+			double sumMad = 0;
+			for (int i = 0; i < pronosticos.length - 2; i++) {
+				double pr = pronosticos[i+1];
+				double li = lista.get(i+1).getCantidad();
+				double er = Math.abs(pr - li);
+				sumMad += er;
+			}
+			double mad = sumMad / (pronosticos.length-2);
+			double[] resultado = {pronosticos[pronosticos.length - 1], mad};
+			return resultado;
 		}
-		double sumMad = 0;
-		for (int i = 0; i < pronosticos.length - 2; i++) {
-			double pr = pronosticos[i+1];
-			double li = lista.get(i+1).getCantidad();
-			double er = Math.abs(pr - li);
-			sumMad += er;
-		}
-		double mad = sumMad / (pronosticos.length-2);
-		double[] resultado = {pronosticos[pronosticos.length - 1], mad};
-		return resultado;
 	}
 	
 	public double[] promedioMovilPonderado(VentasSemanal ventas, String producto) {
 		HashMap<Integer, Producto> map = ordenarPorDia(ventas.getProductosVendidos());
 		List<Producto> lista = new ArrayList<Producto>(map.values());
-		double[] pronosticos = new double[lista.size()-1];
-		for (int i = 2; i < lista.size()+1; i++) {
-			double l1 = lista.get(i-2).getCantidad() * 0.4;
-			double l2 = lista.get(i-1).getCantidad() * 0.6;
-			pronosticos[i-2] = l1 + l2;
+		if (lista.size() < 2) {
+			double[] resultado = {lista.get(0).getCantidad(), 0};
+			return resultado;
+		} else {
+			double[] pronosticos = new double[lista.size()-1];
+			for (int i = 2; i < lista.size()+1; i++) {
+				double l1 = lista.get(i-2).getCantidad() * 0.4;
+				double l2 = lista.get(i-1).getCantidad() * 0.6;
+				pronosticos[i-2] = l1 + l2;
+			}
+			double sumMad = 0;
+			for (int i = 0; i < pronosticos.length - 1; i++) {
+				double pr = pronosticos[i];
+				double li = lista.get(i+2).getCantidad();
+				double er = Math.abs(pr - li);
+				sumMad += er;
+			}
+			double mad = sumMad / (pronosticos.length-2);
+			double[] resultado = {pronosticos[pronosticos.length - 1], mad};
+			return resultado;
 		}
-		double sumMad = 0;
-		for (int i = 0; i < pronosticos.length - 1; i++) {
-			double pr = pronosticos[i];
-			double li = lista.get(i+2).getCantidad();
-			double er = Math.abs(pr - li);
-			sumMad += er;
-		}
-		double mad = sumMad / (pronosticos.length-2);
-		double[] resultado = {pronosticos[pronosticos.length - 1], mad};
-		return resultado;
 	}
 	
 	public static void punto3() {
