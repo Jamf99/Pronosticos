@@ -211,6 +211,41 @@ public class Innova {
 		return map;
 	}
 	
+	public static double[] proyeccionTendencia(VentasSemanal ventas, String producto) {
+		HashMap<Integer, Producto> map = ordenarPorDia(ventas.getProductosVendidos());
+		List<Producto> lista = new ArrayList<Producto>(map.values());
+		if (lista.size() < 2) {
+			double[] resultado = {lista.get(0).getCantidad(), 0};
+			return resultado;
+		} else {
+//			double[] pronosticos = new double[lista.size()-1];
+			double sumPeriodo = 0;
+			double sumCantidad = 0;
+			double sumxx = 0;
+			double sumxy = 0;
+			for (int i = 2; i < lista.size() + 1; i++) {
+				sumPeriodo += lista.get(i).getDia();
+				sumCantidad += lista.get(i).getCantidad();
+				sumxx += sumPeriodo * sumPeriodo;
+				sumxy += sumCantidad * lista.get(i).getDia();
+			}
+			double proPeriodo = sumPeriodo / lista.size();
+			double proCantidad = sumCantidad / lista.size();
+			double proxx = sumxx / lista.size();
+			double proxy = sumxy / lista.size();
+			double b = ((sumxy)-(lista.size()*proPeriodo*proCantidad))/(sumxx-(lista.size()*(proPeriodo*proPeriodo)));
+			double a = proCantidad - b * proPeriodo;
+			double prediccion = a+b*lista.size()+1;
+//			double sumMad = 0;
+//			for (int i = 0; i < pronosticos.length-1; i++) {
+//				sumMad += Math.abs(pronosticos[i] - lista.get(i+2).getCantidad());
+//			}
+//			double mad = sumMad / (pronosticos.length-1);
+			double[] resultado = {prediccion};
+			return resultado;
+		}
+	}
+	
 	public static double[] promedioMovilSimple(VentasSemanal ventas, String producto) {
 		HashMap<Integer, Producto> map = ordenarPorDia(ventas.getProductosVendidos());
 		List<Producto> lista = new ArrayList<Producto>(map.values());
@@ -287,15 +322,16 @@ public class Innova {
 			tt[0] = 2;
 			double[] fift = new double[lista.size()];
 			fift[0] = ft[0] + tt[0];
+			
 			for (int i = 1; i < lista.size(); i++) {
-				ft[i] = ft[i-1] + alpha * (lista.get(i).getCantidad() - ft[i-1]);
+				ft[i] = alpha * lista.get(i-1).getCantidad() + (1 - alpha) * (ft[i-1] + tt[i-1]);
 				tt[i] = beta * (ft[i] - ft[i-1]) + (1 - beta) * tt[i-1];
 				fift[i] = ft[i] + tt[i];
 			}
 			
 			double sumMad = 0;
 			for (int i = 0; i < fift.length - 2; i++) {
-				double er = Math.abs(fift[i+1] - lista.get(i+1).getCantidad());
+				double er = Math.abs(fift[i] - lista.get(i).getCantidad());
 				sumMad += er;
 			}
 			double mad = sumMad / (fift.length-2);
