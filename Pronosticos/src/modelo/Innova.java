@@ -296,7 +296,7 @@ public class Innova {
 			}
 			double mad2 = sumMad2 / (pronosticos2.length-2);
 			
-			double[] resultado = {pronosticos[pronosticos.length-1], mad, pronosticos2[pronosticos2.length-1], mad2};
+			double[] resultado = {pronosticos[pronosticos.length-1], (double)Math.round(mad * 100d) / 100d, pronosticos2[pronosticos2.length-1], (double)Math.round(mad2 * 100d) / 100d};
 			return resultado;
 		}
 	}
