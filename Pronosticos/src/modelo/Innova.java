@@ -175,7 +175,7 @@ public class Innova {
 	}
 	
 	public static void punto1() {
-		System.out.println("======================= VENTAS DE PRODUCTOS SEMANALES ============================");
+		System.out.println("\n\n======================= VENTAS DE PRODUCTOS SEMANALES ============================\n\n");
 		for (int i = 0; i < ventas.length; i++) {
 			System.out.println("Ventas semana "+(i+1)+" = "+ventas[i].getProductosVendidos().size());
 			System.out.println("=========================================");
@@ -188,7 +188,7 @@ public class Innova {
 	}
 	
 	public static void punto2(){
-		System.out.println("======================= CVD DE PRODUCTO POR SEMANA ============================");
+		System.out.println("\n\n======================= CVD DE PRODUCTO POR SEMANA ============================\n\n");
 		for (int i = 0; i < ventas.length; i++) {
 			HashMap<String, Producto> map = unificar(ventas[i].getProductosVendidos());
 			System.out.println("Para la semana "+(i+1)+":");
@@ -362,7 +362,7 @@ public class Innova {
 	}
 	
 	public static void punto3() {
-		System.out.println("======================= MÉTODOS DE PRONÓSTICO POR CADA PRODUCTO EN CADA SEMANA  ============================");
+		System.out.println("\n\n======================= MÉTODOS DE PRONÓSTICO POR CADA PRODUCTO EN CADA SEMANA  ============================\n\n");
 		for (int i = 0; i < ventas.length; i++) {
 			HashMap<String, Producto> map = unificar(ventas[i].getProductosVendidos());
 			System.out.println("|| Para la semana "+(i+1)+": ||");
@@ -390,6 +390,18 @@ public class Innova {
 			}
 			System.out.println("=========================================");
 		}
+		System.out.println("== Para los patrones erráticos se recomiendan seguir las diferentes técnicas y métodos de pronóstico ==" );
+		System.out.println("\t<<Método de Delphi>>");
+		System.out.println("\t\t- Consiste en la selección de un grupo de expertos a los que se les pregunta si opinión sobre cuestiones"
+				+ " \n\t\treferidas a acontecimientos futuros. Las estimaciones de los expertos se realizan en sucesivas rondas anónimas con el"
+				+ " \n\t\tnobjetivo de lograr un consenso, pero con la máxima autonomía por parte de los participantes. Es decir, el este método"
+				+ " \n\t\tprocede por medio de la interrogación a expertos con la ayuda de cuestionarios sucesivos, a fin de poner en manifiesto"
+				+ " \n\t\tconvergencias de opiniones y deducir eventuales consensos.\n");
+		System.out.println("\t<<Jurado de Opinión Ejecutiva>>");
+		System.out.println("\t\t- Se basa en la experiencia y los conocimientos técnicos de los altos mandos de la empresa para llegar a un consenso."
+				+ "\n\t\tEs una de las más utilizadas cuando se requiere actuar con rapidez ante eventos no previstos o lanzamiento de nuevos productos.\n");
+		System.out.println("\t<<Encuesta de Mercado de Consumo>>");
+		System.out.println("\t\t- Consiste en obtener la opinión o percepción de un grupo de personas acerca de su proyección de consumo o interés por un producto o servicio.");
 	}
 	
 	public static void main(String[] args) {
@@ -397,7 +409,7 @@ public class Innova {
 		Innova n = new Innova();
 		leerDatos();
 		try {
-			PrintStream fileStream = new PrintStream("datos/filename.txt");
+			PrintStream fileStream = new PrintStream("datos/reporte.txt");
 			System.setOut(fileStream);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
