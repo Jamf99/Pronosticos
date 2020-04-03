@@ -231,16 +231,9 @@ public class Innova {
 			}
 			double proPeriodo = sumPeriodo / lista.size();
 			double proCantidad = sumCantidad / lista.size();
-			double proxx = sumxx / lista.size();
-			double proxy = sumxy / lista.size();
 			double b = ((sumxy)-(lista.size()*proPeriodo*proCantidad))/(sumxx-(lista.size()*(proPeriodo*proPeriodo)));
 			double a = proCantidad - b * proPeriodo;
 			double prediccion = a+b*lista.size()+1;
-//			double sumMad = 0;
-//			for (int i = 0; i < pronosticos.length-1; i++) {
-//				sumMad += Math.abs(pronosticos[i] - lista.get(i+2).getCantidad());
-//			}
-//			double mad = sumMad / (pronosticos.length-1);
 			double[] resultado = {prediccion};
 			return resultado;
 		}
@@ -302,7 +295,7 @@ public class Innova {
 			}
 			double mad2 = sumMad2 / (pronosticos2.length-2);
 			
-			double[] resultado = {pronosticos[pronosticos.length-1], mad, pronosticos2[pronosticos2.length-1], mad2};
+			double[] resultado = {pronosticos[pronosticos.length-1], (double)Math.round(mad * 100d) / 100d, pronosticos2[pronosticos2.length-1], (double)Math.round(mad2 * 100d) / 100d};
 			return resultado;
 		}
 	}
