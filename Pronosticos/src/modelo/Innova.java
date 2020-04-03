@@ -362,12 +362,6 @@ public class Innova {
 	}
 	
 	public static void punto3() {
-		try {
-			PrintStream fileStream = new PrintStream("datos/filename.txt");
-			System.setOut(fileStream);
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
 		System.out.println("======================= MÉTODOS DE PRONÓSTICO POR CADA PRODUCTO EN CADA SEMANA  ============================");
 		for (int i = 0; i < ventas.length; i++) {
 			HashMap<String, Producto> map = unificar(ventas[i].getProductosVendidos());
@@ -398,18 +392,19 @@ public class Innova {
 		}
 	}
 	
-	public static void escribirEnDocumento() {
-		
-	}
-	
 	public static void main(String[] args) {
 		@SuppressWarnings("unused")
 		Innova n = new Innova();
 		leerDatos();
+		try {
+			PrintStream fileStream = new PrintStream("datos/filename.txt");
+			System.setOut(fileStream);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
 		punto1();
 		punto2();
 		punto3();
-		escribirEnDocumento();
 	}
 
 }
