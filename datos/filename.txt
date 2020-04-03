@@ -1,0 +1,1469 @@
+======================= MÉTODOS DE PRONÓSTICO POR CADA PRODUCTO EN CADA SEMANA  ============================
+|| Para la semana 1: ||
+=========================================
+- Para el producto: PACA ENVASE GALON REDONDO X 24 UND                
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 2 la cantidad de ventas será para un alfa de 0.1 son: 5.0 unidades y un MAD de: +0.0. Para un alfa de 0.3 son: 5.0 unidades y un MAD de: 0.0
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 2 la cantidad de ventas será para un N = 2, de:  5.0 unidades. MAD = 0.0
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 2 la cantidad de ventas será para un N = 2, de:  5.0 unidades. MAD = 0.0
+=========================================
+|| Para la semana 2: ||
+=========================================
+- Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
+	<< Método de pronóstico Suavización Exponencial Doble>>
+		Para la semana 3 la cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 69.35 unidades. MAD = 104.59
+	<< Método de Proyección de Tendencia>>
+- Para el producto: PACA ENVASE GALON REDONDO X 24 UND                
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 3 la cantidad de ventas será para un alfa de 0.1 son: 194.1625 unidades y un MAD de: +149.59375. Para un alfa de 0.3 son: 119.11250000000001 unidades y un MAD de: 136.78125
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 3 la cantidad de ventas será para un N = 2, de:  105.0 unidades. MAD = 127.67
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 3 la cantidad de ventas será para un N = 2, de:  86.0 unidades. MAD = 193.3
+- Para el producto: PACA ENVASE APLICADOR 300 X 144UNDS               
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 3 la cantidad de ventas será para un alfa de 0.1 son: 194.1625 unidades y un MAD de: +149.59375. Para un alfa de 0.3 son: 119.11250000000001 unidades y un MAD de: 136.78125
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 3 la cantidad de ventas será para un N = 2, de:  105.0 unidades. MAD = 127.67
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 3 la cantidad de ventas será para un N = 2, de:  86.0 unidades. MAD = 193.3
+- Para el producto: PACA ENVASE 1.8 L X 60 UND                        
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 3 la cantidad de ventas será para un alfa de 0.1 son: 194.1625 unidades y un MAD de: +149.59375. Para un alfa de 0.3 son: 119.11250000000001 unidades y un MAD de: 136.78125
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 3 la cantidad de ventas será para un N = 2, de:  105.0 unidades. MAD = 127.67
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 3 la cantidad de ventas será para un N = 2, de:  86.0 unidades. MAD = 193.3
+=========================================
+|| Para la semana 3: ||
+=========================================
+- Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
+- Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 4 la cantidad de ventas será para un alfa de 0.1 son: 537.3177400000001 unidades y un MAD de: +1511.60452. Para un alfa de 0.3 son: 765.54622 unidades y un MAD de: 2007.02252
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 4 la cantidad de ventas será para un N = 2, de:  192.0 unidades. MAD = 3026.0
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 4 la cantidad de ventas será para un N = 2, de:  157.4 unidades. MAD = 4036.13
+- Para el producto: PACA ENVASE GALON CUADRADO LACTEOS X 30 UNDS
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 4 la cantidad de ventas será para un alfa de 0.1 son: 537.3177400000001 unidades y un MAD de: +1511.60452. Para un alfa de 0.3 son: 765.54622 unidades y un MAD de: 2007.02252
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 4 la cantidad de ventas será para un N = 2, de:  192.0 unidades. MAD = 3026.0
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 4 la cantidad de ventas será para un N = 2, de:  157.4 unidades. MAD = 4036.13
+- Para el producto: PACA ENVASE GALON CUADRADO LACTEOS X 30 UNDS      
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 4 la cantidad de ventas será para un alfa de 0.1 son: 537.3177400000001 unidades y un MAD de: +1511.60452. Para un alfa de 0.3 son: 765.54622 unidades y un MAD de: 2007.02252
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 4 la cantidad de ventas será para un N = 2, de:  192.0 unidades. MAD = 3026.0
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 4 la cantidad de ventas será para un N = 2, de:  157.4 unidades. MAD = 4036.13
+=========================================
+|| Para la semana 4: ||
+=========================================
+- Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
+	<< Método de pronóstico Suavización Exponencial Doble>>
+		Para la semana 5 la cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 9133.67 unidades. MAD = 2094.17
+	<< Método de Proyección de Tendencia>>
+- Para el producto: PACA ENVASE 2 LITROS JH66 X 40 UNDS               
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 5 la cantidad de ventas será para un alfa de 0.1 son: 1922.02828 unidades y un MAD de: +4403.18024. Para un alfa de 0.3 son: 3481.58684 unidades y un MAD de: 4174.91704
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 5 la cantidad de ventas será para un N = 2, de:  4378.0 unidades. MAD = 3749.75
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 5 la cantidad de ventas será para un N = 2, de:  3520.4 unidades. MAD = 5161.33
+- Para el producto: PACA ENVASE GALON REDONDO X 24 UND                
+	<< Método de pronóstico Suavización Exponencial Doble>>
+		Para la semana 5 la cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 9133.67 unidades. MAD = 2094.17
+	<< Método de Proyección de Tendencia>>
+- Para el producto: PACA ENVASE 2 LITROS RECTANGULAR X 60
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 5 la cantidad de ventas será para un alfa de 0.1 son: 1922.02828 unidades y un MAD de: +4403.18024. Para un alfa de 0.3 son: 3481.58684 unidades y un MAD de: 4174.91704
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 5 la cantidad de ventas será para un N = 2, de:  4378.0 unidades. MAD = 3749.75
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 5 la cantidad de ventas será para un N = 2, de:  3520.4 unidades. MAD = 5161.33
+=========================================
+|| Para la semana 5: ||
+=========================================
+- Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 6 la cantidad de ventas será para un alfa de 0.1 son: 1061.40388 unidades y un MAD de: +2565.3842400000003. Para un alfa de 0.3 son: 1398.01704 unidades y un MAD de: 3189.02864
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 6 la cantidad de ventas será para un N = 2, de:  59.0 unidades. MAD = 4981.75
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 6 la cantidad de ventas será para un N = 2, de:  57.4 unidades. MAD = 6630.0
+- Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 6 la cantidad de ventas será para un alfa de 0.1 son: 1061.40388 unidades y un MAD de: +2565.3842400000003. Para un alfa de 0.3 son: 1398.01704 unidades y un MAD de: 3189.02864
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 6 la cantidad de ventas será para un N = 2, de:  59.0 unidades. MAD = 4981.75
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 6 la cantidad de ventas será para un N = 2, de:  57.4 unidades. MAD = 6630.0
+- Para el producto: PACA ENVASE NITRO FIT 200ML X 300 UNID
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 6 la cantidad de ventas será para un alfa de 0.1 son: 1061.40388 unidades y un MAD de: +2565.3842400000003. Para un alfa de 0.3 son: 1398.01704 unidades y un MAD de: 3189.02864
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 6 la cantidad de ventas será para un N = 2, de:  59.0 unidades. MAD = 4981.75
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 6 la cantidad de ventas será para un N = 2, de:  57.4 unidades. MAD = 6630.0
+- Para el producto: PACA ENVASE 2 LITROS RECTANGULAR X 60
+	<< Método de pronóstico Suavización Exponencial Doble>>
+		Para la semana 6 la cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 4114.72 unidades. MAD = 3339.8
+	<< Método de Proyección de Tendencia>>
+- Para el producto: PACA ENVASE 1.8 L X 60 UND                        
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 6 la cantidad de ventas será para un alfa de 0.1 son: 1061.40388 unidades y un MAD de: +2565.3842400000003. Para un alfa de 0.3 son: 1398.01704 unidades y un MAD de: 3189.02864
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 6 la cantidad de ventas será para un N = 2, de:  59.0 unidades. MAD = 4981.75
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 6 la cantidad de ventas será para un N = 2, de:  57.4 unidades. MAD = 6630.0
+=========================================
+|| Para la semana 6: ||
+=========================================
+- Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 7 la cantidad de ventas será para un alfa de 0.1 son: 627.94829 unidades y un MAD de: +1378.09582. Para un alfa de 0.3 son: 1355.9210699999999 unidades y un MAD de: 1602.75942
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 7 la cantidad de ventas será para un N = 2, de:  3053.0 unidades. MAD = 2267.5
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 7 la cantidad de ventas será para un N = 2, de:  2453.6 unidades. MAD = 3224.07
+- Para el producto: PACA ENVASE LITRO ALPINNA X 100UNDS               
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 7 la cantidad de ventas será para un alfa de 0.1 son: 627.94829 unidades y un MAD de: +1378.09582. Para un alfa de 0.3 son: 1355.9210699999999 unidades y un MAD de: 1602.75942
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 7 la cantidad de ventas será para un N = 2, de:  3053.0 unidades. MAD = 2267.5
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 7 la cantidad de ventas será para un N = 2, de:  2453.6 unidades. MAD = 3224.07
+- Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
+	<< Método de pronóstico Suavización Exponencial Doble>>
+		Para la semana 7 la cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 3229.58 unidades. MAD = 56.93
+	<< Método de Proyección de Tendencia>>
+- Para el producto: PACA ENVASE GALON RECTANGULAR 150GR X 20          
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 7 la cantidad de ventas será para un alfa de 0.1 son: 627.94829 unidades y un MAD de: +1378.09582. Para un alfa de 0.3 son: 1355.9210699999999 unidades y un MAD de: 1602.75942
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 7 la cantidad de ventas será para un N = 2, de:  3053.0 unidades. MAD = 2267.5
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 7 la cantidad de ventas será para un N = 2, de:  2453.6 unidades. MAD = 3224.07
+- Para el producto: PACA ENVASE 1.8 L X 60 UND                        
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 7 la cantidad de ventas será para un alfa de 0.1 son: 627.94829 unidades y un MAD de: +1378.09582. Para un alfa de 0.3 son: 1355.9210699999999 unidades y un MAD de: 1602.75942
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 7 la cantidad de ventas será para un N = 2, de:  3053.0 unidades. MAD = 2267.5
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 7 la cantidad de ventas será para un N = 2, de:  2453.6 unidades. MAD = 3224.07
+=========================================
+|| Para la semana 7: ||
+=========================================
+- Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 8 la cantidad de ventas será para un alfa de 0.1 son: 3109.95608 unidades y un MAD de: +3308.67984. Para un alfa de 0.3 son: 1607.13744 unidades y un MAD de: 3038.54304
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 8 la cantidad de ventas será para un N = 2, de:  135.0 unidades. MAD = 3014.0
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 8 la cantidad de ventas será para un N = 2, de:  128.8 unidades. MAD = 3871.93
+- Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 8 la cantidad de ventas será para un alfa de 0.1 son: 3109.95608 unidades y un MAD de: +3308.67984. Para un alfa de 0.3 son: 1607.13744 unidades y un MAD de: 3038.54304
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 8 la cantidad de ventas será para un N = 2, de:  135.0 unidades. MAD = 3014.0
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 8 la cantidad de ventas será para un N = 2, de:  128.8 unidades. MAD = 3871.93
+- Para el producto: PACA ENVASE APLICADOR X100                        
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 8 la cantidad de ventas será para un alfa de 0.1 son: 3109.95608 unidades y un MAD de: +3308.67984. Para un alfa de 0.3 son: 1607.13744 unidades y un MAD de: 3038.54304
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 8 la cantidad de ventas será para un N = 2, de:  135.0 unidades. MAD = 3014.0
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 8 la cantidad de ventas será para un N = 2, de:  128.8 unidades. MAD = 3871.93
+- Para el producto: PACA ENVASE 1.8 L X 60 UND                        
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 8 la cantidad de ventas será para un alfa de 0.1 son: 3109.95608 unidades y un MAD de: +3308.67984. Para un alfa de 0.3 son: 1607.13744 unidades y un MAD de: 3038.54304
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 8 la cantidad de ventas será para un N = 2, de:  135.0 unidades. MAD = 3014.0
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 8 la cantidad de ventas será para un N = 2, de:  128.8 unidades. MAD = 3871.93
+=========================================
+|| Para la semana 8: ||
+=========================================
+- Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 9 la cantidad de ventas será para un alfa de 0.1 son: 8908.1765 unidades y un MAD de: +8694.247. Para un alfa de 0.3 son: 5341.8423 unidades y un MAD de: 8190.3318
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 9 la cantidad de ventas será para un N = 2, de:  2490.0 unidades. MAD = 8392.25
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 9 la cantidad de ventas será para un N = 2, de:  2003.0 unidades. MAD = 10945.47
+- Para el producto: PACA ENVASE GALON REDONDO X 24 UND                
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 9 la cantidad de ventas será para un alfa de 0.1 son: 8908.1765 unidades y un MAD de: +8694.247. Para un alfa de 0.3 son: 5341.8423 unidades y un MAD de: 8190.3318
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 9 la cantidad de ventas será para un N = 2, de:  2490.0 unidades. MAD = 8392.25
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 9 la cantidad de ventas será para un N = 2, de:  2003.0 unidades. MAD = 10945.47
+- Para el producto: PACA ENVASE APLICADOR 300 X 144UNDS               
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 9 la cantidad de ventas será para un alfa de 0.1 son: 8908.1765 unidades y un MAD de: +8694.247. Para un alfa de 0.3 son: 5341.8423 unidades y un MAD de: 8190.3318
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 9 la cantidad de ventas será para un N = 2, de:  2490.0 unidades. MAD = 8392.25
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 9 la cantidad de ventas será para un N = 2, de:  2003.0 unidades. MAD = 10945.47
+- Para el producto: PACA ENVASE 2 LITROS RECTANGULAR X 60             
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 9 la cantidad de ventas será para un alfa de 0.1 son: 8908.1765 unidades y un MAD de: +8694.247. Para un alfa de 0.3 son: 5341.8423 unidades y un MAD de: 8190.3318
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 9 la cantidad de ventas será para un N = 2, de:  2490.0 unidades. MAD = 8392.25
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 9 la cantidad de ventas será para un N = 2, de:  2003.0 unidades. MAD = 10945.47
+- Para el producto: PACA ENVASE 1.8 L X 60 UND                        
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 9 la cantidad de ventas será para un alfa de 0.1 son: 8908.1765 unidades y un MAD de: +8694.247. Para un alfa de 0.3 son: 5341.8423 unidades y un MAD de: 8190.3318
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 9 la cantidad de ventas será para un N = 2, de:  2490.0 unidades. MAD = 8392.25
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 9 la cantidad de ventas será para un N = 2, de:  2003.0 unidades. MAD = 10945.47
+=========================================
+|| Para la semana 9: ||
+=========================================
+- Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
+	<< Método de pronóstico Suavización Exponencial Doble>>
+		Para la semana 10 la cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 6378.85 unidades. MAD = 3382.19
+	<< Método de Proyección de Tendencia>>
+- Para el producto: PACA ENVASE GALON ACEITERO X 20 UNDS              
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 10 la cantidad de ventas será para un alfa de 0.1 son: 1203.48403 unidades y un MAD de: +3197.4039399999997. Para un alfa de 0.3 son: 2107.02229 unidades y un MAD de: 4067.5731399999995
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 10 la cantidad de ventas será para un N = 2, de:  159.0 unidades. MAD = 6724.5
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 10 la cantidad de ventas será para un N = 2, de:  143.4 unidades. MAD = 8974.6
+- Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 10 la cantidad de ventas será para un alfa de 0.1 son: 1203.48403 unidades y un MAD de: +3197.4039399999997. Para un alfa de 0.3 son: 2107.02229 unidades y un MAD de: 4067.5731399999995
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 10 la cantidad de ventas será para un N = 2, de:  159.0 unidades. MAD = 6724.5
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 10 la cantidad de ventas será para un N = 2, de:  143.4 unidades. MAD = 8974.6
+- Para el producto: PACA ENVASE 1.8 L X 60 UND                        
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 10 la cantidad de ventas será para un alfa de 0.1 son: 1203.48403 unidades y un MAD de: +3197.4039399999997. Para un alfa de 0.3 son: 2107.02229 unidades y un MAD de: 4067.5731399999995
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 10 la cantidad de ventas será para un N = 2, de:  159.0 unidades. MAD = 6724.5
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 10 la cantidad de ventas será para un N = 2, de:  143.4 unidades. MAD = 8974.6
+=========================================
+|| Para la semana 10: ||
+=========================================
+- Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 11 la cantidad de ventas será para un alfa de 0.1 son: 3978.39355 unidades y un MAD de: +4225.2329. Para un alfa de 0.3 son: 2469.0922499999997 unidades y un MAD de: 4085.6385
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 11 la cantidad de ventas será para un N = 2, de:  875.0 unidades. MAD = 4468.25
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 11 la cantidad de ventas será para un N = 2, de:  703.2 unidades. MAD = 5837.33
+- Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
+	<< Método de pronóstico Suavización Exponencial Doble>>
+		Para la semana 11 la cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 2155.7 unidades. MAD = 3923.1
+	<< Método de Proyección de Tendencia>>
+- Para el producto: ENVASE GALON N2018                                
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 11 la cantidad de ventas será para un alfa de 0.1 son: 3978.39355 unidades y un MAD de: +4225.2329. Para un alfa de 0.3 son: 2469.0922499999997 unidades y un MAD de: 4085.6385
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 11 la cantidad de ventas será para un N = 2, de:  875.0 unidades. MAD = 4468.25
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 11 la cantidad de ventas será para un N = 2, de:  703.2 unidades. MAD = 5837.33
+- Para el producto: PACA ENVASE GALON CUADRADO LACTEOS X 30 UNDS      
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 11 la cantidad de ventas será para un alfa de 0.1 son: 3978.39355 unidades y un MAD de: +4225.2329. Para un alfa de 0.3 son: 2469.0922499999997 unidades y un MAD de: 4085.6385
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 11 la cantidad de ventas será para un N = 2, de:  875.0 unidades. MAD = 4468.25
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 11 la cantidad de ventas será para un N = 2, de:  703.2 unidades. MAD = 5837.33
+- Para el producto: PACA ENVASE 1.8 L X 60 UND                        
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 11 la cantidad de ventas será para un alfa de 0.1 son: 3978.39355 unidades y un MAD de: +4225.2329. Para un alfa de 0.3 son: 2469.0922499999997 unidades y un MAD de: 4085.6385
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 11 la cantidad de ventas será para un N = 2, de:  875.0 unidades. MAD = 4468.25
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 11 la cantidad de ventas será para un N = 2, de:  703.2 unidades. MAD = 5837.33
+=========================================
+|| Para la semana 11: ||
+=========================================
+- Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 12 la cantidad de ventas será para un alfa de 0.1 son: 1755.9843600000002 unidades y un MAD de: +3487.24888. Para un alfa de 0.3 son: 3945.866679999999 unidades y un MAD de: 4144.11608
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 12 la cantidad de ventas será para un N = 2, de:  8990.0 unidades. MAD = 5972.25
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 12 la cantidad de ventas será para un N = 2, de:  7436.0 unidades. MAD = 8516.13
+- Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
+- Para el producto: ENVASE GALON MM                                   
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 12 la cantidad de ventas será para un alfa de 0.1 son: 1755.9843600000002 unidades y un MAD de: +3487.24888. Para un alfa de 0.3 son: 3945.866679999999 unidades y un MAD de: 4144.11608
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 12 la cantidad de ventas será para un N = 2, de:  8990.0 unidades. MAD = 5972.25
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 12 la cantidad de ventas será para un N = 2, de:  7436.0 unidades. MAD = 8516.13
+=========================================
+|| Para la semana 12: ||
+=========================================
+- Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 13 la cantidad de ventas será para un alfa de 0.1 son: 1334.5526300000001 unidades y un MAD de: +1664.8947400000002. Para un alfa de 0.3 son: 466.67629000000005 unidades y un MAD de: 1133.54914
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 13 la cantidad de ventas será para un N = 2, de:  114.0 unidades. MAD = 257.0
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 13 la cantidad de ventas será para un N = 2, de:  103.4 unidades. MAD = 277.67
+- Para el producto: PACA ENVASE 2 LITROS JH66 X 40 UNDS               
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 13 la cantidad de ventas será para un alfa de 0.1 son: 1334.5526300000001 unidades y un MAD de: +1664.8947400000002. Para un alfa de 0.3 son: 466.67629000000005 unidades y un MAD de: 1133.54914
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 13 la cantidad de ventas será para un N = 2, de:  114.0 unidades. MAD = 257.0
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 13 la cantidad de ventas será para un N = 2, de:  103.4 unidades. MAD = 277.67
+- Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
+	<< Método de pronóstico Suavización Exponencial Doble>>
+		Para la semana 13 la cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: -771.1 unidades. MAD = 767.26
+	<< Método de Proyección de Tendencia>>
+- Para el producto: PACA ENVASE GALON BOCA ANCHA  X 21 UNDS           
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 13 la cantidad de ventas será para un alfa de 0.1 son: 1334.5526300000001 unidades y un MAD de: +1664.8947400000002. Para un alfa de 0.3 son: 466.67629000000005 unidades y un MAD de: 1133.54914
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 13 la cantidad de ventas será para un N = 2, de:  114.0 unidades. MAD = 257.0
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 13 la cantidad de ventas será para un N = 2, de:  103.4 unidades. MAD = 277.67
+- Para el producto: PACA ENVASE LITRO LIGHT X 100UNDS                 
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 13 la cantidad de ventas será para un alfa de 0.1 son: 1334.5526300000001 unidades y un MAD de: +1664.8947400000002. Para un alfa de 0.3 son: 466.67629000000005 unidades y un MAD de: 1133.54914
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 13 la cantidad de ventas será para un N = 2, de:  114.0 unidades. MAD = 257.0
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 13 la cantidad de ventas será para un N = 2, de:  103.4 unidades. MAD = 277.67
+=========================================
+|| Para la semana 13: ||
+=========================================
+- Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
+	<< Método de pronóstico Suavización Exponencial Doble>>
+		Para la semana 14 la cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 5956.01 unidades. MAD = 339.41
+	<< Método de Proyección de Tendencia>>
+- Para el producto: PACA ENVASE GALON CUADRADO LACTEOS X 30 UNDS      
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 14 la cantidad de ventas será para un alfa de 0.1 son: 1221.6840000000002 unidades y un MAD de: +3137.09. Para un alfa de 0.3 son: 2502.63 unidades y un MAD de: 3638.475
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 14 la cantidad de ventas será para un N = 2, de:  5345.0 unidades. MAD = 5568.67
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 14 la cantidad de ventas será para un N = 2, de:  4293.4 unidades. MAD = 8774.8
+- Para el producto: PACA ENVASE GALON BOCA ANCHA  X 21 UNDS           
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 14 la cantidad de ventas será para un alfa de 0.1 son: 1221.6840000000002 unidades y un MAD de: +3137.09. Para un alfa de 0.3 son: 2502.63 unidades y un MAD de: 3638.475
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 14 la cantidad de ventas será para un N = 2, de:  5345.0 unidades. MAD = 5568.67
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 14 la cantidad de ventas será para un N = 2, de:  4293.4 unidades. MAD = 8774.8
+- Para el producto: PACA ENVASE 2 LITROS RECTANGULAR X 60
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 14 la cantidad de ventas será para un alfa de 0.1 son: 1221.6840000000002 unidades y un MAD de: +3137.09. Para un alfa de 0.3 son: 2502.63 unidades y un MAD de: 3638.475
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 14 la cantidad de ventas será para un N = 2, de:  5345.0 unidades. MAD = 5568.67
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 14 la cantidad de ventas será para un N = 2, de:  4293.4 unidades. MAD = 8774.8
+=========================================
+|| Para la semana 14: ||
+=========================================
+- Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
+	<< Método de pronóstico Suavización Exponencial Doble>>
+		Para la semana 15 la cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 2106.74 unidades. MAD = 995.49
+	<< Método de Proyección de Tendencia>>
+- Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 15 la cantidad de ventas será para un alfa de 0.1 son: 405.39066 unidades y un MAD de: +931.9626799999999. Para un alfa de 0.3 son: 709.36658 unidades y un MAD de: 1189.67828
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 15 la cantidad de ventas será para un N = 2, de:  212.0 unidades. MAD = 1907.5
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 15 la cantidad de ventas será para un N = 2, de:  171.2 unidades. MAD = 2547.0
+- Para el producto: PACA ENVASE TALCO GRANDE X100UND                  
+	<< Método de pronóstico Suavización Exponencial Doble>>
+		Para la semana 15 la cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 2106.74 unidades. MAD = 995.49
+	<< Método de Proyección de Tendencia>>
+- Para el producto: PACA ENVASE GALON REDONDO X 24 UND                
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 15 la cantidad de ventas será para un alfa de 0.1 son: 405.39066 unidades y un MAD de: +931.9626799999999. Para un alfa de 0.3 son: 709.36658 unidades y un MAD de: 1189.67828
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 15 la cantidad de ventas será para un N = 2, de:  212.0 unidades. MAD = 1907.5
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 15 la cantidad de ventas será para un N = 2, de:  171.2 unidades. MAD = 2547.0
+=========================================
+|| Para la semana 15: ||
+=========================================
+- Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 16 la cantidad de ventas será para un alfa de 0.1 son: 6809.81451 unidades y un MAD de: +8722.370980000002. Para un alfa de 0.3 son: 2228.2559300000003 unidades y un MAD de: 5961.82938
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 16 la cantidad de ventas será para un N = 2, de:  213.0 unidades. MAD = 1353.25
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 16 la cantidad de ventas será para un N = 2, de:  202.6 unidades. MAD = 1441.4
+- Para el producto: PACA ENVASE LITRO ASEO X 80 UNDS                  
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 16 la cantidad de ventas será para un alfa de 0.1 son: 6809.81451 unidades y un MAD de: +8722.370980000002. Para un alfa de 0.3 son: 2228.2559300000003 unidades y un MAD de: 5961.82938
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 16 la cantidad de ventas será para un N = 2, de:  213.0 unidades. MAD = 1353.25
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 16 la cantidad de ventas será para un N = 2, de:  202.6 unidades. MAD = 1441.4
+- Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 16 la cantidad de ventas será para un alfa de 0.1 son: 6809.81451 unidades y un MAD de: +8722.370980000002. Para un alfa de 0.3 son: 2228.2559300000003 unidades y un MAD de: 5961.82938
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 16 la cantidad de ventas será para un N = 2, de:  213.0 unidades. MAD = 1353.25
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 16 la cantidad de ventas será para un N = 2, de:  202.6 unidades. MAD = 1441.4
+- Para el producto: PACA ENVASE TALCO GRANDE X100UND                  
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 16 la cantidad de ventas será para un alfa de 0.1 son: 6809.81451 unidades y un MAD de: +8722.370980000002. Para un alfa de 0.3 son: 2228.2559300000003 unidades y un MAD de: 5961.82938
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 16 la cantidad de ventas será para un N = 2, de:  213.0 unidades. MAD = 1353.25
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 16 la cantidad de ventas será para un N = 2, de:  202.6 unidades. MAD = 1441.4
+- Para el producto: ENVASE GALON BLANCO UPN                           
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 16 la cantidad de ventas será para un alfa de 0.1 son: 6809.81451 unidades y un MAD de: +8722.370980000002. Para un alfa de 0.3 son: 2228.2559300000003 unidades y un MAD de: 5961.82938
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 16 la cantidad de ventas será para un N = 2, de:  213.0 unidades. MAD = 1353.25
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 16 la cantidad de ventas será para un N = 2, de:  202.6 unidades. MAD = 1441.4
+- Para el producto: PACA ENVASE 1.8 L X 60 UND                        
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 16 la cantidad de ventas será para un alfa de 0.1 son: 6809.81451 unidades y un MAD de: +8722.370980000002. Para un alfa de 0.3 son: 2228.2559300000003 unidades y un MAD de: 5961.82938
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 16 la cantidad de ventas será para un N = 2, de:  213.0 unidades. MAD = 1353.25
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 16 la cantidad de ventas será para un N = 2, de:  202.6 unidades. MAD = 1441.4
+=========================================
+|| Para la semana 16: ||
+=========================================
+- Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 17 la cantidad de ventas será para un alfa de 0.1 son: 180.96 unidades y un MAD de: +84.2. Para un alfa de 0.3 son: 152.04 unidades y un MAD de: 85.6
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 17 la cantidad de ventas será para un N = 2, de:  125.0 unidades. MAD = 160.0
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 17 la cantidad de ventas será para un N = 2, de:  108.8 unidades. MAD = 9.223372036854776E16
+- Para el producto: PACA ENVASE 2 LITROS JH66 X 40 UNDS               
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 17 la cantidad de ventas será para un alfa de 0.1 son: 180.96 unidades y un MAD de: +84.2. Para un alfa de 0.3 son: 152.04 unidades y un MAD de: 85.6
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 17 la cantidad de ventas será para un N = 2, de:  125.0 unidades. MAD = 160.0
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 17 la cantidad de ventas será para un N = 2, de:  108.8 unidades. MAD = 9.223372036854776E16
+- Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 17 la cantidad de ventas será para un alfa de 0.1 son: 180.96 unidades y un MAD de: +84.2. Para un alfa de 0.3 son: 152.04 unidades y un MAD de: 85.6
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 17 la cantidad de ventas será para un N = 2, de:  125.0 unidades. MAD = 160.0
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 17 la cantidad de ventas será para un N = 2, de:  108.8 unidades. MAD = 9.223372036854776E16
+=========================================
+|| Para la semana 17: ||
+=========================================
+- Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
+	<< Método de pronóstico Suavización Exponencial Doble>>
+		Para la semana 18 la cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 4879.21 unidades. MAD = 2658.75
+	<< Método de Proyección de Tendencia>>
+- Para el producto: PACA ENVASE LITRO ASEO X 80 UNDS                  
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 18 la cantidad de ventas será para un alfa de 0.1 son: 994.16783 unidades y un MAD de: +2525.15634. Para un alfa de 0.3 son: 1639.04869 unidades y un MAD de: 3187.63554
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 18 la cantidad de ventas será para un N = 2, de:  125.0 unidades. MAD = 5138.25
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 18 la cantidad de ventas será para un N = 2, de:  104.0 unidades. MAD = 6879.93
+- Para el producto: PACA ENVASE GALON REDONDO X 24 UND                
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 18 la cantidad de ventas será para un alfa de 0.1 son: 994.16783 unidades y un MAD de: +2525.15634. Para un alfa de 0.3 son: 1639.04869 unidades y un MAD de: 3187.63554
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 18 la cantidad de ventas será para un N = 2, de:  125.0 unidades. MAD = 5138.25
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 18 la cantidad de ventas será para un N = 2, de:  104.0 unidades. MAD = 6879.93
+- Para el producto: PACA ENVASE APLICADOR X100                        
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 18 la cantidad de ventas será para un alfa de 0.1 son: 994.16783 unidades y un MAD de: +2525.15634. Para un alfa de 0.3 son: 1639.04869 unidades y un MAD de: 3187.63554
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 18 la cantidad de ventas será para un N = 2, de:  125.0 unidades. MAD = 5138.25
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 18 la cantidad de ventas será para un N = 2, de:  104.0 unidades. MAD = 6879.93
+- Para el producto: PACA ENVASE GALON CUADRADO 150GR X 20             
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 18 la cantidad de ventas será para un alfa de 0.1 son: 994.16783 unidades y un MAD de: +2525.15634. Para un alfa de 0.3 son: 1639.04869 unidades y un MAD de: 3187.63554
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 18 la cantidad de ventas será para un N = 2, de:  125.0 unidades. MAD = 5138.25
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 18 la cantidad de ventas será para un N = 2, de:  104.0 unidades. MAD = 6879.93
+=========================================
+|| Para la semana 18: ||
+=========================================
+- Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
+- Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 19 la cantidad de ventas será para un alfa de 0.1 son: 4952.1118 unidades y un MAD de: +5227.8305. Para un alfa de 0.3 son: 3477.8158000000003 unidades y un MAD de: 5277.9435
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 19 la cantidad de ventas será para un N = 2, de:  4586.0 unidades. MAD = 5538.67
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 19 la cantidad de ventas será para un N = 2, de:  3682.2 unidades. MAD = 8474.0
+- Para el producto: PACA ENVASE GALON CUADRADO LACTEOS X 30 UNDS      
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 19 la cantidad de ventas será para un alfa de 0.1 son: 4952.1118 unidades y un MAD de: +5227.8305. Para un alfa de 0.3 son: 3477.8158000000003 unidades y un MAD de: 5277.9435
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 19 la cantidad de ventas será para un N = 2, de:  4586.0 unidades. MAD = 5538.67
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 19 la cantidad de ventas será para un N = 2, de:  3682.2 unidades. MAD = 8474.0
+=========================================
+|| Para la semana 19: ||
+=========================================
+- Para el producto: PACA ENVASE LITRO REDONDO X60UND                  
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 20 la cantidad de ventas será para un alfa de 0.1 son: 2574.0483600000002 unidades y un MAD de: +6100.784880000001. Para un alfa de 0.3 son: 4796.36668 unidades y un MAD de: 7045.664880000001
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 20 la cantidad de ventas será para un N = 2, de:  2399.0 unidades. MAD = 12068.5
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 20 la cantidad de ventas será para un N = 2, de:  1923.8 unidades. MAD = 16256.0
+- Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
+	<< Método de pronóstico Suavización Exponencial Doble>>
+		Para la semana 20 la cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 14178.38 unidades. MAD = 6351.68
+	<< Método de Proyección de Tendencia>>
+- Para el producto: PACA ENVASE GALON BOCA ANCHA  X 21 UNDS           
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 20 la cantidad de ventas será para un alfa de 0.1 son: 2574.0483600000002 unidades y un MAD de: +6100.784880000001. Para un alfa de 0.3 son: 4796.36668 unidades y un MAD de: 7045.664880000001
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 20 la cantidad de ventas será para un N = 2, de:  2399.0 unidades. MAD = 12068.5
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 20 la cantidad de ventas será para un N = 2, de:  1923.8 unidades. MAD = 16256.0
+- Para el producto: PACA ENVASE APLICADOR 300 X 144UNDS               
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 20 la cantidad de ventas será para un alfa de 0.1 son: 2574.0483600000002 unidades y un MAD de: +6100.784880000001. Para un alfa de 0.3 son: 4796.36668 unidades y un MAD de: 7045.664880000001
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 20 la cantidad de ventas será para un N = 2, de:  2399.0 unidades. MAD = 12068.5
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 20 la cantidad de ventas será para un N = 2, de:  1923.8 unidades. MAD = 16256.0
+- Para el producto: PACA ENVASE GALON REDONDO X 24 UND                
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 20 la cantidad de ventas será para un alfa de 0.1 son: 2574.0483600000002 unidades y un MAD de: +6100.784880000001. Para un alfa de 0.3 son: 4796.36668 unidades y un MAD de: 7045.664880000001
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 20 la cantidad de ventas será para un N = 2, de:  2399.0 unidades. MAD = 12068.5
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 20 la cantidad de ventas será para un N = 2, de:  1923.8 unidades. MAD = 16256.0
+=========================================
+|| Para la semana 20: ||
+=========================================
+- Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 21 la cantidad de ventas será para un alfa de 0.1 son: 2904.00552 unidades y un MAD de: +8328.712160000001. Para un alfa de 0.3 son: 4757.10636 unidades y un MAD de: 10152.37016
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 21 la cantidad de ventas será para un N = 2, de:  7222.0 unidades. MAD = 10822.5
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 21 la cantidad de ventas será para un N = 2, de:  5795.6 unidades. MAD = 14882.07
+- Para el producto: PACA ENVASE LITRO REDONDO X60UND                  
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 21 la cantidad de ventas será para un alfa de 0.1 son: 2904.00552 unidades y un MAD de: +8328.712160000001. Para un alfa de 0.3 son: 4757.10636 unidades y un MAD de: 10152.37016
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 21 la cantidad de ventas será para un N = 2, de:  7222.0 unidades. MAD = 10822.5
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 21 la cantidad de ventas será para un N = 2, de:  5795.6 unidades. MAD = 14882.07
+- Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
+- Para el producto: PACA ENVASE GALON CUADRADO LACTEOS X 30 UNDS      
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 21 la cantidad de ventas será para un alfa de 0.1 son: 2904.00552 unidades y un MAD de: +8328.712160000001. Para un alfa de 0.3 son: 4757.10636 unidades y un MAD de: 10152.37016
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 21 la cantidad de ventas será para un N = 2, de:  7222.0 unidades. MAD = 10822.5
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 21 la cantidad de ventas será para un N = 2, de:  5795.6 unidades. MAD = 14882.07
+=========================================
+|| Para la semana 21: ||
+=========================================
+- Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 22 la cantidad de ventas será para un alfa de 0.1 son: 4852.64144 unidades y un MAD de: +6576.717119999999. Para un alfa de 0.3 son: 1450.7115200000003 unidades y un MAD de: 4460.19232
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 22 la cantidad de ventas será para un N = 2, de:  96.0 unidades. MAD = 1063.75
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 22 la cantidad de ventas será para un N = 2, de:  81.2 unidades. MAD = 1153.93
+- Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
+	<< Método de pronóstico Suavización Exponencial Doble>>
+		Para la semana 22 la cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: -3582.84 unidades. MAD = 3052.02
+	<< Método de Proyección de Tendencia>>
+- Para el producto: PACA ENVASE GALON BOCA ANCHA  X 21 UNDS           
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 22 la cantidad de ventas será para un alfa de 0.1 son: 4852.64144 unidades y un MAD de: +6576.717119999999. Para un alfa de 0.3 son: 1450.7115200000003 unidades y un MAD de: 4460.19232
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 22 la cantidad de ventas será para un N = 2, de:  96.0 unidades. MAD = 1063.75
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 22 la cantidad de ventas será para un N = 2, de:  81.2 unidades. MAD = 1153.93
+- Para el producto: ENVASE GALON NUTRA                                
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 22 la cantidad de ventas será para un alfa de 0.1 son: 4852.64144 unidades y un MAD de: +6576.717119999999. Para un alfa de 0.3 son: 1450.7115200000003 unidades y un MAD de: 4460.19232
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 22 la cantidad de ventas será para un N = 2, de:  96.0 unidades. MAD = 1063.75
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 22 la cantidad de ventas será para un N = 2, de:  81.2 unidades. MAD = 1153.93
+- Para el producto: PACA ENVASE 1.8 L X 60 UND                        
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 22 la cantidad de ventas será para un alfa de 0.1 son: 4852.64144 unidades y un MAD de: +6576.717119999999. Para un alfa de 0.3 son: 1450.7115200000003 unidades y un MAD de: 4460.19232
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 22 la cantidad de ventas será para un N = 2, de:  96.0 unidades. MAD = 1063.75
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 22 la cantidad de ventas será para un N = 2, de:  81.2 unidades. MAD = 1153.93
+=========================================
+|| Para la semana 22: ||
+=========================================
+- Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
+- Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 23 la cantidad de ventas será para un alfa de 0.1 son: 2455.45438 unidades y un MAD de: +5431.23596. Para un alfa de 0.3 son: 5589.78894 unidades y un MAD de: 6034.12036
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 23 la cantidad de ventas será para un N = 2, de:  7152.0 unidades. MAD = 9422.25
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 23 la cantidad de ventas será para un N = 2, de:  8548.4 unidades. MAD = 12564.87
+- Para el producto: ENVASE GALON BLANCO UPN                           
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 23 la cantidad de ventas será para un alfa de 0.1 son: 2455.45438 unidades y un MAD de: +5431.23596. Para un alfa de 0.3 son: 5589.78894 unidades y un MAD de: 6034.12036
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 23 la cantidad de ventas será para un N = 2, de:  7152.0 unidades. MAD = 9422.25
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 23 la cantidad de ventas será para un N = 2, de:  8548.4 unidades. MAD = 12564.87
+- Para el producto: PACA ENVASE GALON REDONDO X 24 UND                
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 23 la cantidad de ventas será para un alfa de 0.1 son: 2455.45438 unidades y un MAD de: +5431.23596. Para un alfa de 0.3 son: 5589.78894 unidades y un MAD de: 6034.12036
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 23 la cantidad de ventas será para un N = 2, de:  7152.0 unidades. MAD = 9422.25
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 23 la cantidad de ventas será para un N = 2, de:  8548.4 unidades. MAD = 12564.87
+=========================================
+|| Para la semana 23: ||
+=========================================
+- Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
+	<< Método de pronóstico Suavización Exponencial Doble>>
+		Para la semana 24 la cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 9387.58 unidades. MAD = 45.27
+	<< Método de Proyección de Tendencia>>
+- Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 24 la cantidad de ventas será para un alfa de 0.1 son: 1712.2132 unidades y un MAD de: +5026.207. Para un alfa de 0.3 son: 3897.5191999999997 unidades y un MAD de: 5929.493999999999
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 24 la cantidad de ventas será para un N = 2, de:  9136.0 unidades. MAD = 9109.67
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 24 la cantidad de ventas será para un N = 2, de:  7322.0 unidades. MAD = 14558.2
+- Para el producto: ENVASE GALON BLANCO UPN                           
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 24 la cantidad de ventas será para un alfa de 0.1 son: 1712.2132 unidades y un MAD de: +5026.207. Para un alfa de 0.3 son: 3897.5191999999997 unidades y un MAD de: 5929.493999999999
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 24 la cantidad de ventas será para un N = 2, de:  9136.0 unidades. MAD = 9109.67
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 24 la cantidad de ventas será para un N = 2, de:  7322.0 unidades. MAD = 14558.2
+=========================================
+|| Para la semana 24: ||
+=========================================
+- Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 25 la cantidad de ventas será para un alfa de 0.1 son: 893.3681 unidades y un MAD de: +2369.3038. Para un alfa de 0.3 son: 1262.0445000000002 unidades y un MAD de: 2912.6369999999997
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 25 la cantidad de ventas será para un N = 2, de:  69.0 unidades. MAD = 4584.0
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 25 la cantidad de ventas será para un N = 2, de:  63.2 unidades. MAD = 6104.67
+- Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
+	<< Método de pronóstico Suavización Exponencial Doble>>
+		Para la semana 25 la cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 3849.1 unidades. MAD = 3082.33
+	<< Método de Proyección de Tendencia>>
+- Para el producto: TAPA 38 MM                                        
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 25 la cantidad de ventas será para un alfa de 0.1 son: 893.3681 unidades y un MAD de: +2369.3038. Para un alfa de 0.3 son: 1262.0445000000002 unidades y un MAD de: 2912.6369999999997
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 25 la cantidad de ventas será para un N = 2, de:  69.0 unidades. MAD = 4584.0
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 25 la cantidad de ventas será para un N = 2, de:  63.2 unidades. MAD = 6104.67
+- Para el producto: TERMO ESTELAR FIT 690CC                           
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 25 la cantidad de ventas será para un alfa de 0.1 son: 893.3681 unidades y un MAD de: +2369.3038. Para un alfa de 0.3 son: 1262.0445000000002 unidades y un MAD de: 2912.6369999999997
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 25 la cantidad de ventas será para un N = 2, de:  69.0 unidades. MAD = 4584.0
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 25 la cantidad de ventas será para un N = 2, de:  63.2 unidades. MAD = 6104.67
+- Para el producto: PACA ENVASE 1.8 L X 60 UND                        
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 25 la cantidad de ventas será para un alfa de 0.1 son: 893.3681 unidades y un MAD de: +2369.3038. Para un alfa de 0.3 son: 1262.0445000000002 unidades y un MAD de: 2912.6369999999997
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 25 la cantidad de ventas será para un N = 2, de:  69.0 unidades. MAD = 4584.0
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 25 la cantidad de ventas será para un N = 2, de:  63.2 unidades. MAD = 6104.67
+=========================================
+|| Para la semana 25: ||
+=========================================
+- Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
+	<< Método de pronóstico Suavización Exponencial Doble>>
+		Para la semana 26 la cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 10619.3 unidades. MAD = 5350.52
+	<< Método de Proyección de Tendencia>>
+- Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
+	<< Método de pronóstico Suavización Exponencial Doble>>
+		Para la semana 26 la cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 10619.3 unidades. MAD = 5350.52
+	<< Método de Proyección de Tendencia>>
+- Para el producto: ENVASE GALON NUTRA                                
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 26 la cantidad de ventas será para un alfa de 0.1 son: 5174.242339999999 unidades y un MAD de: +5810.08572. Para un alfa de 0.3 son: 5420.69022 unidades y un MAD de: 5888.03932
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 26 la cantidad de ventas será para un N = 2, de:  4509.0 unidades. MAD = 7535.75
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 26 la cantidad de ventas será para un N = 2, de:  3668.0 unidades. MAD = 10073.67
+- Para el producto: PACA ENVASE 1.8 L X 60 UND                        
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 26 la cantidad de ventas será para un alfa de 0.1 son: 5174.242339999999 unidades y un MAD de: +5810.08572. Para un alfa de 0.3 son: 5420.69022 unidades y un MAD de: 5888.03932
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 26 la cantidad de ventas será para un N = 2, de:  4509.0 unidades. MAD = 7535.75
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 26 la cantidad de ventas será para un N = 2, de:  3668.0 unidades. MAD = 10073.67
+=========================================
+|| Para la semana 26: ||
+=========================================
+- Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 27 la cantidad de ventas será para un alfa de 0.1 son: 1775.5817999999997 unidades y un MAD de: +2603.9445. Para un alfa de 0.3 son: 1789.9617999999998 unidades y un MAD de: 3052.0115
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 27 la cantidad de ventas será para un N = 2, de:  1021.0 unidades. MAD = 3422.33
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 27 la cantidad de ventas será para un N = 2, de:  1194.6 unidades. MAD = 5058.9
+- Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 27 la cantidad de ventas será para un alfa de 0.1 son: 1775.5817999999997 unidades y un MAD de: +2603.9445. Para un alfa de 0.3 son: 1789.9617999999998 unidades y un MAD de: 3052.0115
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 27 la cantidad de ventas será para un N = 2, de:  1021.0 unidades. MAD = 3422.33
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 27 la cantidad de ventas será para un N = 2, de:  1194.6 unidades. MAD = 5058.9
+- Para el producto: PACA ENVASE TALCO GRANDE X100UND                  
+=========================================
+|| Para la semana 27: ||
+=========================================
+- Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 28 la cantidad de ventas será para un alfa de 0.1 son: 2617.5731000000005 unidades y un MAD de: +8871.11725. Para un alfa de 0.3 son: 3895.8971 unidades y un MAD de: 9597.23575
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 28 la cantidad de ventas será para un N = 2, de:  125.0 unidades. MAD = 7304.67
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 28 la cantidad de ventas será para un N = 2, de:  119.4 unidades. MAD = 10953.1
+- Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
+	<< Método de pronóstico Suavización Exponencial Doble>>
+		Para la semana 28 la cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 11966.08 unidades. MAD = 7577.95
+	<< Método de Proyección de Tendencia>>
+- Para el producto: PACA ENVASE LITRO JH66 X 60 UNDS                  
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 28 la cantidad de ventas será para un alfa de 0.1 son: 2617.5731000000005 unidades y un MAD de: +8871.11725. Para un alfa de 0.3 son: 3895.8971 unidades y un MAD de: 9597.23575
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 28 la cantidad de ventas será para un N = 2, de:  125.0 unidades. MAD = 7304.67
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 28 la cantidad de ventas será para un N = 2, de:  119.4 unidades. MAD = 10953.1
+- Para el producto: PACA ENVASE 1.8 L X 60 UND                        
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 28 la cantidad de ventas será para un alfa de 0.1 son: 2617.5731000000005 unidades y un MAD de: +8871.11725. Para un alfa de 0.3 son: 3895.8971 unidades y un MAD de: 9597.23575
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 28 la cantidad de ventas será para un N = 2, de:  125.0 unidades. MAD = 7304.67
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 28 la cantidad de ventas será para un N = 2, de:  119.4 unidades. MAD = 10953.1
+=========================================
+|| Para la semana 28: ||
+=========================================
+- Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
+	<< Método de pronóstico Suavización Exponencial Doble>>
+		Para la semana 29 la cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 2985.17 unidades. MAD = 1553.81
+	<< Método de Proyección de Tendencia>>
+- Para el producto: PACA ENVASE GALON BOCA ANCHA  X 21 UNDS           
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 29 la cantidad de ventas será para un alfa de 0.1 son: 657.04903 unidades y un MAD de: +1486.1539400000001. Para un alfa de 0.3 son: 1044.6792900000003 unidades y un MAD de: 1879.17514
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 29 la cantidad de ventas será para un N = 2, de:  131.0 unidades. MAD = 3093.75
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 29 la cantidad de ventas será para un N = 2, de:  122.8 unidades. MAD = 4122.93
+- Para el producto: PACA ENVASE APLICADOR 300 X 144UNDS               
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 29 la cantidad de ventas será para un alfa de 0.1 son: 657.04903 unidades y un MAD de: +1486.1539400000001. Para un alfa de 0.3 son: 1044.6792900000003 unidades y un MAD de: 1879.17514
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 29 la cantidad de ventas será para un N = 2, de:  131.0 unidades. MAD = 3093.75
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 29 la cantidad de ventas será para un N = 2, de:  122.8 unidades. MAD = 4122.93
+=========================================
+|| Para la semana 29: ||
+=========================================
+- Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 30 la cantidad de ventas será para un alfa de 0.1 son: 3411.3177 unidades y un MAD de: +8243.94425. Para un alfa de 0.3 son: 7595.5757 unidades y un MAD de: 7647.92975
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 30 la cantidad de ventas será para un N = 2, de:  12588.0 unidades. MAD = 6092.0
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 30 la cantidad de ventas será para un N = 2, de:  12482.8 unidades. MAD = 9538.1
+- Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 30 la cantidad de ventas será para un alfa de 0.1 son: 3411.3177 unidades y un MAD de: +8243.94425. Para un alfa de 0.3 son: 7595.5757 unidades y un MAD de: 7647.92975
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 30 la cantidad de ventas será para un N = 2, de:  12588.0 unidades. MAD = 6092.0
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 30 la cantidad de ventas será para un N = 2, de:  12482.8 unidades. MAD = 9538.1
+- Para el producto: PACA ENVASE GALON CUADRADO LACTEOS X 30 UNDS      
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 30 la cantidad de ventas será para un alfa de 0.1 son: 3411.3177 unidades y un MAD de: +8243.94425. Para un alfa de 0.3 son: 7595.5757 unidades y un MAD de: 7647.92975
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 30 la cantidad de ventas será para un N = 2, de:  12588.0 unidades. MAD = 6092.0
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 30 la cantidad de ventas será para un N = 2, de:  12482.8 unidades. MAD = 9538.1
+- Para el producto: PACA ENVASE GALON BOCA ANCHA  X 21 UNDS           
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 30 la cantidad de ventas será para un alfa de 0.1 son: 3411.3177 unidades y un MAD de: +8243.94425. Para un alfa de 0.3 son: 7595.5757 unidades y un MAD de: 7647.92975
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 30 la cantidad de ventas será para un N = 2, de:  12588.0 unidades. MAD = 6092.0
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 30 la cantidad de ventas será para un N = 2, de:  12482.8 unidades. MAD = 9538.1
+- Para el producto: ENVASE GALON NUTRA                                
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 30 la cantidad de ventas será para un alfa de 0.1 son: 3411.3177 unidades y un MAD de: +8243.94425. Para un alfa de 0.3 son: 7595.5757 unidades y un MAD de: 7647.92975
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 30 la cantidad de ventas será para un N = 2, de:  12588.0 unidades. MAD = 6092.0
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 30 la cantidad de ventas será para un N = 2, de:  12482.8 unidades. MAD = 9538.1
+=========================================
+|| Para la semana 30: ||
+=========================================
+- Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 31 la cantidad de ventas será para un alfa de 0.1 son: 2485.40884 unidades y un MAD de: +8233.02232. Para un alfa de 0.3 son: 3037.1287200000006 unidades y un MAD de: 9393.96752
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 31 la cantidad de ventas será para un N = 2, de:  121.0 unidades. MAD = 7071.5
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 31 la cantidad de ventas será para un N = 2, de:  107.6 unidades. MAD = 8076.93
+- Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 31 la cantidad de ventas será para un alfa de 0.1 son: 2485.40884 unidades y un MAD de: +8233.02232. Para un alfa de 0.3 son: 3037.1287200000006 unidades y un MAD de: 9393.96752
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 31 la cantidad de ventas será para un N = 2, de:  121.0 unidades. MAD = 7071.5
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 31 la cantidad de ventas será para un N = 2, de:  107.6 unidades. MAD = 8076.93
+- Para el producto: PACA ENVASE GALON ACEITERO X 20 UNDS              
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 31 la cantidad de ventas será para un alfa de 0.1 son: 2485.40884 unidades y un MAD de: +8233.02232. Para un alfa de 0.3 son: 3037.1287200000006 unidades y un MAD de: 9393.96752
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 31 la cantidad de ventas será para un N = 2, de:  121.0 unidades. MAD = 7071.5
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 31 la cantidad de ventas será para un N = 2, de:  107.6 unidades. MAD = 8076.93
+- Para el producto: PACA ENVASE GALON CUADRADO LACTEOS X 30 UNDS      
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 31 la cantidad de ventas será para un alfa de 0.1 son: 2485.40884 unidades y un MAD de: +8233.02232. Para un alfa de 0.3 son: 3037.1287200000006 unidades y un MAD de: 9393.96752
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 31 la cantidad de ventas será para un N = 2, de:  121.0 unidades. MAD = 7071.5
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 31 la cantidad de ventas será para un N = 2, de:  107.6 unidades. MAD = 8076.93
+- Para el producto: PACA ENVASE 1.8 L X 60 UND                        
+	<< Método de pronóstico Suavización Exponencial Doble>>
+		Para la semana 31 la cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 8207.66 unidades. MAD = 10146.87
+	<< Método de Proyección de Tendencia>>
+=========================================
+|| Para la semana 31: ||
+=========================================
+- Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
+	<< Método de pronóstico Suavización Exponencial Doble>>
+		Para la semana 32 la cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 12735.24 unidades. MAD = 40.08
+	<< Método de Proyección de Tendencia>>
+- Para el producto: PACA ENVASE GALON BOCA ANCHA  X 21 UNDS           
+	<< Método de pronóstico Suavización Exponencial Doble>>
+		Para la semana 32 la cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 12735.24 unidades. MAD = 40.08
+	<< Método de Proyección de Tendencia>>
+- Para el producto: PACA ENVASE GALON REDONDO X 24 UND                
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 32 la cantidad de ventas será para un alfa de 0.1 son: 2376.69021 unidades y un MAD de: +5467.72718. Para un alfa de 0.3 son: 5317.692230000001 unidades y un MAD de: 6456.7103799999995
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 32 la cantidad de ventas será para un N = 2, de:  12453.0 unidades. MAD = 9310.75
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 32 la cantidad de ventas será para un N = 2, de:  9979.0 unidades. MAD = 13232.67
+=========================================
+|| Para la semana 32: ||
+=========================================
+- Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
+	<< Método de pronóstico Suavización Exponencial Doble>>
+		Para la semana 33 la cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 4479.36 unidades. MAD = 7202.19
+	<< Método de Proyección de Tendencia>>
+- Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 33 la cantidad de ventas será para un alfa de 0.1 son: 3028.2559 unidades y un MAD de: +5769.86025. Para un alfa de 0.3 son: 2392.6439 unidades y un MAD de: 6653.2967499999995
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 33 la cantidad de ventas será para un N = 2, de:  201.0 unidades. MAD = 5521.67
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 33 la cantidad de ventas será para un N = 2, de:  184.2 unidades. MAD = 8156.6
+- Para el producto: PACA ENVASE GALON REDONDO X 24 UND                
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 33 la cantidad de ventas será para un alfa de 0.1 son: 3028.2559 unidades y un MAD de: +5769.86025. Para un alfa de 0.3 son: 2392.6439 unidades y un MAD de: 6653.2967499999995
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 33 la cantidad de ventas será para un N = 2, de:  201.0 unidades. MAD = 5521.67
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 33 la cantidad de ventas será para un N = 2, de:  184.2 unidades. MAD = 8156.6
+- Para el producto: PACA ENVASE 1.8 L X 60 UND                        
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 33 la cantidad de ventas será para un alfa de 0.1 son: 3028.2559 unidades y un MAD de: +5769.86025. Para un alfa de 0.3 son: 2392.6439 unidades y un MAD de: 6653.2967499999995
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 33 la cantidad de ventas será para un N = 2, de:  201.0 unidades. MAD = 5521.67
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 33 la cantidad de ventas será para un N = 2, de:  184.2 unidades. MAD = 8156.6
+=========================================
+|| Para la semana 33: ||
+=========================================
+- Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
+	<< Método de pronóstico Suavización Exponencial Doble>>
+		Para la semana 34 la cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 6320.53 unidades. MAD = 3678.75
+	<< Método de Proyección de Tendencia>>
+- Para el producto: PACA ENVASE TALCO GRANDE X100UND                  
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 34 la cantidad de ventas será para un alfa de 0.1 son: 1810.06932 unidades y un MAD de: +3827.88744. Para un alfa de 0.3 son: 3521.62676 unidades y un MAD de: 4076.8674400000004
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 34 la cantidad de ventas será para un N = 2, de:  2402.0 unidades. MAD = 5226.5
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 34 la cantidad de ventas será para un N = 2, de:  2840.2 unidades. MAD = 7100.93
+- Para el producto: PACA ENVASE GALON BOCA ANCHA  X 21 UNDS           
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 34 la cantidad de ventas será para un alfa de 0.1 son: 1810.06932 unidades y un MAD de: +3827.88744. Para un alfa de 0.3 son: 3521.62676 unidades y un MAD de: 4076.8674400000004
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 34 la cantidad de ventas será para un N = 2, de:  2402.0 unidades. MAD = 5226.5
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 34 la cantidad de ventas será para un N = 2, de:  2840.2 unidades. MAD = 7100.93
+- Para el producto: PACA ENVASE GALON REDONDO X 24 UND                
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 34 la cantidad de ventas será para un alfa de 0.1 son: 1810.06932 unidades y un MAD de: +3827.88744. Para un alfa de 0.3 son: 3521.62676 unidades y un MAD de: 4076.8674400000004
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 34 la cantidad de ventas será para un N = 2, de:  2402.0 unidades. MAD = 5226.5
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 34 la cantidad de ventas será para un N = 2, de:  2840.2 unidades. MAD = 7100.93
+- Para el producto: ENVASE GALON NUTRA                                
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 34 la cantidad de ventas será para un alfa de 0.1 son: 1810.06932 unidades y un MAD de: +3827.88744. Para un alfa de 0.3 son: 3521.62676 unidades y un MAD de: 4076.8674400000004
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 34 la cantidad de ventas será para un N = 2, de:  2402.0 unidades. MAD = 5226.5
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 34 la cantidad de ventas será para un N = 2, de:  2840.2 unidades. MAD = 7100.93
+=========================================
+|| Para la semana 34: ||
+=========================================
+- Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
+	<< Método de pronóstico Suavización Exponencial Doble>>
+		Para la semana 35 la cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: -472.82 unidades. MAD = 1841.51
+	<< Método de Proyección de Tendencia>>
+- Para el producto: PACA ENVASE 2 LITROS RECTANGULAR X 60             
+	<< Método de pronóstico Suavización Exponencial Doble>>
+		Para la semana 35 la cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: -472.82 unidades. MAD = 1841.51
+	<< Método de Proyección de Tendencia>>
+- Para el producto: PACA ENVASE 1.8 L X 60 UND                        
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 35 la cantidad de ventas será para un alfa de 0.1 son: 3418.2117999999996 unidades y un MAD de: +3736.9705. Para un alfa de 0.3 son: 1556.8778000000002 unidades y un MAD de: 2796.7685
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 35 la cantidad de ventas será para un N = 2, de:  212.0 unidades. MAD = 809.0
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 35 la cantidad de ventas será para un N = 2, de:  202.6 unidades. MAD = 981.2
+=========================================
+|| Para la semana 35: ||
+=========================================
+- Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 36 la cantidad de ventas será para un alfa de 0.1 son: 2054.07931 unidades y un MAD de: +4685.74498. Para un alfa de 0.3 son: 4000.00133 unidades y un MAD de: 4814.25498
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 36 la cantidad de ventas será para un N = 2, de:  4481.0 unidades. MAD = 6766.75
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 36 la cantidad de ventas será para un N = 2, de:  3604.0 unidades. MAD = 8387.67
+- Para el producto: PACA ENVASE LITRO ASEO X 80 UNDS                  
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 36 la cantidad de ventas será para un alfa de 0.1 son: 2054.07931 unidades y un MAD de: +4685.74498. Para un alfa de 0.3 son: 4000.00133 unidades y un MAD de: 4814.25498
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 36 la cantidad de ventas será para un N = 2, de:  4481.0 unidades. MAD = 6766.75
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 36 la cantidad de ventas será para un N = 2, de:  3604.0 unidades. MAD = 8387.67
+- Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
+- Para el producto: PACA ENVASE GALON BOCA ANCHA  X 21 UNDS           
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 36 la cantidad de ventas será para un alfa de 0.1 son: 2054.07931 unidades y un MAD de: +4685.74498. Para un alfa de 0.3 son: 4000.00133 unidades y un MAD de: 4814.25498
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 36 la cantidad de ventas será para un N = 2, de:  4481.0 unidades. MAD = 6766.75
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 36 la cantidad de ventas será para un N = 2, de:  3604.0 unidades. MAD = 8387.67
+=========================================
+|| Para la semana 36: ||
+=========================================
+- Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 37 la cantidad de ventas será para un alfa de 0.1 son: 7724.470050000001 unidades y un MAD de: +10403.617900000001. Para un alfa de 0.3 son: 7220.40595 unidades y un MAD de: 10538.200700000001
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 37 la cantidad de ventas será para un N = 2, de:  13432.0 unidades. MAD = 11194.75
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 37 la cantidad de ventas será para un N = 2, de:  10760.0 unidades. MAD = 15537.13
+- Para el producto: PACA ENVASE GALON BOCA ANCHA  X 21 UNDS           
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 37 la cantidad de ventas será para un alfa de 0.1 son: 7724.470050000001 unidades y un MAD de: +10403.617900000001. Para un alfa de 0.3 son: 7220.40595 unidades y un MAD de: 10538.200700000001
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 37 la cantidad de ventas será para un N = 2, de:  13432.0 unidades. MAD = 11194.75
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 37 la cantidad de ventas será para un N = 2, de:  10760.0 unidades. MAD = 15537.13
+- Para el producto: PACA ENVASE APLICADOR 300 X 144UNDS               
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 37 la cantidad de ventas será para un alfa de 0.1 son: 7724.470050000001 unidades y un MAD de: +10403.617900000001. Para un alfa de 0.3 son: 7220.40595 unidades y un MAD de: 10538.200700000001
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 37 la cantidad de ventas será para un N = 2, de:  13432.0 unidades. MAD = 11194.75
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 37 la cantidad de ventas será para un N = 2, de:  10760.0 unidades. MAD = 15537.13
+- Para el producto: PACA ENVASE 1.8 L X 60 UND                        
+	<< Método de pronóstico Suavización Exponencial Doble>>
+		Para la semana 37 la cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 9753.22 unidades. MAD = 3320.23
+	<< Método de Proyección de Tendencia>>
+=========================================
+|| Para la semana 37: ||
+=========================================
+- Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
+- Para el producto: CUCHARA 130ML NUTRA                               
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 38 la cantidad de ventas será para un alfa de 0.1 son: 5612.86184 unidades y un MAD de: +9697.88368. Para un alfa de 0.3 son: 12776.44272 unidades y un MAD de: 9791.75968
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 38 la cantidad de ventas será para un N = 2, de:  16238.0 unidades. MAD = 11438.25
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 38 la cantidad de ventas será para un N = 2, de:  18820.2 unidades. MAD = 16524.33
+- Para el producto: PACA ENVASE 1.8 L X 60 UND                        
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 38 la cantidad de ventas será para un alfa de 0.1 son: 5612.86184 unidades y un MAD de: +9697.88368. Para un alfa de 0.3 son: 12776.44272 unidades y un MAD de: 9791.75968
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 38 la cantidad de ventas será para un N = 2, de:  16238.0 unidades. MAD = 11438.25
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 38 la cantidad de ventas será para un N = 2, de:  18820.2 unidades. MAD = 16524.33
+=========================================
+|| Para la semana 38: ||
+=========================================
+- Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 39 la cantidad de ventas será para un alfa de 0.1 son: 5048.800539999999 unidades y un MAD de: +10558.66532. Para un alfa de 0.3 son: 5278.594219999999 unidades y un MAD de: 12530.07932
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 39 la cantidad de ventas será para un N = 2, de:  5533.0 unidades. MAD = 12682.25
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 39 la cantidad de ventas será para un N = 2, de:  4444.4 unidades. MAD = 17169.33
+- Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
+	<< Método de pronóstico Suavización Exponencial Doble>>
+		Para la semana 39 la cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 9771.84 unidades. MAD = 15848.17
+	<< Método de Proyección de Tendencia>>
+- Para el producto: CUCHARA 130ML NUTRA                               
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 39 la cantidad de ventas será para un alfa de 0.1 son: 5048.800539999999 unidades y un MAD de: +10558.66532. Para un alfa de 0.3 son: 5278.594219999999 unidades y un MAD de: 12530.07932
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 39 la cantidad de ventas será para un N = 2, de:  5533.0 unidades. MAD = 12682.25
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 39 la cantidad de ventas será para un N = 2, de:  4444.4 unidades. MAD = 17169.33
+- Para el producto: ENVASE 2 LITROS COLAGENO BLANCO NUTRA             
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 39 la cantidad de ventas será para un alfa de 0.1 son: 5048.800539999999 unidades y un MAD de: +10558.66532. Para un alfa de 0.3 son: 5278.594219999999 unidades y un MAD de: 12530.07932
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 39 la cantidad de ventas será para un N = 2, de:  5533.0 unidades. MAD = 12682.25
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 39 la cantidad de ventas será para un N = 2, de:  4444.4 unidades. MAD = 17169.33
+- Para el producto: PACA ENVASE 1.8 L X 60 UND                        
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 39 la cantidad de ventas será para un alfa de 0.1 son: 5048.800539999999 unidades y un MAD de: +10558.66532. Para un alfa de 0.3 son: 5278.594219999999 unidades y un MAD de: 12530.07932
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 39 la cantidad de ventas será para un N = 2, de:  5533.0 unidades. MAD = 12682.25
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 39 la cantidad de ventas será para un N = 2, de:  4444.4 unidades. MAD = 17169.33
+=========================================
+|| Para la semana 39: ||
+=========================================
+- Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 40 la cantidad de ventas será para un alfa de 0.1 son: 3576.83811 unidades y un MAD de: +8472.71538. Para un alfa de 0.3 son: 5597.01933 unidades y un MAD de: 7614.16698
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 40 la cantidad de ventas será para un N = 2, de:  4477.0 unidades. MAD = 6997.0
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 40 la cantidad de ventas será para un N = 2, de:  3590.4 unidades. MAD = 8606.33
+- Para el producto: PACA ENVASE TALCO MEDIANO X 100                   
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 40 la cantidad de ventas será para un alfa de 0.1 son: 3576.83811 unidades y un MAD de: +8472.71538. Para un alfa de 0.3 son: 5597.01933 unidades y un MAD de: 7614.16698
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 40 la cantidad de ventas será para un N = 2, de:  4477.0 unidades. MAD = 6997.0
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 40 la cantidad de ventas será para un N = 2, de:  3590.4 unidades. MAD = 8606.33
+- Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 40 la cantidad de ventas será para un alfa de 0.1 son: 3576.83811 unidades y un MAD de: +8472.71538. Para un alfa de 0.3 son: 5597.01933 unidades y un MAD de: 7614.16698
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 40 la cantidad de ventas será para un N = 2, de:  4477.0 unidades. MAD = 6997.0
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 40 la cantidad de ventas será para un N = 2, de:  3590.4 unidades. MAD = 8606.33
+- Para el producto: PACA ENVASE GALON BOCA ANCHA  X 21 UNDS           
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 40 la cantidad de ventas será para un alfa de 0.1 son: 3576.83811 unidades y un MAD de: +8472.71538. Para un alfa de 0.3 son: 5597.01933 unidades y un MAD de: 7614.16698
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 40 la cantidad de ventas será para un N = 2, de:  4477.0 unidades. MAD = 6997.0
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 40 la cantidad de ventas será para un N = 2, de:  3590.4 unidades. MAD = 8606.33
+- Para el producto: ENVASE GALON NUTRA                                
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 40 la cantidad de ventas será para un alfa de 0.1 son: 3576.83811 unidades y un MAD de: +8472.71538. Para un alfa de 0.3 son: 5597.01933 unidades y un MAD de: 7614.16698
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 40 la cantidad de ventas será para un N = 2, de:  4477.0 unidades. MAD = 6997.0
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 40 la cantidad de ventas será para un N = 2, de:  3590.4 unidades. MAD = 8606.33
+- Para el producto: PACA ENVASE 1.8 L X 60 UND                        
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 40 la cantidad de ventas será para un alfa de 0.1 son: 3576.83811 unidades y un MAD de: +8472.71538. Para un alfa de 0.3 son: 5597.01933 unidades y un MAD de: 7614.16698
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 40 la cantidad de ventas será para un N = 2, de:  4477.0 unidades. MAD = 6997.0
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 40 la cantidad de ventas será para un N = 2, de:  3590.4 unidades. MAD = 8606.33
+=========================================
+|| Para la semana 40: ||
+=========================================
+- Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 41 la cantidad de ventas será para un alfa de 0.1 son: 2192.15792 unidades y un MAD de: +2693.68416. Para un alfa de 0.3 son: 773.8139600000001 unidades y un MAD de: 1843.4573599999999
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 41 la cantidad de ventas será para un N = 2, de:  131.0 unidades. MAD = 453.75
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 41 la cantidad de ventas será para un N = 2, de:  137.6 unidades. MAD = 488.73
+- Para el producto: PACA ENVASE GALON REDONDO X 24 UND                
+	<< Método de pronóstico Suavización Exponencial Doble>>
+		Para la semana 41 la cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: -1254.74 unidades. MAD = 1219.98
+	<< Método de Proyección de Tendencia>>
+- Para el producto: ENVASE GALON NUTRA                                
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 41 la cantidad de ventas será para un alfa de 0.1 son: 2192.15792 unidades y un MAD de: +2693.68416. Para un alfa de 0.3 son: 773.8139600000001 unidades y un MAD de: 1843.4573599999999
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 41 la cantidad de ventas será para un N = 2, de:  131.0 unidades. MAD = 453.75
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 41 la cantidad de ventas será para un N = 2, de:  137.6 unidades. MAD = 488.73
+- Para el producto: PACA ENVASE 1.8 L X 60 UND                        
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 41 la cantidad de ventas será para un alfa de 0.1 son: 2192.15792 unidades y un MAD de: +2693.68416. Para un alfa de 0.3 son: 773.8139600000001 unidades y un MAD de: 1843.4573599999999
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 41 la cantidad de ventas será para un N = 2, de:  131.0 unidades. MAD = 453.75
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 41 la cantidad de ventas será para un N = 2, de:  137.6 unidades. MAD = 488.73
+=========================================
+|| Para la semana 41: ||
+=========================================
+- Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 42 la cantidad de ventas será para un alfa de 0.1 son: 921.6882799999998 unidades y un MAD de: +734.38824. Para un alfa de 0.3 son: 854.20324 unidades y un MAD de: 812.8474399999999
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 42 la cantidad de ventas será para un N = 2, de:  1133.0 unidades. MAD = 848.75
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 42 la cantidad de ventas será para un N = 2, de:  927.8 unidades. MAD = 1268.67
+- Para el producto: PACA ENVASE LITRO ASEO X 80 UNDS                  
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 42 la cantidad de ventas será para un alfa de 0.1 son: 921.6882799999998 unidades y un MAD de: +734.38824. Para un alfa de 0.3 son: 854.20324 unidades y un MAD de: 812.8474399999999
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 42 la cantidad de ventas será para un N = 2, de:  1133.0 unidades. MAD = 848.75
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 42 la cantidad de ventas será para un N = 2, de:  927.8 unidades. MAD = 1268.67
+- Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 42 la cantidad de ventas será para un alfa de 0.1 son: 921.6882799999998 unidades y un MAD de: +734.38824. Para un alfa de 0.3 son: 854.20324 unidades y un MAD de: 812.8474399999999
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 42 la cantidad de ventas será para un N = 2, de:  1133.0 unidades. MAD = 848.75
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 42 la cantidad de ventas será para un N = 2, de:  927.8 unidades. MAD = 1268.67
+- Para el producto: PACA ENVASE TALCO GRANDE X100UND                  
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 42 la cantidad de ventas será para un alfa de 0.1 son: 921.6882799999998 unidades y un MAD de: +734.38824. Para un alfa de 0.3 son: 854.20324 unidades y un MAD de: 812.8474399999999
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 42 la cantidad de ventas será para un N = 2, de:  1133.0 unidades. MAD = 848.75
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 42 la cantidad de ventas será para un N = 2, de:  927.8 unidades. MAD = 1268.67
+- Para el producto: PACA ENVASE GALON CUADRADO LACTEOS X 30 UNDS      
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 42 la cantidad de ventas será para un alfa de 0.1 son: 921.6882799999998 unidades y un MAD de: +734.38824. Para un alfa de 0.3 son: 854.20324 unidades y un MAD de: 812.8474399999999
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 42 la cantidad de ventas será para un N = 2, de:  1133.0 unidades. MAD = 848.75
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 42 la cantidad de ventas será para un N = 2, de:  927.8 unidades. MAD = 1268.67
+- Para el producto: PACA ENVASE GALON REDONDO X 24 UND                
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 42 la cantidad de ventas será para un alfa de 0.1 son: 921.6882799999998 unidades y un MAD de: +734.38824. Para un alfa de 0.3 son: 854.20324 unidades y un MAD de: 812.8474399999999
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 42 la cantidad de ventas será para un N = 2, de:  1133.0 unidades. MAD = 848.75
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 42 la cantidad de ventas será para un N = 2, de:  927.8 unidades. MAD = 1268.67
+=========================================
+|| Para la semana 42: ||
+=========================================
+- Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
+	<< Método de pronóstico Suavización Exponencial Doble>>
+		Para la semana 43 la cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 8995.73 unidades. MAD = 6349.25
+	<< Método de Proyección de Tendencia>>
+- Para el producto: PACA ENVASE TALCO MEDIANO X 100                   
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 43 la cantidad de ventas será para un alfa de 0.1 son: 1731.2177000000001 unidades y un MAD de: +5672.80575. Para un alfa de 0.3 son: 2986.8637 unidades y un MAD de: 7197.830249999999
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 43 la cantidad de ventas será para un N = 2, de:  196.0 unidades. MAD = 12682.67
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 43 la cantidad de ventas será para un N = 2, de:  182.4 unidades. MAD = 19020.7
+- Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
+	<< Método de pronóstico Suavización Exponencial Doble>>
+		Para la semana 43 la cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 8995.73 unidades. MAD = 6349.25
+	<< Método de Proyección de Tendencia>>
+=========================================
+|| Para la semana 43: ||
+=========================================
+- Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
+	<< Método de pronóstico Suavización Exponencial Doble>>
+		Para la semana 44 la cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 2218.45 unidades. MAD = 14827.77
+	<< Método de Proyección de Tendencia>>
+- Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
+	<< Método de pronóstico Suavización Exponencial Doble>>
+		Para la semana 44 la cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 2218.45 unidades. MAD = 14827.77
+	<< Método de Proyección de Tendencia>>
+- Para el producto: PACA ENVASE 1.8 L X 60 UND                        
+	<< Método de pronóstico Suavización Exponencial Doble>>
+		Para la semana 44 la cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 2218.45 unidades. MAD = 14827.77
+	<< Método de Proyección de Tendencia>>
+=========================================
+|| Para la semana 44: ||
+=========================================
+- Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
+	<< Método de pronóstico Suavización Exponencial Doble>>
+		Para la semana 45 la cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 13780.04 unidades. MAD = 5823.32
+	<< Método de Proyección de Tendencia>>
+- Para el producto: PACA ENVASE GALON REDONDO X 24 UND                
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 45 la cantidad de ventas será para un alfa de 0.1 son: 2483.35827 unidades y un MAD de: +5923.764659999999. Para un alfa de 0.3 son: 4720.20681 unidades y un MAD de: 6244.887460000001
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 45 la cantidad de ventas será para un N = 2, de:  2973.0 unidades. MAD = 10899.5
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 45 la cantidad de ventas será para un N = 2, de:  2390.4 unidades. MAD = 14714.33
+- Para el producto: ENVASE AROMAS SANITY 4000ml GALON REF 68562       
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 45 la cantidad de ventas será para un alfa de 0.1 son: 2483.35827 unidades y un MAD de: +5923.764659999999. Para un alfa de 0.3 son: 4720.20681 unidades y un MAD de: 6244.887460000001
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 45 la cantidad de ventas será para un N = 2, de:  2973.0 unidades. MAD = 10899.5
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 45 la cantidad de ventas será para un N = 2, de:  2390.4 unidades. MAD = 14714.33
+- Para el producto: ENVASE GALON NUTRA                                
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 45 la cantidad de ventas será para un alfa de 0.1 son: 2483.35827 unidades y un MAD de: +5923.764659999999. Para un alfa de 0.3 son: 4720.20681 unidades y un MAD de: 6244.887460000001
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 45 la cantidad de ventas será para un N = 2, de:  2973.0 unidades. MAD = 10899.5
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 45 la cantidad de ventas será para un N = 2, de:  2390.4 unidades. MAD = 14714.33
+- Para el producto: PACA ENVASE 1.8 L X 60 UND                        
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 45 la cantidad de ventas será para un alfa de 0.1 son: 2483.35827 unidades y un MAD de: +5923.764659999999. Para un alfa de 0.3 son: 4720.20681 unidades y un MAD de: 6244.887460000001
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 45 la cantidad de ventas será para un N = 2, de:  2973.0 unidades. MAD = 10899.5
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 45 la cantidad de ventas será para un N = 2, de:  2390.4 unidades. MAD = 14714.33
+=========================================
+|| Para la semana 45: ||
+=========================================
+- Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
+	<< Método de pronóstico Suavización Exponencial Doble>>
+		Para la semana 46 la cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 7865.28 unidades. MAD = 3665.05
+	<< Método de Proyección de Tendencia>>
+- Para el producto: PACA ENVASE TALCO GRANDE X100UND                  
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 46 la cantidad de ventas será para un alfa de 0.1 son: 6762.2397 unidades y un MAD de: +8699.71575. Para un alfa de 0.3 son: 6010.7317 unidades y un MAD de: 9175.22525
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 46 la cantidad de ventas será para un N = 2, de:  9852.0 unidades. MAD = 10921.67
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 46 la cantidad de ventas será para un N = 2, de:  7909.8 unidades. MAD = 16973.7
+- Para el producto: PACA ENVASE 1.8 L X 60 UND                        
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 46 la cantidad de ventas será para un alfa de 0.1 son: 6762.2397 unidades y un MAD de: +8699.71575. Para un alfa de 0.3 son: 6010.7317 unidades y un MAD de: 9175.22525
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 46 la cantidad de ventas será para un N = 2, de:  9852.0 unidades. MAD = 10921.67
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 46 la cantidad de ventas será para un N = 2, de:  7909.8 unidades. MAD = 16973.7
+=========================================
+|| Para la semana 46: ||
+=========================================
+- Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
+	<< Método de pronóstico Suavización Exponencial Doble>>
+		Para la semana 47 la cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 392.51 unidades. MAD = 110.17
+	<< Método de Proyección de Tendencia>>
+- Para el producto: PACA ENVASE PERSONAL X 200 UNDS                   
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 47 la cantidad de ventas será para un alfa de 0.1 son: 219.3554 unidades y un MAD de: +215.4415. Para un alfa de 0.3 son: 225.0874 unidades y un MAD de: 241.63049999999998
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 47 la cantidad de ventas será para un N = 2, de:  298.0 unidades. MAD = 283.67
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 47 la cantidad de ventas será para un N = 2, de:  242.4 unidades. MAD = 469.6
+- Para el producto: PACA ENVASE LITRO JH66 X 60 UNDS                  
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 47 la cantidad de ventas será para un alfa de 0.1 son: 219.3554 unidades y un MAD de: +215.4415. Para un alfa de 0.3 son: 225.0874 unidades y un MAD de: 241.63049999999998
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 47 la cantidad de ventas será para un N = 2, de:  298.0 unidades. MAD = 283.67
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 47 la cantidad de ventas será para un N = 2, de:  242.4 unidades. MAD = 469.6
+- Para el producto: PACA ENVASE 1.8 L X 60 UND                        
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 47 la cantidad de ventas será para un alfa de 0.1 son: 219.3554 unidades y un MAD de: +215.4415. Para un alfa de 0.3 son: 225.0874 unidades y un MAD de: 241.63049999999998
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 47 la cantidad de ventas será para un N = 2, de:  298.0 unidades. MAD = 283.67
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 47 la cantidad de ventas será para un N = 2, de:  242.4 unidades. MAD = 469.6
+=========================================
+|| Para la semana 47: ||
+=========================================
+- Para el producto: PACA ENVASE TALCO MEDIANO X 100                   
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 48 la cantidad de ventas será para un alfa de 0.1 son: 3422.02308 unidades y un MAD de: +8003.68664. Para un alfa de 0.3 son: 7504.60204 unidades y un MAD de: 9425.60024
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 48 la cantidad de ventas será para un N = 2, de:  17196.0 unidades. MAD = 13368.5
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 48 la cantidad de ventas será para un N = 2, de:  13763.8 unidades. MAD = 19102.13
+- Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 48 la cantidad de ventas será para un alfa de 0.1 son: 3422.02308 unidades y un MAD de: +8003.68664. Para un alfa de 0.3 son: 7504.60204 unidades y un MAD de: 9425.60024
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 48 la cantidad de ventas será para un N = 2, de:  17196.0 unidades. MAD = 13368.5
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 48 la cantidad de ventas será para un N = 2, de:  13763.8 unidades. MAD = 19102.13
+- Para el producto: PACA ENVASE TALCO GRANDE X100UND                  
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 48 la cantidad de ventas será para un alfa de 0.1 son: 3422.02308 unidades y un MAD de: +8003.68664. Para un alfa de 0.3 son: 7504.60204 unidades y un MAD de: 9425.60024
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 48 la cantidad de ventas será para un N = 2, de:  17196.0 unidades. MAD = 13368.5
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 48 la cantidad de ventas será para un N = 2, de:  13763.8 unidades. MAD = 19102.13
+- Para el producto: PACA ENVASE 2 LITROS RECTANGULAR X 60             
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 48 la cantidad de ventas será para un alfa de 0.1 son: 3422.02308 unidades y un MAD de: +8003.68664. Para un alfa de 0.3 son: 7504.60204 unidades y un MAD de: 9425.60024
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 48 la cantidad de ventas será para un N = 2, de:  17196.0 unidades. MAD = 13368.5
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 48 la cantidad de ventas será para un N = 2, de:  13763.8 unidades. MAD = 19102.13
+- Para el producto: PACA ENVASE 1.8 L X 60 UND                        
+	<< Método de pronóstico Suavización Exponencial Doble>>
+		Para la semana 48 la cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 18133.24 unidades. MAD = 763.34
+	<< Método de Proyección de Tendencia>>
+=========================================
+|| Para la semana 48: ||
+=========================================
+- Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
+	<< Método de pronóstico Suavización Exponencial Doble>>
+		Para la semana 49 la cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: -9032.44 unidades. MAD = 11770.74
+	<< Método de Proyección de Tendencia>>
+- Para el producto: PACA ENVASE TALCO GRANDE X100UND                  
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 49 la cantidad de ventas será para un alfa de 0.1 son: 20370.522989999998 unidades y un MAD de: +24350.95402. Para un alfa de 0.3 son: 7857.4507699999995 unidades y un MAD de: 16459.03282
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 49 la cantidad de ventas será para un N = 2, de:  4500.0 unidades. MAD = 6369.5
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 49 la cantidad de ventas será para un N = 2, de:  3611.8 unidades. MAD = 7939.2
+- Para el producto: PACA ENVASE GALON REDONDO X 24 UND                
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 49 la cantidad de ventas será para un alfa de 0.1 son: 20370.522989999998 unidades y un MAD de: +24350.95402. Para un alfa de 0.3 son: 7857.4507699999995 unidades y un MAD de: 16459.03282
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 49 la cantidad de ventas será para un N = 2, de:  4500.0 unidades. MAD = 6369.5
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 49 la cantidad de ventas será para un N = 2, de:  3611.8 unidades. MAD = 7939.2
+- Para el producto: ENVASE GALON NUTRA                                
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 49 la cantidad de ventas será para un alfa de 0.1 son: 20370.522989999998 unidades y un MAD de: +24350.95402. Para un alfa de 0.3 son: 7857.4507699999995 unidades y un MAD de: 16459.03282
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 49 la cantidad de ventas será para un N = 2, de:  4500.0 unidades. MAD = 6369.5
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 49 la cantidad de ventas será para un N = 2, de:  3611.8 unidades. MAD = 7939.2
+- Para el producto: PACA ENVASE 1.8 L X 60 UND                        
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 49 la cantidad de ventas será para un alfa de 0.1 son: 20370.522989999998 unidades y un MAD de: +24350.95402. Para un alfa de 0.3 son: 7857.4507699999995 unidades y un MAD de: 16459.03282
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 49 la cantidad de ventas será para un N = 2, de:  4500.0 unidades. MAD = 6369.5
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 49 la cantidad de ventas será para un N = 2, de:  3611.8 unidades. MAD = 7939.2
+=========================================
+|| Para la semana 49: ||
+=========================================
+- Para el producto: PACA ENVASE GALON CUADRADO LACTEOS X 30 UNDS      
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 50 la cantidad de ventas será para un alfa de 0.1 son: 2691.0495200000005 unidades y un MAD de: +6084.41584. Para un alfa de 0.3 son: 5462.98816 unidades y un MAD de: 6474.1190400000005
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 50 la cantidad de ventas será para un N = 2, de:  6133.0 unidades. MAD = 5150.5
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 50 la cantidad de ventas será para un N = 2, de:  7299.4 unidades. MAD = 7184.13
+- Para el producto: PACA ENVASE GALON REDONDO X 24 UND                
+	<< Método de pronóstico Suavización Exponencial Doble>>
+		Para la semana 50 la cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 4803.41 unidades. MAD = 5580.61
+	<< Método de Proyección de Tendencia>>
+- Para el producto: PACA ENVASE APLICADOR 300 X 144UNDS               
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 50 la cantidad de ventas será para un alfa de 0.1 son: 2691.0495200000005 unidades y un MAD de: +6084.41584. Para un alfa de 0.3 son: 5462.98816 unidades y un MAD de: 6474.1190400000005
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 50 la cantidad de ventas será para un N = 2, de:  6133.0 unidades. MAD = 5150.5
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 50 la cantidad de ventas será para un N = 2, de:  7299.4 unidades. MAD = 7184.13
+- Para el producto: ENVASE GALON NUTRA                                
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 50 la cantidad de ventas será para un alfa de 0.1 son: 2691.0495200000005 unidades y un MAD de: +6084.41584. Para un alfa de 0.3 son: 5462.98816 unidades y un MAD de: 6474.1190400000005
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 50 la cantidad de ventas será para un N = 2, de:  6133.0 unidades. MAD = 5150.5
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 50 la cantidad de ventas será para un N = 2, de:  7299.4 unidades. MAD = 7184.13
+- Para el producto: PACA ENVASE 1.8 L X 60 UND                        
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 50 la cantidad de ventas será para un alfa de 0.1 son: 2691.0495200000005 unidades y un MAD de: +6084.41584. Para un alfa de 0.3 son: 5462.98816 unidades y un MAD de: 6474.1190400000005
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 50 la cantidad de ventas será para un N = 2, de:  6133.0 unidades. MAD = 5150.5
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 50 la cantidad de ventas será para un N = 2, de:  7299.4 unidades. MAD = 7184.13
+=========================================
+|| Para la semana 50: ||
+=========================================
+- Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 51 la cantidad de ventas será para un alfa de 0.1 son: 2930.83844 unidades y un MAD de: +6445.646479999999. Para un alfa de 0.3 son: 6135.11132 unidades y un MAD de: 6193.64808
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 51 la cantidad de ventas será para un N = 2, de:  5619.0 unidades. MAD = 8293.75
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 51 la cantidad de ventas será para un N = 2, de:  6692.6 unidades. MAD = 10778.07
+- Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 51 la cantidad de ventas será para un alfa de 0.1 son: 2930.83844 unidades y un MAD de: +6445.646479999999. Para un alfa de 0.3 son: 6135.11132 unidades y un MAD de: 6193.64808
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 51 la cantidad de ventas será para un N = 2, de:  5619.0 unidades. MAD = 8293.75
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 51 la cantidad de ventas será para un N = 2, de:  6692.6 unidades. MAD = 10778.07
+- Para el producto: PACA ENVASE GALON REDONDO X 24 UND                
+- Para el producto: PACA ENVASE 1.8 L X 60 UND                        
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 51 la cantidad de ventas será para un alfa de 0.1 son: 2930.83844 unidades y un MAD de: +6445.646479999999. Para un alfa de 0.3 son: 6135.11132 unidades y un MAD de: 6193.64808
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 51 la cantidad de ventas será para un N = 2, de:  5619.0 unidades. MAD = 8293.75
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 51 la cantidad de ventas será para un N = 2, de:  6692.6 unidades. MAD = 10778.07
+=========================================
+|| Para la semana 51: ||
+=========================================
+- Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
+	<< Método de pronóstico Suavización Exponencial Doble>>
+		Para la semana 52 la cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 3752.48 unidades. MAD = 4990.37
+	<< Método de Proyección de Tendencia>>
+- Para el producto: PACA ENVASE TALCO GRANDE X100UND                  
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 52 la cantidad de ventas será para un alfa de 0.1 son: 956.5486000000002 unidades y un MAD de: +2965.6285. Para un alfa de 0.3 son: 1383.1906 unidades y un MAD de: 3967.6745
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 52 la cantidad de ventas será para un N = 2, de:  538.0 unidades. MAD = 3155.67
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 52 la cantidad de ventas será para un N = 2, de:  515.0 unidades. MAD = 4759.7
+- Para el producto: PACA ENVASE 1.8 L X 60 UND                        
+	<< Método de pronóstico Suavización Exponencial Doble>>
+		Para la semana 52 la cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 3752.48 unidades. MAD = 4990.37
+	<< Método de Proyección de Tendencia>>
+=========================================
+|| Para la semana 52: ||
+=========================================
+- Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 53 la cantidad de ventas será para un alfa de 0.1 son: 95.356 unidades y un MAD de: +72.14666666666666. Para un alfa de 0.3 son: 67.332 unidades y un MAD de: 55.18666666666667
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 53 la cantidad de ventas será para un N = 2, de:  46.0 unidades. MAD = 39.5
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 53 la cantidad de ventas será para un N = 2, de:  50.0 unidades. MAD = 67.0
+- Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
+	<< Método de pronóstico Suavización Exponencial Doble>>
+		Para la semana 53 la cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 26.73 unidades. MAD = 54.49
+	<< Método de Proyección de Tendencia>>
+- Para el producto: PACA ENVASE GALON REDONDO X 24 UND                
+	<< Método de pronóstico Suavización Exponencial Simple>>
+		Para la semana 53 la cantidad de ventas será para un alfa de 0.1 son: 95.356 unidades y un MAD de: +72.14666666666666. Para un alfa de 0.3 son: 67.332 unidades y un MAD de: 55.18666666666667
+	<< Método de pronóstico Promedio Móvil Simple>>
+		Para la semana 53 la cantidad de ventas será para un N = 2, de:  46.0 unidades. MAD = 39.5
+	<< Método de pronóstico Promedio Móvil Ponderado>>
+		Para la semana 53 la cantidad de ventas será para un N = 2, de:  50.0 unidades. MAD = 67.0
+=========================================

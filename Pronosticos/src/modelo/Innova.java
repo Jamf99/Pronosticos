@@ -1,6 +1,8 @@
 package modelo;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -218,7 +220,6 @@ public class Innova {
 			double[] resultado = {lista.get(0).getCantidad(), 0};
 			return resultado;
 		} else {
-//			double[] pronosticos = new double[lista.size()-1];
 			double sumPeriodo = 0;
 			double sumCantidad = 0;
 			double sumxx = 0;
@@ -231,16 +232,9 @@ public class Innova {
 			}
 			double proPeriodo = sumPeriodo / lista.size();
 			double proCantidad = sumCantidad / lista.size();
-			double proxx = sumxx / lista.size();
-			double proxy = sumxy / lista.size();
 			double b = ((sumxy)-(lista.size()*proPeriodo*proCantidad))/(sumxx-(lista.size()*(proPeriodo*proPeriodo)));
 			double a = proCantidad - b * proPeriodo;
 			double prediccion = a+b*lista.size()+1;
-//			double sumMad = 0;
-//			for (int i = 0; i < pronosticos.length-1; i++) {
-//				sumMad += Math.abs(pronosticos[i] - lista.get(i+2).getCantidad());
-//			}
-//			double mad = sumMad / (pronosticos.length-1);
 			double[] resultado = {prediccion};
 			return resultado;
 		}
@@ -368,6 +362,12 @@ public class Innova {
 	}
 	
 	public static void punto3() {
+		try {
+			PrintStream fileStream = new PrintStream("datos/filename.txt");
+			System.setOut(fileStream);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
 		System.out.println("======================= MÉTODOS DE PRONÓSTICO POR CADA PRODUCTO EN CADA SEMANA  ============================");
 		for (int i = 0; i < ventas.length; i++) {
 			HashMap<String, Producto> map = unificar(ventas[i].getProductosVendidos());
