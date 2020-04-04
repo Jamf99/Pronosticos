@@ -3,6 +3,7 @@ package modelo;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -175,6 +176,11 @@ public class Innova {
 	}
 	
 	public static void punto1() {
+		Date objDate = new Date();
+		String strDateFormat = "hh:mm:ss a  dd/MM/yyyy";
+		SimpleDateFormat objSDF = new SimpleDateFormat(strDateFormat);
+		System.out.println("Reporte hecho: "+objSDF.format(objDate));
+		
 		System.out.println("\n\n======================= VENTAS DE PRODUCTOS SEMANALES ============================\n\n");
 		for (int i = 0; i < ventas.length; i++) {
 			System.out.println("Ventas semana "+(i+1)+" = "+ventas[i].getProductosVendidos().size());
@@ -203,50 +209,61 @@ public class Innova {
 		}
 	}
 	
-	public static HashMap<Integer, Producto> ordenarPorDia(ArrayList<Producto> productos){
+	public static HashMap<Integer, Producto> ordenarPorDia(int index, String nombreProducto){
 		HashMap<Integer, Producto> map = new HashMap<Integer, Producto>();
-		for (int i = 0; i < productos.size(); i++) {
-			if(!map.containsKey(productos.get(i).getDia())) {
-				map.put(productos.get(i).getDia(), productos.get(i));
+		for (int l = 0; l < ventas.length - index; l++) {
+			for (int i = 0; i < ventas[l].getProductosVendidos().size(); i++) {
+				Producto p = ventas[l].getProductosVendidos().get(i);
+				if(p.getNombre().equals(nombreProducto)) {
+					if(!map.containsKey(p.getDia())) {
+						map.put(p.getDia(), p);
+					}
+				}
 			}
 		}
+		
 		return map;
 	}
 	
-	public static double[] proyeccionTendencia(VentasSemanal ventas, String producto) {
-		HashMap<Integer, Producto> map = ordenarPorDia(ventas.getProductosVendidos());
+	
+	public static double[] proyeccionTendencia(String producto, int index) {
+		HashMap<Integer, Producto> map = ordenarPorDia(index, producto);
 		List<Producto> lista = new ArrayList<Producto>(map.values());
-		if (lista.size() < 2) {
+		if (lista.size() == 1) {
 			double[] resultado = {lista.get(0).getCantidad(), 0};
 			return resultado;
-		} else {
+		} else if(lista.size() > 1) {
 			double sumPeriodo = 0;
 			double sumCantidad = 0;
 			double sumxx = 0;
 			double sumxy = 0;
-			for (int i = 2; i < lista.size() + 1; i++) {
-				sumPeriodo += lista.get(i).getDia();
-				sumCantidad += lista.get(i).getCantidad();
-				sumxx += sumPeriodo * sumPeriodo;
-				sumxy += sumCantidad * lista.get(i).getDia();
-			}
-			double proPeriodo = sumPeriodo / lista.size();
-			double proCantidad = sumCantidad / lista.size();
-			double b = ((sumxy)-(lista.size()*proPeriodo*proCantidad))/(sumxx-(lista.size()*(proPeriodo*proPeriodo)));
-			double a = proCantidad - b * proPeriodo;
-			double prediccion = a+b*lista.size()+1;
-			double[] resultado = {prediccion};
-			return resultado;
+				for (int i = 2; i < lista.size() - 1; i++) {
+					sumPeriodo += lista.get(i).getDia();
+					sumCantidad += lista.get(i).getCantidad();
+					sumxx += sumPeriodo * sumPeriodo;
+					sumxy += sumCantidad * lista.get(i).getDia();
+				}
+				double proPeriodo = sumPeriodo / lista.size();
+				double proCantidad = sumCantidad / lista.size();
+				double b = ((sumxy)-(lista.size()*proPeriodo*proCantidad))/(sumxx-(lista.size()*(proPeriodo*proPeriodo)));
+				double a = proCantidad - b * proPeriodo;
+				double prediccion = a+b*lista.size()+1;
+				double[] resultado = {prediccion};
+				return resultado;
+		}else {
+			double[] r = {0,0,0,0};
+			return r;
 		}
 	}
 	
-	public static double[] promedioMovilSimple(VentasSemanal ventas, String producto) {
-		HashMap<Integer, Producto> map = ordenarPorDia(ventas.getProductosVendidos());
+	public static double[] promedioMovilSimple(String producto, int index) {
+		HashMap<Integer, Producto> map = ordenarPorDia(index, producto);
 		List<Producto> lista = new ArrayList<Producto>(map.values());
-		if (lista.size() < 2) {
+		if (lista.size() == 1) {
 			double[] resultado = {lista.get(0).getCantidad(), 0};
 			return resultado;
-		} else {
+			
+		} else if(lista.size() > 1) {
 			double[] pronosticos = new double[lista.size()-1];
 			for (int i = 2; i < lista.size() + 1; i++) {
 				int cantidad1 = lista.get(i-2).getCantidad();
@@ -260,16 +277,19 @@ public class Innova {
 			double mad = sumMad / (pronosticos.length-1);
 			double[] resultado = {pronosticos[pronosticos.length - 1], (double)Math.round(mad * 100d) / 100d};
 			return resultado;
+		}else {
+			double[] r = {0,0,0,0};
+			return r;
 		}
 	}
 	
-	public static double[] suavizacionExponencialSimple(VentasSemanal ventas, String producto) {
-		HashMap<Integer, Producto> map = ordenarPorDia(ventas.getProductosVendidos());
+	public static double[] suavizacionExponencialSimple(String producto, int index) {
+		HashMap<Integer, Producto> map = ordenarPorDia(index, producto);
 		List<Producto> lista = new ArrayList<Producto>(map.values());
-		if (lista.size() < 2) {
+		if (lista.size() == 1) {
 			double[] resultado = {lista.get(0).getCantidad(), 0, lista.get(0).getCantidad(), 0};
 			return resultado;
-		} else {	
+		} else if(lista.size() > 1){	
 			double[] pronosticos = new double[lista.size()+1];
 			double alpha = 0.1;
 			pronosticos[0] = lista.get(0).getCantidad();
@@ -298,16 +318,19 @@ public class Innova {
 			
 			double[] resultado = {pronosticos[pronosticos.length-1], (double)Math.round(mad * 100d) / 100d, pronosticos2[pronosticos2.length-1], (double)Math.round(mad2 * 100d) / 100d};
 			return resultado;
+		}else {
+			double[] r = {0,0,0,0};
+			return r;
 		}
 	}
 	
-	public static double[] suavizacionExponencialDoble(VentasSemanal ventas, String producto) {
-		HashMap<Integer, Producto> map = ordenarPorDia(ventas.getProductosVendidos());
+	public static double[] suavizacionExponencialDoble(String producto, int index) {
+		HashMap<Integer, Producto> map = ordenarPorDia(index, producto);
 		List<Producto> lista = new ArrayList<Producto>(map.values());
-		if (lista.size() < 2) {
+		if (lista.size() == 1) {
 			double[] resultado = {lista.get(0).getCantidad(), 0};
 			return resultado;
-		} else {	
+		} else if(lista.size() > 1) {	
 			double alpha = 0.3;
 			double beta = 0.7;
 			double[] ft = new double[lista.size()];
@@ -332,16 +355,19 @@ public class Innova {
 			
 			double[] resultado = {(double)Math.round(fift[fift.length - 1] * 100d) / 100d, (double)Math.round(mad * 100d) / 100d};
 			return resultado; 
+		}else {
+			double[] r = {0,0,0,0};
+			return r;
 		}
 	}
 	
-	public static double[] promedioMovilPonderado(VentasSemanal ventas, String producto) {
-		HashMap<Integer, Producto> map = ordenarPorDia(ventas.getProductosVendidos());
+	public static double[] promedioMovilPonderado(String producto, int index) {
+		HashMap<Integer, Producto> map = ordenarPorDia(index, producto);
 		List<Producto> lista = new ArrayList<Producto>(map.values());
-		if (lista.size() < 2) {
+		if (lista.size() == 1) {
 			double[] resultado = {lista.get(0).getCantidad(), 0};
 			return resultado;
-		} else {
+		} else if(lista.size() > 1){
 			double[] pronosticos = new double[lista.size()-1];
 			for (int i = 2; i < lista.size()+1; i++) {
 				double l1 = lista.get(i-2).getCantidad() * 0.4;
@@ -358,6 +384,9 @@ public class Innova {
 			double mad = sumMad / (pronosticos.length-2);
 			double[] resultado = {(double)Math.round(pronosticos[pronosticos.length - 1] * 100d) / 100d, (double)Math.round(mad * 100d) / 100d};
 			return resultado;
+		}else {
+			double[] r = {0,0,0,0};
+			return r;
 		}
 	}
 	
@@ -373,19 +402,22 @@ public class Innova {
 				String patron = patron(cvd, ventas[i], producto.getNombre());
 				if(patron.equals("Horizontal")) {
 					System.out.println("\t<< Método de pronóstico Suavización Exponencial Simple>>");
-					double[] suavizacionSimple = suavizacionExponencialSimple(ventas[i], producto.getNombre());
+					double[] suavizacionSimple = suavizacionExponencialSimple(producto.getNombre(), i);
 					System.out.println("\t\tPara la semana "+(i+2)+" la cantidad de ventas será para un alfa de 0.1 son: "+suavizacionSimple[0]+" unidades y un MAD de: +"+suavizacionSimple[1]+". Para un alfa de 0.3 son: "+suavizacionSimple[2]+" unidades y un MAD de: "+suavizacionSimple[3]);
 					System.out.println("\t<< Método de pronóstico Promedio Móvil Simple>>");
-					double[] movilSimple = promedioMovilSimple(ventas[i], producto.getNombre());
+					double[] movilSimple = promedioMovilSimple(producto.getNombre(), i);
 					System.out.println("\t\tPara la semana "+(i+2)+" la cantidad de ventas será para un N = 2, de:  "+movilSimple[0]+" unidades. MAD = "+movilSimple[1]);
 					System.out.println("\t<< Método de pronóstico Promedio Móvil Ponderado>>");
-					double[] movilPonderado = promedioMovilPonderado(ventas[i], producto.getNombre());
+					double[] movilPonderado = promedioMovilPonderado(producto.getNombre(), i);
 					System.out.println("\t\tPara la semana "+(i+2)+" la cantidad de ventas será para un N = 2, de:  "+movilPonderado[0]+" unidades. MAD = "+movilPonderado[1]);
 				}else if(patron.equals("Tendencia Creciente") || patron.equals("Tendencia Decreciente")) {
 					System.out.println("\t<< Método de pronóstico Suavización Exponencial Doble>>");
-					double suavizacionDoble[] = suavizacionExponencialDoble(ventas[i], producto.getNombre());
+					double suavizacionDoble[] = suavizacionExponencialDoble(producto.getNombre(), i);
 					System.out.println("\t\tPara la semana "+(i+2)+" la cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: "+suavizacionDoble[0]+" unidades. MAD = "+suavizacionDoble[1]);
 					System.out.println("\t<< Método de Proyección de Tendencia>>");
+					double tendencia[] = proyeccionTendencia(producto.getNombre(), i);
+					System.out.println("\t\tPara la semana "+(i+2)+" la cantidad de ventas serán "+tendencia[0]+" unidades.");
+
 				}
 			}
 			System.out.println("=========================================");
