@@ -3,6 +3,7 @@ package modelo;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -175,6 +176,11 @@ public class Innova {
 	}
 	
 	public static void punto1() {
+		Date objDate = new Date();
+		String strDateFormat = "hh:mm:ss a  dd/MM/yyyy";
+		SimpleDateFormat objSDF = new SimpleDateFormat(strDateFormat);
+		System.out.println("Reporte hecho: "+objSDF.format(objDate));
+		
 		System.out.println("\n\n======================= VENTAS DE PRODUCTOS SEMANALES ============================\n\n");
 		for (int i = 0; i < ventas.length; i++) {
 			System.out.println("Ventas semana "+(i+1)+" = "+ventas[i].getProductosVendidos().size());
