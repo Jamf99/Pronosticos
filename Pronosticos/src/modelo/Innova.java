@@ -211,7 +211,7 @@ public class Innova {
 	
 	public static HashMap<Integer, Producto> ordenarPorDia(int index, String nombreProducto){
 		HashMap<Integer, Producto> map = new HashMap<Integer, Producto>();
-		for (int l = 0; l < ventas.length - index; l++) {
+		for (int l = 0; l < index + 1; l++) {
 			for (int i = 0; i < ventas[l].getProductosVendidos().size(); i++) {
 				Producto p = ventas[l].getProductosVendidos().get(i);
 				if(p.getNombre().equals(nombreProducto)) {
