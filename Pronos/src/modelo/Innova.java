@@ -286,12 +286,77 @@ public class Innova {
 		return map;
 	}
 	
-	public void politicaNumerosEnterosConEOQ() {
-		double costoOrdenar = 300;
-		double costoMantener = 0.8;
-		double demandaPromedio = 260;
-		double eoq = 442;
-		double periodos = 2;
+	private static HashMap<String, HashMap<String, Integer>> mapProductos = new HashMap<String, HashMap<String, Integer>>();
+	
+	public static void dividirProductos() {
+		for (int i = 0; i < ventas.length; i++) {
+			HashMap<String, Integer> aux = new HashMap<String, Integer>();
+			for (int j = 0; j < ventas[i].getProductosVendidos().size(); j++) {
+				String nombreP = ventas[i].getProductosVendidos().get(j).getNombre();
+				if(!mapProductos.containsKey(nombreP)) {
+					aux.put(ventas[i].getSemana(), ventas[i].getProductosVendidos().get(j).getCantidad());
+					mapProductos.put(nombreP, aux);				
+				}else {
+					if(!aux.containsKey(ventas[i].getSemana())) {
+						aux = mapProductos.get(nombreP);
+						aux.put(ventas[i].getSemana(), ventas[i].getProductosVendidos().get(j).getCantidad());
+						mapProductos.put(nombreP, aux);
+					}else {
+						aux.put(ventas[i].getSemana(), aux.get(ventas[i].getSemana()) + ventas[i].getProductosVendidos().get(j).getCantidad());
+						mapProductos.put(nombreP, aux);
+					}	
+				}
+			}
+		}
+	}
+	
+	public static double[] politicaNumerosEnterosConEOQ(String nombreProducto) {
+		HashMap<String, Integer> aux = mapProductos.get(nombreProducto);
+		double costoOrdenarPorPedido = 300;
+		double costoMantenerPorPedido = 0.8;
+		int[] demandas = new int[52], pedidos = new int[52], invFinal = new int[52], invInicial = new int[52];
+		invInicial[0] = 0;
+		int totalDemandas = 0, totalInvFinal = 0;
+		int demandaPromedio = Math.round(totalDemandas/demandas.length);
+		int eoq = (int) Math.round(Math.sqrt((2*demandaPromedio*costoOrdenarPorPedido)/costoMantenerPorPedido));
+		int periodos = Math.round(eoq/demandaPromedio);
+		for (int i = 0; i < ventas.length; i++) {
+			demandas[i] = aux.get((i+1)+"");
+			totalDemandas += pedidos[i];
+		}
+		for (int i = 0; i < demandas.length; i++) {
+			if(i%periodos == 0) {
+				pedidos[i] = demandas[i] + demandas[i+(periodos-1)];
+			} 
+		}
+		for (int i = 0; i < pedidos.length; i++) {
+			if(pedidos[i] != 0) {
+				invFinal[i] = pedidos[i] - demandas[i];
+			}else {
+				invFinal[i] = 0;
+			}
+			totalInvFinal += invFinal[i];
+		}
+		for (int i = 0; i < invFinal.length; i++) {
+			if(invFinal[i] == 0) {
+				invInicial[i] = invFinal[i-(periodos-1)];
+			}else {
+				invInicial[i] = 0;
+			}
+		}
+		int n = 0;
+		for (int i = 0; i < pedidos.length; i++) {
+			if(pedidos[i] > 0) {
+				n++;
+			}
+		}
+		int inventarioPromedio = Math.round(totalInvFinal/ventas.length);
+		int rotacionInventario = totalDemandas / inventarioPromedio;
+		double costoOrdenarTotal = costoOrdenarPorPedido * n;
+		double costoMantenerTotal = costoMantenerPorPedido * totalInvFinal;
+		double costoTotal = costoMantenerTotal + costoOrdenarTotal;
+		double[] resultado = {totalInvFinal, inventarioPromedio, rotacionInventario, costoOrdenarTotal, costoMantenerTotal, costoTotal, eoq, demandaPromedio, periodos};
+		return resultado;
 	}
 	
 	public static double provisionPeriodica() {
@@ -525,6 +590,17 @@ public class Innova {
 				+ "\n\t\tEs una de las más utilizadas cuando se requiere actuar con rapidez ante eventos no previstos o lanzamiento de nuevos productos.\n");
 		System.out.println("\t<<Encuesta de Mercado de Consumo>>");
 		System.out.println("\t\t- Consiste en obtener la opinión o percepción de un grupo de personas acerca de su proyección de consumo o interés por un producto o servicio.");
+	}
+	
+	public static void punto4() {
+		System.out.println("\n\n======================= NUMERO NO SE QUE CON EOQ  ============================\n\n");
+		for (int i = 0; i < ventas.length; i++) {
+			HashMap<String, Producto> map = unificar(ventas[i].getProductosVendidos());
+			System.out.println("|| Para la semana "+(i+1)+": ||");
+			for(Producto producto : map.values()) {
+				
+			}
+		}
 	}
 	
 	public static void main(String[] args) {
