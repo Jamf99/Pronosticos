@@ -515,13 +515,9 @@ public class Innova {
 	}
 	
 	public static void punto4() {
-		System.out.println("\n\n======================= NUMERO NO SE QUE CON EOQ  ============================\n\n");
-		for (int i = 0; i < ventas.length; i++) {
-			HashMap<String, Producto> map = unificar(ventas[i].getProductosVendidos());
-			System.out.println("|| Para la semana "+(i+1)+": ||");
-			for(Producto producto : map.values()) {
-				
-			}
+		System.out.println("\n\n======================= POLÍTICA NÚMEROS ENTEROS CON EOQ  ============================\n\n");
+		for(String producto : mapProductos.keySet()) {
+			
 		}
 	}
 	
