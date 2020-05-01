@@ -6,6 +6,7 @@ import java.io.PrintStream;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -16,7 +17,65 @@ public class Innova {
 	
 	private static VentasSemanal[] ventas;
 	
+	public static Producto getProductos() {
+		HashMap<String, Producto> mapita = new HashMap<String, Producto>();
+		for (int i = 0; i < ventas.length; i++) {
+			ArrayList<Producto> listaProductos = ventas[i].getProductosVendidos();
+			for (int j = 0; j < listaProductos.size(); j++) {
+				if (!mapita.containsKey(listaProductos.get(j).getNombre())) {
+					mapita.put(listaProductos.get(j).getNombre(), listaProductos.get(j));
+				}
+			}
+		}
+		Collection<Producto> values = mapita.values(); 
+		ArrayList<Producto> listOfValues = new ArrayList<Producto>(values);
+		Scanner scanner = new Scanner(System.in);
+		for (int i = 0; i < listOfValues.size(); i++) {
+			System.out.println((i+1) + " " + listOfValues.get(i).getNombre());
+		}
+		System.out.println("Seleccione un producto ingresando el numero que acompaña al producto deseado");
+		return listOfValues.get(scanner.nextInt()-1); 
+	}
 	
+	public static Producto getSemana(Producto producto) {
+		ArrayList<String> semanas = new ArrayList<String>();
+		for (int i = 0; i < ventas.length; i++) {
+			ArrayList<Producto> listaProductos = ventas[i].getProductosVendidos();
+			for (int j = 0; j < listaProductos.size(); j++) {
+				if (listaProductos.get(j).getNombre().equals(producto.getNombre())) {
+					semanas.add(ventas[i].getSemana());
+					break;
+				}
+			}
+		}
+		Scanner scanner = new Scanner(System.in);
+		for (int i = 0; i < semanas.size(); i++) {
+			System.out.println((i+1) + " Semana " + semanas.get(i));
+		}
+		System.out.println("Seleccione semana con el indicador que acompaña a la semana");
+		String sem = semanas.get(scanner.nextInt()-1);
+		ArrayList<Producto> productos = ventas[(Integer.parseInt(sem))-1].getProductosVendidos();
+		for (int j = 0; j < ventas.length; j++) {
+			if (productos.get(j).equals(producto)) {
+				return productos.get(j);
+			}
+		}
+		return null;
+	}
+	
+	private static ArrayList<VentasSemanal> getSemanasF(Producto producto) {
+		ArrayList<VentasSemanal> semanas = new ArrayList<VentasSemanal>();
+		for (int i = 0; i < ventas.length; i++) {
+			ArrayList<Producto> listaProductos = ventas[i].getProductosVendidos();
+			for (int j = 0; j < listaProductos.size(); j++) {
+				if (listaProductos.get(j).getNombre().equals(producto.getNombre())) {
+					semanas.add(ventas[i]);
+					break;
+				}
+			}
+		}
+		return semanas;
+	}
 	
 	public Innova() {
 		ventas = new VentasSemanal[52];
@@ -300,8 +359,27 @@ public class Innova {
 		return resultado;
 	}
 	
-	public void provisionPeriodica() {
-		
+	public static double provisionPeriodica() {
+		Producto producto = getSemana(getProductos());
+		double resul = producto.getCantidad() * (8) + 1.644854 * calcularDesviacionEstandarProMasterMegaCool(getSemanasF(producto), producto);
+		return resul;
+	}
+	
+	private static double calcularDesviacionEstandarProMasterMegaCool(ArrayList<VentasSemanal> ventas, Producto producto) {
+		double varianza = 0;
+		double sumatoria;
+		int n = 0;
+		for (int i = 0; i < ventas.size(); i++) {
+			ArrayList<Producto> productos = ventas.get(i).getProductosVendidos(); 
+			for (int j = 0; j < Innova.ventas.length; j++) {
+				sumatoria = Math.pow(productos.get(i).getCantidad() - calcularMedia(productos.get(j).getNombre(), ventas.get(i)), 2);
+				varianza += sumatoria;
+				n++;
+			}
+		}
+		varianza/=(n);
+		double desviacion = Math.sqrt(varianza);
+		return desviacion;
 	}
 	
 	public static double[] proyeccionTendencia(String producto, int index) {
@@ -525,15 +603,18 @@ public class Innova {
 		@SuppressWarnings("unused")
 		Innova n = new Innova();
 		leerDatos();
+		PrintStream original = System.out;
 		try {
 			PrintStream fileStream = new PrintStream("datos/reporte.txt");
 			System.setOut(fileStream);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
-//		punto1();
-//		punto2();
-//		punto3();
+		punto1();
+		punto2();
+		punto3();
+		System.setOut(original);
+		provisionPeriodica();
 	}
 
 }
