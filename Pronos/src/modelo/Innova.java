@@ -16,6 +16,8 @@ public class Innova {
 	
 	private static VentasSemanal[] ventas;
 	
+	
+	
 	public Innova() {
 		ventas = new VentasSemanal[52];
 		inicializarVentas();
@@ -225,7 +227,31 @@ public class Innova {
 		return map;
 	}
 	
-	public void politicaNumerosEnterosConEOQ() {
+	private static HashMap<String, HashMap<String, Integer>> mapProductos = new HashMap<String, HashMap<String, Integer>>();
+	
+	public static void dividirProductos() {
+		for (int i = 0; i < ventas.length; i++) {
+			HashMap<String, Integer> aux = new HashMap<String, Integer>();
+			for (int j = 0; j < ventas[i].getProductosVendidos().size(); j++) {
+				String nombreP = ventas[i].getProductosVendidos().get(j).getNombre();
+				if(!mapProductos.containsKey(nombreP)) {
+					aux.put(ventas[i].getSemana(), ventas[i].getProductosVendidos().get(j).getCantidad());
+					mapProductos.put(nombreP, aux);				
+				}else {
+					if(!aux.containsKey(ventas[i].getSemana())) {
+						aux = mapProductos.get(nombreP);
+						aux.put(ventas[i].getSemana(), ventas[i].getProductosVendidos().get(j).getCantidad());
+						mapProductos.put(nombreP, aux);
+					}else {
+						aux.put(ventas[i].getSemana(), aux.get(ventas[i].getSemana()) + ventas[i].getProductosVendidos().get(j).getCantidad());
+						mapProductos.put(nombreP, aux);
+					}	
+				}
+			}
+		}
+	}
+	
+	public static void politicaNumerosEnterosConEOQ(String nombreProducto) {
 		double costoOrdenar = 300;
 		double costoMantener = 0.8;
 		double demandaPromedio = 260;
@@ -447,6 +473,17 @@ public class Innova {
 		System.out.println("\t\t- Consiste en obtener la opinión o percepción de un grupo de personas acerca de su proyección de consumo o interés por un producto o servicio.");
 	}
 	
+	public static void punto4() {
+		System.out.println("\n\n======================= NUMERO NO SE QUE CON EOQ  ============================\n\n");
+		for (int i = 0; i < ventas.length; i++) {
+			HashMap<String, Producto> map = unificar(ventas[i].getProductosVendidos());
+			System.out.println("|| Para la semana "+(i+1)+": ||");
+			for(Producto producto : map.values()) {
+				
+			}
+		}
+	}
+	
 	public static void main(String[] args) {
 		@SuppressWarnings("unused")
 		Innova n = new Innova();
@@ -457,9 +494,9 @@ public class Innova {
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
-		punto1();
-		punto2();
-		punto3();
+//		punto1();
+//		punto2();
+//		punto3();
 	}
 
 }
