@@ -251,22 +251,16 @@ public class Innova {
 		}
 	}
 	
-	public static void politicaNumerosEnterosConEOQ(String nombreProducto) {
-		double costoOrdenar = 300;
-		double costoMantener = 0.8;
-		double demandaPromedio = 260;
-		double eoq = 442;
-		int periodos = 2;
-		int demandas[] = new int[52];
-		int pedidos[] = new int[52];
-		int invFinal[] = new int[52];
-		int invInicial[] = new int[52];
-		invInicial[0] = 0;
-		int totales[] = new int[3];
-		int totalDemandas = 0;
-		int totalPedidos = 0;
-		int totalInvFinal = 0;
+	public static double[] politicaNumerosEnterosConEOQ(String nombreProducto) {
 		HashMap<String, Integer> aux = mapProductos.get(nombreProducto);
+		double costoOrdenarPorPedido = 300;
+		double costoMantenerPorPedido = 0.8;
+		int[] demandas = new int[52], pedidos = new int[52], invFinal = new int[52], invInicial = new int[52];
+		invInicial[0] = 0;
+		int totalDemandas = 0, totalInvFinal = 0;
+		int demandaPromedio = Math.round(totalDemandas/demandas.length);
+		int eoq = (int) Math.round(Math.sqrt((2*demandaPromedio*costoOrdenarPorPedido)/costoMantenerPorPedido));
+		int periodos = Math.round(eoq/demandaPromedio);
 		for (int i = 0; i < ventas.length; i++) {
 			demandas[i] = aux.get((i+1)+"");
 			totalDemandas += pedidos[i];
@@ -274,7 +268,6 @@ public class Innova {
 		for (int i = 0; i < demandas.length; i++) {
 			if(i%periodos == 0) {
 				pedidos[i] = demandas[i] + demandas[i+(periodos-1)];
-				totalPedidos += pedidos[i];
 			} 
 		}
 		for (int i = 0; i < pedidos.length; i++) {
@@ -283,7 +276,7 @@ public class Innova {
 			}else {
 				invFinal[i] = 0;
 			}
-			totalPedidos += invFinal[i];
+			totalInvFinal += invFinal[i];
 		}
 		for (int i = 0; i < invFinal.length; i++) {
 			if(invFinal[i] == 0) {
@@ -292,6 +285,19 @@ public class Innova {
 				invInicial[i] = 0;
 			}
 		}
+		int n = 0;
+		for (int i = 0; i < pedidos.length; i++) {
+			if(pedidos[i] > 0) {
+				n++;
+			}
+		}
+		int inventarioPromedio = Math.round(totalInvFinal/ventas.length);
+		int rotacionInventario = totalDemandas / inventarioPromedio;
+		double costoOrdenarTotal = costoOrdenarPorPedido * n;
+		double costoMantenerTotal = costoMantenerPorPedido * totalInvFinal;
+		double costoTotal = costoMantenerTotal + costoOrdenarTotal;
+		double[] resultado = {totalInvFinal, inventarioPromedio, rotacionInventario, costoOrdenarTotal, costoMantenerTotal, costoTotal, eoq, demandaPromedio, periodos};
+		return resultado;
 	}
 	
 	public void provisionPeriodica() {
