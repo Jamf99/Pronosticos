@@ -256,7 +256,42 @@ public class Innova {
 		double costoMantener = 0.8;
 		double demandaPromedio = 260;
 		double eoq = 442;
-		double periodos = 2;
+		int periodos = 2;
+		int demandas[] = new int[52];
+		int pedidos[] = new int[52];
+		int invFinal[] = new int[52];
+		int invInicial[] = new int[52];
+		invInicial[0] = 0;
+		int totales[] = new int[3];
+		int totalDemandas = 0;
+		int totalPedidos = 0;
+		int totalInvFinal = 0;
+		HashMap<String, Integer> aux = mapProductos.get(nombreProducto);
+		for (int i = 0; i < ventas.length; i++) {
+			demandas[i] = aux.get((i+1)+"");
+			totalDemandas += pedidos[i];
+		}
+		for (int i = 0; i < demandas.length; i++) {
+			if(i%periodos == 0) {
+				pedidos[i] = demandas[i] + demandas[i+(periodos-1)];
+				totalPedidos += pedidos[i];
+			} 
+		}
+		for (int i = 0; i < pedidos.length; i++) {
+			if(pedidos[i] != 0) {
+				invFinal[i] = pedidos[i] - demandas[i];
+			}else {
+				invFinal[i] = 0;
+			}
+			totalPedidos += invFinal[i];
+		}
+		for (int i = 0; i < invFinal.length; i++) {
+			if(invFinal[i] == 0) {
+				invInicial[i] = invFinal[i-(periodos-1)];
+			}else {
+				invInicial[i] = 0;
+			}
+		}
 	}
 	
 	public void provisionPeriodica() {
