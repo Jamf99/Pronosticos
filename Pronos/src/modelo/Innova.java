@@ -225,6 +225,17 @@ public class Innova {
 		return map;
 	}
 	
+	public void politicaNumerosEnterosConEOQ() {
+		double costoOrdenar = 300;
+		double costoMantener = 0.8;
+		double demandaPromedio = 260;
+		double eoq = 442;
+		double periodos = 2;
+	}
+	
+	public void provisionPeriodica() {
+		
+	}
 	
 	public static double[] proyeccionTendencia(String producto, int index) {
 		HashMap<Integer, Producto> map = ordenarPorDia(index, producto);
