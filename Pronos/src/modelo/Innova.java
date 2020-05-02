@@ -366,13 +366,13 @@ public class Innova {
 		int inicio = scanner.nextInt()-1;
 		System.out.println("Ingrese la semana final");
 		int fin = scanner.nextInt()-1;
-		System.out.println("seleccione el porcentaje de la varianza(90%, 95% o 98%");
-		int f = scanner.nextInt();
+		System.out.println("seleccione el porcentaje de la varianza (90%, 95% o 98%");
+		String f = scanner.nextLine();
 		for (int i = inicio; i <= fin; i++) {
 			ArrayList<Producto> productos = ventas.get(i).getProductosVendidos(); 
 			for (int j = 0; j < productos.size(); j++) {
 				if (productos.get(j).getNombre().equals(producto.getNombre())) {
-					sumatoria = Math.pow(productos.get(i).getCantidad() - calcularMedia(productos.get(j).getNombre(), ventas.get(i)), 2);
+					sumatoria = Math.pow(productos.get(j).getCantidad() - calcularMedia(productos.get(j).getNombre(), ventas.get(i)), 2);
 					varianza += sumatoria;
 					n++;
 				}
@@ -617,8 +617,12 @@ public class Innova {
 		punto2();
 		punto3();
 		System.setOut(original);
-		while (true) {
+		Scanner scanner = new Scanner(System.in);
+		int num = 1;
+		while (num == 1) {
 			System.out.println("la provision periodica es: " + provisionPeriodica());
+			System.out.println("Para seguir sacando la provision periodica ingrese 1");
+			num = scanner.nextInt();
 		}
 	}
 
