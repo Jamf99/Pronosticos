@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-Reporte hecho: 07:37:55 a. m.  01/05/2020
+Reporte hecho: 08:35:06 PM  01/05/2020
 
 
 ======================= VENTAS DE PRODUCTOS SEMANALES ============================
@@ -2998,5 +2997,3 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 
 	<<Encuesta de Mercado de Consumo>>
 		- Consiste en obtener la opinión o percepción de un grupo de personas acerca de su proyección de consumo o interés por un producto o servicio.
-=======
->>>>>>> 9fa1e58a34f9bb199bb4eac4d576cfac4e7b3f5c
