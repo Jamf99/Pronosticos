@@ -613,7 +613,9 @@ public class Innova {
 		punto2();
 		punto3();
 		System.setOut(original);
-		System.out.println("la provision periodica es: " + provisionPeriodica());
+		while (true) {
+			System.out.println("la provision periodica es: " + provisionPeriodica());
+		}
 	}
 
 }
