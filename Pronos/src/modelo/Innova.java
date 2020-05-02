@@ -366,6 +366,8 @@ public class Innova {
 		int inicio = scanner.nextInt()-1;
 		System.out.println("Ingrese la semana final");
 		int fin = scanner.nextInt()-1;
+		System.out.println("seleccione el porcentaje de la varianza(90%, 95% o 98%");
+		int f = scanner.nextInt();
 		for (int i = inicio; i <= fin; i++) {
 			ArrayList<Producto> productos = ventas.get(i).getProductosVendidos(); 
 			for (int j = 0; j < productos.size(); j++) {
