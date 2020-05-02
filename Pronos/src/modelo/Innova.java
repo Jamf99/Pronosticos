@@ -594,7 +594,9 @@ public class Innova {
 	public static void punto4() {
 		System.out.println("\n\n======================= POLÍTICA NÚMEROS ENTEROS CON EOQ  ============================\n\n");
 		for(String producto : mapProductos.keySet()) {
-			
+			System.out.println("<< Para el producto: "+producto+" >>");
+			double[] resultados = politicaNumerosEnterosConEOQ(producto);
+			System.out.println();
 		}
 	}
 	
