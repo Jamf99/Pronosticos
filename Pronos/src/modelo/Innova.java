@@ -34,10 +34,10 @@ public class Innova {
 			System.out.println((i+1) + " " + listOfValues.get(i).getNombre());
 		}
 		System.out.println("Seleccione un producto ingresando el numero que acompaña al producto deseado");
-		return listOfValues.get(scanner.nextInt()-1); 
+		return listOfValues.get(scanner.nextInt()-1);
 	}
 	
-	public static Producto getSemana(Producto producto) {
+	public static void getSemana(Producto producto) {
 		ArrayList<String> semanas = new ArrayList<String>();
 		for (int i = 0; i < ventas.length; i++) {
 			ArrayList<Producto> listaProductos = ventas[i].getProductosVendidos();
@@ -48,19 +48,9 @@ public class Innova {
 				}
 			}
 		}
-		Scanner scanner = new Scanner(System.in);
 		for (int i = 0; i < semanas.size(); i++) {
 			System.out.println((i+1) + " Semana " + semanas.get(i));
 		}
-		System.out.println("Seleccione semana con el indicador que acompaña a la semana");
-		String sem = semanas.get(scanner.nextInt()-1);
-		ArrayList<Producto> productos = ventas[(Integer.parseInt(sem))-1].getProductosVendidos();
-		for (int j = 0; j < ventas.length; j++) {
-			if (productos.get(j).equals(producto)) {
-				return productos.get(j);
-			}
-		}
-		return null;
 	}
 	
 	private static ArrayList<VentasSemanal> getSemanasF(Producto producto) {
@@ -360,7 +350,9 @@ public class Innova {
 	}
 	
 	public static double provisionPeriodica() {
-		Producto producto = getSemana(getProductos());
+//		Producto producto = getSemana(getProductos());
+		Producto producto = getProductos();
+		getSemana(producto);
 		double resul = producto.getCantidad() * (8) + 1.644854 * calcularDesviacionEstandarProMasterMegaCool(getSemanasF(producto), producto);
 		return resul;
 	}
@@ -621,7 +613,7 @@ public class Innova {
 		punto2();
 		punto3();
 		System.setOut(original);
-		provisionPeriodica();
+		System.out.println("la provision periodica es: " + provisionPeriodica());
 	}
 
 }
