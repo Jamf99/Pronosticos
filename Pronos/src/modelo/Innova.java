@@ -31,7 +31,7 @@ public class Innova {
 		ArrayList<Producto> listOfValues = new ArrayList<Producto>(values);
 		Scanner scanner = new Scanner(System.in);
 		for (int i = 0; i < listOfValues.size(); i++) {
-			System.out.println((i+1) + " " + listOfValues.get(i).getNombre());
+			System.out.println((i+1) + ". " + listOfValues.get(i).getNombre());
 		}
 		System.out.println("Seleccione un producto ingresando el numero que acompaña al producto deseado");
 		return listOfValues.get(scanner.nextInt()-1);
@@ -49,7 +49,7 @@ public class Innova {
 			}
 		}
 		for (int i = 0; i < semanas.size(); i++) {
-			System.out.println((i+1) + " Semana " + semanas.get(i));
+			System.out.println((i+1) + ". Semana " + semanas.get(i));
 		}
 	}
 	
@@ -70,6 +70,27 @@ public class Innova {
 	public Innova() {
 		ventas = new VentasSemanal[52];
 		inicializarVentas();
+		leerDatos();
+		PrintStream original = System.out;
+		try {
+			PrintStream fileStream = new PrintStream("datos/reporte.txt");
+			System.setOut(fileStream);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		dividirProductos();
+		punto1();
+		punto2();
+		punto3();
+		punto4();
+		System.setOut(original);
+		Scanner scanner = new Scanner(System.in);
+		int num = 1;
+		while (num == 1) {
+			System.out.println("La provision periódica es: " + provisionPeriodica());
+			System.out.println("Para seguir utilizando la provision periodica ingrese 1");
+			num = scanner.nextInt();
+		}
 	}
 	
 	public void inicializarVentas() {
@@ -307,18 +328,27 @@ public class Innova {
 		int[] demandas = new int[52], pedidos = new int[52], invFinal = new int[52], invInicial = new int[52];
 		invInicial[0] = 0;
 		int totalDemandas = 0, totalInvFinal = 0;
-		int demandaPromedio = Math.round(totalDemandas/demandas.length);
-		int eoq = (int) Math.round(Math.sqrt((2*demandaPromedio*costoOrdenarPorPedido)/costoMantenerPorPedido));
-		int periodos = Math.round(eoq/demandaPromedio);
 		for (int i = 0; i < ventas.length; i++) {
-			demandas[i] = aux.get((i+1)+"");
-			totalDemandas += pedidos[i];
+			if(aux.get((i+1)+"") != null) {
+				demandas[i] = aux.get((i+1)+"");
+				totalDemandas += demandas[i];
+			}
 		}
+		
+		int demandaPromedio = Math.round(totalDemandas/demandas.length);
+		double eoq = Math.round(Math.sqrt((2*demandaPromedio*costoOrdenarPorPedido)/costoMantenerPorPedido));
+		int periodos = (int) Math.ceil(eoq/demandaPromedio);
+		System.out.println(periodos);
 		for (int i = 0; i < demandas.length; i++) {
 			if(i%periodos == 0) {
-				pedidos[i] = demandas[i] + demandas[i+(periodos-1)];
-			} 
+				for (int j = 0; j < periodos; j++) {
+					if(i+j < demandas.length) {
+						pedidos[i] = demandas[i] + demandas[i+j];
+					}
+				}
+			}
 		}
+		
 		for (int i = 0; i < pedidos.length; i++) {
 			if(pedidos[i] != 0) {
 				invFinal[i] = pedidos[i] - demandas[i];
@@ -327,21 +357,29 @@ public class Innova {
 			}
 			totalInvFinal += invFinal[i];
 		}
-		for (int i = 0; i < invFinal.length; i++) {
-			if(invFinal[i] == 0) {
-				invInicial[i] = invFinal[i-(periodos-1)];
-			}else {
-				invInicial[i] = 0;
-			}
-		}
+		
 		int n = 0;
 		for (int i = 0; i < pedidos.length; i++) {
 			if(pedidos[i] > 0) {
 				n++;
 			}
 		}
-		int inventarioPromedio = Math.round(totalInvFinal/ventas.length);
-		int rotacionInventario = totalDemandas / inventarioPromedio;
+		
+		for (int i = 1; i < invFinal.length; i++) {
+			if(i % periodos == 0) {
+				invInicial[i] = invFinal[i-(periodos-1)];
+			}else {
+				invInicial[i] = 0;
+			}
+		}
+		int inventarioPromedio = 0;
+		int rotacionInventario = 0;
+		if(totalInvFinal != 0) {
+			inventarioPromedio = Math.round(totalInvFinal/ventas.length);
+			rotacionInventario = totalDemandas / inventarioPromedio;
+		}
+		
+		
 		double costoOrdenarTotal = costoOrdenarPorPedido * n;
 		double costoMantenerTotal = costoMantenerPorPedido * totalInvFinal;
 		double costoTotal = costoMantenerTotal + costoOrdenarTotal;
@@ -350,7 +388,6 @@ public class Innova {
 	}
 	
 	public static double provisionPeriodica() {
-//		Producto producto = getSemana(getProductos());
 		Producto producto = getProductos();
 		getSemana(producto);
 		double resul = producto.getCantidad() * (8) + 1.644854 * calcularDesviacionEstandarProMasterMegaCool(getSemanasF(producto), producto);
@@ -366,7 +403,7 @@ public class Innova {
 		int inicio = scanner.nextInt()-1;
 		System.out.println("Ingrese la semana final");
 		int fin = scanner.nextInt()-1;
-		System.out.println("seleccione el porcentaje de la varianza (90%, 95% o 98%");
+		System.out.println("Seleccione el nivel de confianza (90%, 95% o 98%)");
 		String f = scanner.nextLine();
 		for (int i = inicio; i <= fin; i++) {
 			ArrayList<Producto> productos = ventas.get(i).getProductosVendidos(); 
@@ -596,6 +633,7 @@ public class Innova {
 	public static void punto4() {
 		System.out.println("\n\n======================= POLÍTICA NÚMEROS ENTEROS CON EOQ  ============================\n\n");
 		for(String producto : mapProductos.keySet()) {
+			
 			System.out.println("<< Para el producto: "+producto+" >>");
 			double[] resultados = politicaNumerosEnterosConEOQ(producto);
 			System.out.println("\t- Total Inventario Final: "+resultados[0]+"\n\t- Inventario Promedio: "+resultados[1]+"\n\t- Rotación Inventario: "+
@@ -608,26 +646,7 @@ public class Innova {
 	public static void main(String[] args) {
 		@SuppressWarnings("unused")
 		Innova n = new Innova();
-		leerDatos();
-		PrintStream original = System.out;
-		try {
-			PrintStream fileStream = new PrintStream("datos/reporte.txt");
-			System.setOut(fileStream);
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
-		punto1();
-		punto2();
-		punto3();
-		punto4();
-		System.setOut(original);
-		Scanner scanner = new Scanner(System.in);
-		int num = 1;
-		while (num == 1) {
-			System.out.println("la provision periodica es: " + provisionPeriodica());
-			System.out.println("Para seguir sacando la provision periodica ingrese 1");
-			num = scanner.nextInt();
-		}
+		
 	}
 
 }
