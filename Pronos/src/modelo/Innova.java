@@ -598,7 +598,10 @@ public class Innova {
 		for(String producto : mapProductos.keySet()) {
 			System.out.println("<< Para el producto: "+producto+" >>");
 			double[] resultados = politicaNumerosEnterosConEOQ(producto);
-			System.out.println();
+			System.out.println("\t- Total Inventario Final: "+resultados[0]+"\n\t- Inventario Promedio: "+resultados[1]+"\n\t- Rotación Inventario: "+
+								resultados[2]+"\n\t- Costo ordenar total: "+resultados[3]+"\n\t- Costo mantener total: "+resultados[4]+
+								"\n\t- Costo total: "+resultados[5]+"\n\t- EOQ: "+resultados[6]+"\n\t- Demanda promedio: "+resultados[7]+
+								"\n\t- Periodos: "+resultados[8]);
 		}
 	}
 	
@@ -616,6 +619,7 @@ public class Innova {
 		punto1();
 		punto2();
 		punto3();
+		punto4();
 		System.setOut(original);
 		while (true) {
 			System.out.println("la provision periodica es: " + provisionPeriodica());
