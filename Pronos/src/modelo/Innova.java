@@ -371,15 +371,17 @@ public class Innova {
 		int n = 0;
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Ingrese la semana inicial");
-		int inicio = scanner.nextInt();
+		int inicio = scanner.nextInt()-1;
 		System.out.println("Ingrese la semana final");
-		int fin = scanner.nextInt();
-		for (int i = inicio; i < fin; i++) {
+		int fin = scanner.nextInt()-1;
+		for (int i = inicio; i <= fin; i++) {
 			ArrayList<Producto> productos = ventas.get(i).getProductosVendidos(); 
-			for (int j = 0; j < Innova.ventas.length; j++) {
-				sumatoria = Math.pow(productos.get(i).getCantidad() - calcularMedia(productos.get(j).getNombre(), ventas.get(i)), 2);
-				varianza += sumatoria;
-				n++;
+			for (int j = 0; j < productos.size(); j++) {
+				if (productos.get(j).getNombre().equals(producto.getNombre())) {
+					sumatoria = Math.pow(productos.get(i).getCantidad() - calcularMedia(productos.get(j).getNombre(), ventas.get(i)), 2);
+					varianza += sumatoria;
+					n++;
+				}
 			}
 		}
 		varianza/=(n);
