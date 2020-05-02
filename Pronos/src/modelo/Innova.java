@@ -403,8 +403,14 @@ public class Innova {
 		int inicio = scanner.nextInt()-1;
 		System.out.println("Ingrese la semana final");
 		int fin = scanner.nextInt()-1;
+<<<<<<< HEAD
 		System.out.println("Seleccione el nivel de confianza (90%, 95% o 98%)");
 		String f = scanner.nextLine();
+=======
+		System.out.println("seleccione el porcentaje de la varianza (90%, 95% o 98%)");
+		Scanner scan = new Scanner(System.in);
+		String f = scan.nextLine();
+>>>>>>> 576f70101e283e382b39cf046bb33df43132f6ed
 		for (int i = inicio; i <= fin; i++) {
 			ArrayList<Producto> productos = ventas.get(i).getProductosVendidos(); 
 			for (int j = 0; j < productos.size(); j++) {
