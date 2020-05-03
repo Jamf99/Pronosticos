@@ -51,12 +51,12 @@ public class Innova {
 		return semanas;
 	}
 	
-	private static ArrayList<VentasSemanal> getSemanasF(Producto producto) {
+	private static ArrayList<VentasSemanal> getSemanasF(String nomProd) {
 		ArrayList<VentasSemanal> semanas = new ArrayList<VentasSemanal>();
 		for (int i = 0; i < ventas.length; i++) {
 			ArrayList<Producto> listaProductos = ventas[i].getProductosVendidos();
 			for (int j = 0; j < listaProductos.size(); j++) {
-				if (listaProductos.get(j).getNombre().equals(producto.getNombre())) {
+				if (listaProductos.get(j).getNombre().equals(nomProd)) {
 					semanas.add(ventas[i]);
 					break;
 				}
@@ -395,6 +395,7 @@ public class Innova {
 		return resultado;
 	}
 	
+<<<<<<< HEAD
 	public int buscarProducto(String nombre, String semana) {
 		HashMap<String, Integer> prod = mapProductos.get(nombre);
 		int demanda = 0;
@@ -402,22 +403,33 @@ public class Innova {
 			demanda = mapProductos.get(nombre).get(semana);
 		}
 		return demanda;
+=======
+	public static int demandaSemanal(String nombre, int initialWeek, int endWeek) {
+		int demandaTotal = 0;
+		for (int i = initialWeek; i < endWeek; i++) {
+			ArrayList<Producto> prods = ventas[i].getProductosVendidos();
+			for (int j = 0; j < prods.size(); j++) {
+				if (prods.get(j).getNombre().equals(nombre)) {
+					demandaTotal += prods.get(j).getCantidad();
+				}
+			}
+		}
+		return demandaTotal;
+>>>>>>> 91a06378249f16f8a397175f97d8b749c30ef8e8
 	}
 	
 	public static double provisionPeriodica(String nomProd, int initialWeek, int endWeek, String percent) {
-		Producto producto = mapProductos.get(nomProd);
-		double resul = producto.getCantidad() * (8) + 1.644854 * calcularDesviacionEstandarProMasterMegaCool(getSemanasF(producto), producto, initialWeek, endWeek, percent);
-		return resul;
+		return demandaSemanal(nomProd, initialWeek, endWeek) * (8) + 1.644854 * calcularDesviacionEstandarProMasterMegaCool(getSemanasF(nomProd), nomProd, initialWeek, endWeek, percent);
 	}
 	
-	private static double calcularDesviacionEstandarProMasterMegaCool(ArrayList<VentasSemanal> ventas, Producto producto, int initialWeek, int endWeek, String percent) {
+	private static double calcularDesviacionEstandarProMasterMegaCool(ArrayList<VentasSemanal> ventas, String nomProd, int initialWeek, int endWeek, String percent) {
 		double varianza = 0;
 		double sumatoria;
 		int n = 0;
 		for (int i = initialWeek; i <= endWeek; i++) {
 			ArrayList<Producto> productos = ventas.get(i).getProductosVendidos(); 
 			for (int j = 0; j < productos.size(); j++) {
-				if (productos.get(j).getNombre().equals(producto.getNombre())) {
+				if (productos.get(j).getNombre().equals(nomProd)) {
 					sumatoria = Math.pow(productos.get(j).getCantidad() - calcularMedia(productos.get(j).getNombre(), ventas.get(i)), 2);
 					varianza += sumatoria;
 					n++;
