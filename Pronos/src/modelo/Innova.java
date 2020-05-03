@@ -37,7 +37,7 @@ public class Innova {
 //		return listOfValues.get(scanner.nextInt()-1);
 //	}
 	
-	public static ArrayList<String> getSemana(String nomProd) {
+	public ArrayList<String> getSemana(String nomProd) {
 		ArrayList<String> semanas = new ArrayList<String>();
 		for (int i = 0; i < ventas.length; i++) {
 			ArrayList<Producto> listaProductos = ventas[i].getProductosVendidos();
@@ -395,16 +395,8 @@ public class Innova {
 		return resultado;
 	}
 	
-<<<<<<< HEAD
-	public int buscarProducto(String nombre, String semana) {
-		HashMap<String, Integer> prod = mapProductos.get(nombre);
-		int demanda = 0;
-		if(mapProductos.get(nombre).get(semana) != null) {
-			demanda = mapProductos.get(nombre).get(semana);
-		}
-		return demanda;
-=======
-	public static int demandaSemanal(String nombre, int initialWeek, int endWeek) {
+
+	public int demandaSemanal(String nombre, int initialWeek, int endWeek) {
 		int demandaTotal = 0;
 		for (int i = initialWeek; i < endWeek; i++) {
 			ArrayList<Producto> prods = ventas[i].getProductosVendidos();
@@ -415,14 +407,23 @@ public class Innova {
 			}
 		}
 		return demandaTotal;
->>>>>>> 91a06378249f16f8a397175f97d8b749c30ef8e8
 	}
 	
-	public static double provisionPeriodica(String nomProd, int initialWeek, int endWeek, String percent) {
-		return demandaSemanal(nomProd, initialWeek, endWeek) * (8) + 1.644854 * calcularDesviacionEstandarProMasterMegaCool(getSemanasF(nomProd), nomProd, initialWeek, endWeek, percent);
+	public double provisionPeriodica(String nomProd, int initialWeek, int endWeek, int percent) {
+		double Z = 0;
+		if(percent == 95) {
+			Z = 1.644854;
+		}else if(percent == 90 ) {
+			Z = 1.28155157;
+		}else if(percent == 98) {
+			Z = 2.05374891;
+		}else {
+			return 0;
+		}
+		return demandaSemanal(nomProd, initialWeek, endWeek) * (8) + Z * calcularDesviacionEstandarProMasterMegaCool(getSemanasF(nomProd), nomProd, initialWeek, endWeek);
 	}
 	
-	private static double calcularDesviacionEstandarProMasterMegaCool(ArrayList<VentasSemanal> ventas, String nomProd, int initialWeek, int endWeek, String percent) {
+	private static double calcularDesviacionEstandarProMasterMegaCool(ArrayList<VentasSemanal> ventas, String nomProd, int initialWeek, int endWeek) {
 		double varianza = 0;
 		double sumatoria;
 		int n = 0;

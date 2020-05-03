@@ -7,6 +7,7 @@ import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
@@ -96,8 +97,17 @@ public class InterfazInnova extends JFrame implements ActionListener, ListSelect
 	}
 	
 	public void provisionPeriodica() {
-		int index = indexProd;
+		ArrayList<String> semanas = modelo.getSemana(prodSeleccionado);
 		
+		String mensajeSemanas = "";
+		for (int i = 0; i < semanas.size(); i++) {
+			mensajeSemanas += (i+1)+". Semana "+semanas.get(i)+"\n";
+		}
+		int semanaInicio = Integer.parseInt(JOptionPane.showInputDialog(this, mensajeSemanas));
+		int semanaFin = Integer.parseInt(JOptionPane.showInputDialog(this, mensajeSemanas));
+		int nivelConfianza = Integer.parseInt(JOptionPane.showInputDialog(this, "Escriba el nivel de confianza deseado (90%, 95% o 98%)"));
+		int resultado = (int) modelo.provisionPeriodica(prodSeleccionado, semanaInicio, semanaFin, nivelConfianza);
+		JOptionPane.showMessageDialog(this, "La provisión periódica es: "+resultado);
 	}
 
 	@Override
