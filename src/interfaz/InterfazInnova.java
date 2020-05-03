@@ -106,7 +106,7 @@ public class InterfazInnova extends JFrame implements ActionListener, ListSelect
 		int semanaInicio = Integer.parseInt(JOptionPane.showInputDialog(this, mensajeSemanas));
 		int semanaFin = Integer.parseInt(JOptionPane.showInputDialog(this, mensajeSemanas));
 		int nivelConfianza = Integer.parseInt(JOptionPane.showInputDialog(this, "Escriba el nivel de confianza deseado (90%, 95% o 98%)"));
-		int resultado = (int) modelo.provisionPeriodica(prodSeleccionado, semanaInicio, semanaFin, nivelConfianza);
+		int resultado = (int) modelo.provisionPeriodica(prodSeleccionado, semanaInicio-1, semanaFin-1, nivelConfianza);
 		JOptionPane.showMessageDialog(this, "La provisión periódica es: "+resultado);
 	}
 
