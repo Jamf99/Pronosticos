@@ -85,12 +85,12 @@ public class Innova {
 //		punto4();
 		System.setOut(original);
 		Scanner scanner = new Scanner(System.in);
-		int num = 1;
-		while (num == 1) {
-			System.out.println("La provision periódica es: " + provisionPeriodica());
-			System.out.println("Para seguir utilizando la provision periodica ingrese 1");
-			num = scanner.nextInt();
-		}
+//		int num = 1;
+//		while (num == 1) {
+//			System.out.println("La provision periódica es: " + provisionPeriodica());
+//			System.out.println("Para seguir utilizando la provision periodica ingrese 1");
+//			num = scanner.nextInt();
+//		}
 	}
 	
 	public void inicializarVentas() {
