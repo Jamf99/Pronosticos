@@ -17,40 +17,38 @@ public class Innova {
 	
 	private static VentasSemanal[] ventas;
 	
-	public static Producto getProductos() {
-		HashMap<String, Producto> mapita = new HashMap<String, Producto>();
-		for (int i = 0; i < ventas.length; i++) {
-			ArrayList<Producto> listaProductos = ventas[i].getProductosVendidos();
-			for (int j = 0; j < listaProductos.size(); j++) {
-				if (!mapita.containsKey(listaProductos.get(j).getNombre())) {
-					mapita.put(listaProductos.get(j).getNombre(), listaProductos.get(j));
-				}
-			}
-		}
-		Collection<Producto> values = mapita.values(); 
-		ArrayList<Producto> listOfValues = new ArrayList<Producto>(values);
-		Scanner scanner = new Scanner(System.in);
-		for (int i = 0; i < listOfValues.size(); i++) {
-			System.out.println((i+1) + ". " + listOfValues.get(i).getNombre());
-		}
-		System.out.println("Seleccione un producto ingresando el numero que acompaña al producto deseado");
-		return listOfValues.get(scanner.nextInt()-1);
-	}
+//	public static Producto getProductos() {
+//		HashMap<String, Producto> mapita = new HashMap<String, Producto>();
+//		for (int i = 0; i < ventas.length; i++) {
+//			ArrayList<Producto> listaProductos = ventas[i].getProductosVendidos();
+//			for (int j = 0; j < listaProductos.size(); j++) {
+//				if (!mapita.containsKey(listaProductos.get(j).getNombre())) {
+//					mapita.put(listaProductos.get(j).getNombre(), listaProductos.get(j));
+//				}
+//			}
+//		}
+//		Collection<Producto> values = mapita.values(); 
+//		ArrayList<Producto> listOfValues = new ArrayList<Producto>(values);
+//		Scanner scanner = new Scanner(System.in);
+//		for (int i = 0; i < listOfValues.size(); i++) {
+//			System.out.println((i+1) + ". " + listOfValues.get(i).getNombre());
+//		}
+//		System.out.println("Seleccione un producto ingresando el numero que acompaña al producto deseado");
+//		return listOfValues.get(scanner.nextInt()-1);
+//	}
 	
-	public static void getSemana(Producto producto) {
+	public static ArrayList<String> getSemana(String nomProd) {
 		ArrayList<String> semanas = new ArrayList<String>();
 		for (int i = 0; i < ventas.length; i++) {
 			ArrayList<Producto> listaProductos = ventas[i].getProductosVendidos();
 			for (int j = 0; j < listaProductos.size(); j++) {
-				if (listaProductos.get(j).getNombre().equals(producto.getNombre())) {
+				if (listaProductos.get(j).getNombre().equals(nomProd)) {
 					semanas.add(ventas[i].getSemana());
 					break;
 				}
 			}
 		}
-		for (int i = 0; i < semanas.size(); i++) {
-			System.out.println((i+1) + ". Semana " + semanas.get(i));
-		}
+		return semanas;
 	}
 	
 	private static ArrayList<VentasSemanal> getSemanasF(Producto producto) {
@@ -307,7 +305,7 @@ public class Innova {
 		return map;
 	}
 	
-	private HashMap<String, HashMap<String, Integer>> mapProductos = new HashMap<String, HashMap<String, Integer>>();
+	private static HashMap<String, HashMap<String, Integer>> mapProductos = new HashMap<String, HashMap<String, Integer>>();
 	
 	public  void dividirProductos() {
 		for (int i = 0; i < ventas.length; i++) {
@@ -397,26 +395,17 @@ public class Innova {
 		return resultado;
 	}
 	
-	public static double provisionPeriodica() {
-		Producto producto = getProductos();
-		getSemana(producto);
-		double resul = producto.getCantidad() * (8) + 1.644854 * calcularDesviacionEstandarProMasterMegaCool(getSemanasF(producto), producto);
+	public static double provisionPeriodica(String nomProd, int initialWeek, int endWeek, String percent) {
+		Producto producto = mapProductos.get(nomProd);
+		double resul = producto.getCantidad() * (8) + 1.644854 * calcularDesviacionEstandarProMasterMegaCool(getSemanasF(producto), producto, initialWeek, endWeek, percent);
 		return resul;
 	}
 	
-	private static double calcularDesviacionEstandarProMasterMegaCool(ArrayList<VentasSemanal> ventas, Producto producto) {
+	private static double calcularDesviacionEstandarProMasterMegaCool(ArrayList<VentasSemanal> ventas, Producto producto, int initialWeek, int endWeek, String percent) {
 		double varianza = 0;
 		double sumatoria;
 		int n = 0;
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("Ingrese la semana inicial");
-		int inicio = scanner.nextInt()-1;
-		System.out.println("Ingrese la semana final");
-		int fin = scanner.nextInt()-1;
-		System.out.println("Seleccione el porcentaje de la varianza (90%, 95% o 98%)");
-		Scanner scan = new Scanner(System.in);
-		String f = scan.nextLine();
-		for (int i = inicio; i <= fin; i++) {
+		for (int i = initialWeek; i <= endWeek; i++) {
 			ArrayList<Producto> productos = ventas.get(i).getProductosVendidos(); 
 			for (int j = 0; j < productos.size(); j++) {
 				if (productos.get(j).getNombre().equals(producto.getNombre())) {
