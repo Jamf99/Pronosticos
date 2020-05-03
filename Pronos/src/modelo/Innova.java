@@ -395,6 +395,15 @@ public class Innova {
 		return resultado;
 	}
 	
+	public int buscarProducto(String nombre, String semana) {
+		HashMap<String, Integer> prod = mapProductos.get(nombre);
+		int demanda = 0;
+		if(mapProductos.get(nombre).get(semana) != null) {
+			demanda = mapProductos.get(nombre).get(semana);
+		}
+		return demanda;
+	}
+	
 	public static double provisionPeriodica(String nomProd, int initialWeek, int endWeek, String percent) {
 		Producto producto = mapProductos.get(nomProd);
 		double resul = producto.getCantidad() * (8) + 1.644854 * calcularDesviacionEstandarProMasterMegaCool(getSemanasF(producto), producto, initialWeek, endWeek, percent);
