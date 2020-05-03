@@ -37,7 +37,7 @@ public class Innova {
 //		return listOfValues.get(scanner.nextInt()-1);
 //	}
 	
-	public static void getSemana(String nomProd) {
+	public static ArrayList<String> getSemana(String nomProd) {
 		ArrayList<String> semanas = new ArrayList<String>();
 		for (int i = 0; i < ventas.length; i++) {
 			ArrayList<Producto> listaProductos = ventas[i].getProductosVendidos();
@@ -48,9 +48,7 @@ public class Innova {
 				}
 			}
 		}
-		for (int i = 0; i < semanas.size(); i++) {
-			System.out.println((i+1) + ". Semana " + semanas.get(i));
-		}
+		return semanas;
 	}
 	
 	private static ArrayList<VentasSemanal> getSemanasF(Producto producto) {
@@ -399,7 +397,6 @@ public class Innova {
 	
 	public static double provisionPeriodica(String nomProd, int initialWeek, int endWeek, String percent) {
 		Producto producto = mapProductos.get(nomProd);
-		getSemana(nomProd);
 		double resul = producto.getCantidad() * (8) + 1.644854 * calcularDesviacionEstandarProMasterMegaCool(getSemanasF(producto), producto, initialWeek, endWeek, percent);
 		return resul;
 	}
