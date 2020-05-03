@@ -82,7 +82,7 @@ public class Innova {
 		punto1();
 		punto2();
 		punto3();
-		punto4();
+//		punto4();
 		System.setOut(original);
 		Scanner scanner = new Scanner(System.in);
 		int num = 1;
@@ -107,6 +107,16 @@ public class Innova {
 		}else {
 			return "Tendencia "+pendiente(ventas, producto);
 		}
+	}
+	
+	public String[] darProductos() {
+		String[] productos = new String[33];
+		int n = 0;
+		for(String producto : mapProductos.keySet()) {
+			productos[n] = producto;
+			n++;
+		}
+		return productos;
 	}
 	
 	public static String pendiente(VentasSemanal ventas, String producto) {
@@ -297,9 +307,9 @@ public class Innova {
 		return map;
 	}
 	
-	private static HashMap<String, HashMap<String, Integer>> mapProductos = new HashMap<String, HashMap<String, Integer>>();
+	private HashMap<String, HashMap<String, Integer>> mapProductos = new HashMap<String, HashMap<String, Integer>>();
 	
-	public static void dividirProductos() {
+	public  void dividirProductos() {
 		for (int i = 0; i < ventas.length; i++) {
 			HashMap<String, Integer> aux = new HashMap<String, Integer>();
 			for (int j = 0; j < ventas[i].getProductosVendidos().size(); j++) {
@@ -321,7 +331,7 @@ public class Innova {
 		}
 	}
 	
-	public static double[] politicaNumerosEnterosConEOQ(String nombreProducto) {
+	public double[] politicaNumerosEnterosConEOQ(String nombreProducto) {
 		HashMap<String, Integer> aux = mapProductos.get(nombreProducto);
 		double costoOrdenarPorPedido = 300;
 		double costoMantenerPorPedido = 0.8;
@@ -403,14 +413,9 @@ public class Innova {
 		int inicio = scanner.nextInt()-1;
 		System.out.println("Ingrese la semana final");
 		int fin = scanner.nextInt()-1;
-<<<<<<< HEAD
-		System.out.println("Seleccione el nivel de confianza (90%, 95% o 98%)");
-		String f = scanner.nextLine();
-=======
-		System.out.println("seleccione el porcentaje de la varianza (90%, 95% o 98%)");
+		System.out.println("Seleccione el porcentaje de la varianza (90%, 95% o 98%)");
 		Scanner scan = new Scanner(System.in);
 		String f = scan.nextLine();
->>>>>>> 576f70101e283e382b39cf046bb33df43132f6ed
 		for (int i = inicio; i <= fin; i++) {
 			ArrayList<Producto> productos = ventas.get(i).getProductosVendidos(); 
 			for (int j = 0; j < productos.size(); j++) {
@@ -636,23 +641,16 @@ public class Innova {
 		System.out.println("\t\t- Consiste en obtener la opinión o percepción de un grupo de personas acerca de su proyección de consumo o interés por un producto o servicio.");
 	}
 	
-	public static void punto4() {
-		System.out.println("\n\n======================= POLÍTICA NÚMEROS ENTEROS CON EOQ  ============================\n\n");
-		for(String producto : mapProductos.keySet()) {
-			
-			System.out.println("<< Para el producto: "+producto+" >>");
-			double[] resultados = politicaNumerosEnterosConEOQ(producto);
-			System.out.println("\t- Total Inventario Final: "+resultados[0]+"\n\t- Inventario Promedio: "+resultados[1]+"\n\t- Rotación Inventario: "+
-								resultados[2]+"\n\t- Costo ordenar total: "+resultados[3]+"\n\t- Costo mantener total: "+resultados[4]+
-								"\n\t- Costo total: "+resultados[5]+"\n\t- EOQ: "+resultados[6]+"\n\t- Demanda promedio: "+resultados[7]+
-								"\n\t- Periodos: "+resultados[8]);
-		}
-	}
-	
-	public static void main(String[] args) {
-		@SuppressWarnings("unused")
-		Innova n = new Innova();
-		
-	}
-
+//	public static void punto4() {
+//		System.out.println("\n\n======================= POLÍTICA NÚMEROS ENTEROS CON EOQ  ============================\n\n");
+//		for(String producto : mapProductos.keySet()) {
+//			
+//			System.out.println("<< Para el producto: "+producto+" >>");
+//			double[] resultados = politicaNumerosEnterosConEOQ(producto);
+//			System.out.println("\t- Total Inventario Final: "+resultados[0]+"\n\t- Inventario Promedio: "+resultados[1]+"\n\t- Rotación Inventario: "+
+//								resultados[2]+"\n\t- Costo ordenar total: "+resultados[3]+"\n\t- Costo mantener total: "+resultados[4]+
+//								"\n\t- Costo total: "+resultados[5]+"\n\t- EOQ: "+resultados[6]+"\n\t- Demanda promedio: "+resultados[7]+
+//								"\n\t- Periodos: "+resultados[8]);
+//		}
+//	}
 }

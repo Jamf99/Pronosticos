@@ -12,6 +12,7 @@ import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JList;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.UIManager;
@@ -32,6 +33,8 @@ public class InterfazInnova extends JFrame implements ActionListener, ListSelect
 	private JScrollPane scroll;
 	
 	private Innova modelo;
+	String prodSeleccionado = "";
+	int indexProd = 0;
 	
 	public InterfazInnova() {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -59,7 +62,7 @@ public class InterfazInnova extends JFrame implements ActionListener, ListSelect
 		panelListaProductos.setLayout(new BorderLayout());
 		panelListaProductos.setPreferredSize(new Dimension(0,400));
 		
-		listaProductos = new JList<String>();
+		listaProductos = new JList<String>(modelo.darProductos());
 		scroll = new JScrollPane(listaProductos);
 		scroll.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 		scroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
@@ -82,17 +85,35 @@ public class InterfazInnova extends JFrame implements ActionListener, ListSelect
 		}catch(Exception e){	
 		}
 	}
+	
+	public void politicaNumerosEnteros() {
+		double[] resultados = modelo.politicaNumerosEnterosConEOQ(prodSeleccionado);
+		String mensaje = "<< "+prodSeleccionado+" >>\n\t- Total Inventario Final: "+resultados[0]+"\n\t- Inventario Promedio: "+resultados[1]+"\n\t- Rotación Inventario: "+
+				resultados[2]+"\n\t- Costo ordenar total: "+resultados[3]+"\n\t- Costo mantener total: "+resultados[4]+
+				"\n\t- Costo total: "+resultados[5]+"\n\t- EOQ: "+resultados[6]+"\n\t- Demanda promedio: "+resultados[7]+
+				"\n\t- Periodos: "+resultados[8];
+		JOptionPane.showMessageDialog(this, mensaje);
+	}
+	
+	public void provisionPeriodica() {
+		int index = indexProd;
+		
+	}
 
 	@Override
-	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-		
+	public void actionPerformed(ActionEvent evento) {
+		String comando = evento.getActionCommand();
+		if(comando.equals(POLITICA_NUMEROS_ENTEROS)) {
+			politicaNumerosEnteros();
+		}else {
+			provisionPeriodica();
+		}
 	}
 	
 	@Override
 	public void valueChanged(ListSelectionEvent e) {
-		// TODO Auto-generated method stub
-		
+		prodSeleccionado = listaProductos.getSelectedValue();
+		indexProd = listaProductos.getSelectedIndex();
 	}
 	
 	public static void main(String[] args) {
