@@ -96,16 +96,31 @@ public class InterfazInnova extends JFrame implements ActionListener, ListSelect
 		JOptionPane.showMessageDialog(this, mensaje);
 	}
 	
-	public void provisionPeriodica() {
+	public void provisionPeriodica() throws Exception {
 		ArrayList<String> semanas = modelo.getSemana(prodSeleccionado);
 		
 		String mensajeSemanas = "";
 		for (int i = 0; i < semanas.size(); i++) {
 			mensajeSemanas += (i+1)+". Semana "+semanas.get(i)+"\n";
 		}
-		int semanaInicio = Integer.parseInt(JOptionPane.showInputDialog(this, mensajeSemanas));
-		int semanaFin = Integer.parseInt(JOptionPane.showInputDialog(this, mensajeSemanas));
+		int semanaInicio = Integer.parseInt(JOptionPane.showInputDialog(this, "Escoja el número de la semana incial:\n"+mensajeSemanas));
+		int semanaFin = Integer.parseInt(JOptionPane.showInputDialog(this, "Escoja el número de la semana final:\n"+mensajeSemanas));
+		if((semanaInicio > 0 && semanaInicio <= semanas.size()) || (semanaFin > 0 && semanaFin <= semanas.size())) {
+			if(semanaFin - semanaInicio < 0) {
+				throw new Exception();
+			}
+		}else {
+			throw new Exception();
+		}
+		
 		int nivelConfianza = Integer.parseInt(JOptionPane.showInputDialog(this, "Escriba el nivel de confianza deseado (90%, 95% o 98%)"));
+		if(nivelConfianza != 98) {
+			if(nivelConfianza != 90) {
+				if(nivelConfianza != 95) {
+					throw new Exception();
+				}
+			}
+		}
 		int resultado = (int) modelo.provisionPeriodica(prodSeleccionado, semanaInicio-1, semanaFin-1, nivelConfianza);
 		JOptionPane.showMessageDialog(this, "La provisión periódica es: "+resultado);
 	}
@@ -114,9 +129,19 @@ public class InterfazInnova extends JFrame implements ActionListener, ListSelect
 	public void actionPerformed(ActionEvent evento) {
 		String comando = evento.getActionCommand();
 		if(comando.equals(POLITICA_NUMEROS_ENTEROS)) {
-			politicaNumerosEnteros();
+			try {
+				politicaNumerosEnteros();
+			}catch(Exception e) {
+				JOptionPane.showMessageDialog(this, "Escoja primero un producto", "Error", JOptionPane.ERROR_MESSAGE);
+			}
+			
 		}else {
-			provisionPeriodica();
+			try {
+				provisionPeriodica();
+			}catch(Exception e) {
+				JOptionPane.showMessageDialog(this, "Verifique que haya ingresado los datos correctamente", "Error", JOptionPane.ERROR_MESSAGE);
+
+			}
 		}
 	}
 	

@@ -6,7 +6,6 @@ import java.io.PrintStream;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -60,15 +59,7 @@ public class Innova {
 		punto1();
 		punto2();
 		punto3();
-//		punto4();
 		System.setOut(original);
-		Scanner scanner = new Scanner(System.in);
-//		int num = 1;
-//		while (num == 1) {
-//			System.out.println("La provision periódica es: " + provisionPeriodica());
-//			System.out.println("Para seguir utilizando la provision periodica ingrese 1");
-//			num = scanner.nextInt();
-//		}
 	}
 	
 	public void inicializarVentas() {
