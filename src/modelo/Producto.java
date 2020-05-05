@@ -3,14 +3,16 @@ package modelo;
 public class Producto {
 	
 	private String nombre;
-	private int cantidad;
-	private int dia;
+	private int volumenAnual;
+	private double costo;
+	private int unidades;
 	
-	public Producto(String nombre, int cantidad, int dia) {
+	public Producto(String nombre, int volumenAnual, double costo, int unidades) {
 		super();
-		this.dia = dia;
 		this.nombre = nombre;
-		this.cantidad = cantidad;
+		this.volumenAnual = volumenAnual;
+		this.costo = costo;
+		this.unidades = unidades;
 	}
 
 	public String getNombre() {
@@ -21,20 +23,28 @@ public class Producto {
 		this.nombre = nombre;
 	}
 
-	public int getCantidad() {
-		return cantidad;
+	public int getVolumenAnual() {
+		return volumenAnual;
 	}
 
-	public void setCantidad(int cantidad) {
-		this.cantidad = cantidad;
+	public void setVolumenAnual(int volumenAnual) {
+		this.volumenAnual = volumenAnual;
 	}
 
-	public int getDia() {
-		return dia;
+	public double getCosto() {
+		return costo;
 	}
 
-	public void setDia(int dia) {
-		this.dia = dia;
+	public void setCosto(double costo) {
+		this.costo = costo;
 	}
 
+	public int getUnidades() {
+		return unidades;
+	}
+
+	public void setUnidades(int unidades) {
+		this.unidades = unidades;
+	}
+	
 }
