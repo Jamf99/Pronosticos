@@ -28,10 +28,13 @@ public class InterfazInnova extends JFrame implements ActionListener, ListSelect
 	
 	public static final String POLITICA_NUMEROS_ENTEROS = "Política números enteros";
 	public static final String PROVISION_PERIODICA = "Provisión periódica";
+	public static final String INVENTARIO_ABC = "Inventario ABC";
 	
-	private JButton butPoliticaNum, butProvisionPeriodica;
+	private JButton butPoliticaNum, butProvisionPeriodica, butInventarioABC;
 	private JList<String> listaProductos;
 	private JScrollPane scroll;
+	
+	private DialogoABC dialogoABC;
 	
 	private Innova modelo;
 	String prodSeleccionado = "";
@@ -53,6 +56,9 @@ public class InterfazInnova extends JFrame implements ActionListener, ListSelect
 		butProvisionPeriodica = new JButton(PROVISION_PERIODICA);
 		butProvisionPeriodica.setActionCommand(PROVISION_PERIODICA);
 		butProvisionPeriodica.addActionListener(this);
+		butInventarioABC = new JButton(INVENTARIO_ABC);
+		butInventarioABC.setActionCommand(INVENTARIO_ABC);
+		butInventarioABC.addActionListener(this);
 		
 		JPanel panelListaProductos = new JPanel();
 		Font font = new Font("Verdana", Font.BOLD, 15);
@@ -74,9 +80,10 @@ public class InterfazInnova extends JFrame implements ActionListener, ListSelect
 		TitledBorder border2 = BorderFactory.createTitledBorder("Opciones");
 		border2.setTitleColor(Color.BLUE);
 		aux3.setBorder(border2);
-		aux3.setLayout(new GridLayout(1,2));
+		aux3.setLayout(new GridLayout(1,3));
 		aux3.add(butPoliticaNum);
 		aux3.add(butProvisionPeriodica);
+		aux3.add(butInventarioABC);
 		
 		add(panelListaProductos, BorderLayout.NORTH);
 		add(aux3, BorderLayout.SOUTH);
@@ -135,16 +142,31 @@ public class InterfazInnova extends JFrame implements ActionListener, ListSelect
 				JOptionPane.showMessageDialog(this, "Escoja primero un producto", "Error", JOptionPane.ERROR_MESSAGE);
 			}
 			
-		}else {
+		}else if(comando.equals(PROVISION_PERIODICA)){
 			try {
 				provisionPeriodica();
 			}catch(Exception e) {
 				JOptionPane.showMessageDialog(this, "Verifique que haya ingresado los datos correctamente", "Error", JOptionPane.ERROR_MESSAGE);
 
 			}
+		}else {
+			abrirDialogo();
 		}
 	}
 	
+	public void abrirDialogo() {
+		dialogoABC = new DialogoABC(this);
+		dialogoABC.setLocationRelativeTo(this);
+		dialogoABC.setVisible(true);
+		this.setVisible(false);
+	}
+	
+	public void cerrarDialogo() {
+		dialogoABC.setVisible(false);
+		dialogoABC = null;
+		this.setVisible(true);
+	}
+
 	@Override
 	public void valueChanged(ListSelectionEvent e) {
 		prodSeleccionado = listaProductos.getSelectedValue();
