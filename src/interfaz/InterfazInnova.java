@@ -22,6 +22,7 @@ import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
 import modelo.Innova;
+import modelo.Producto;
 
 @SuppressWarnings("serial")
 public class InterfazInnova extends JFrame implements ActionListener, ListSelectionListener{
@@ -130,6 +131,10 @@ public class InterfazInnova extends JFrame implements ActionListener, ListSelect
 		}
 		int resultado = (int) modelo.provisionPeriodica(prodSeleccionado, semanaInicio-1, semanaFin-1, nivelConfianza);
 		JOptionPane.showMessageDialog(this, "La provisión periódica es: "+resultado);
+	}
+	
+	public Producto[] getProductos() {
+		return modelo.getProductos();
 	}
 
 	@Override

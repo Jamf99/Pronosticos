@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
@@ -39,6 +40,18 @@ public class Innova {
 		punto2();
 		punto3();
 		System.setOut(original);
+		calcularVolumenPorUnidad();
+		calcularCostoPorUnidad();
+		calcularVolumenAnualDinero();
+		calcularTotalVolumenAnualDinero();
+		calcularPorcentajeVolumenAnualDinero();
+		ordenarPorPorcentaje();
+		calcularAcumuladoPorcentaje();
+		clasificar();
+	}
+	
+	public Producto[] getProductos() {
+		return productos;
 	}
 	
 	public void leerDatosProductoExcel() {
@@ -66,6 +79,89 @@ public class Innova {
 				e.printStackTrace();
 			}
 		}
+	}
+	
+	public void calcularVolumenPorUnidad() {
+		for (int i = 0; i < productos.length; i++) {
+			productos[i].setVolumenPorUnidad(productos[i].getUnidades() * productos[i].getVolumenAnual());
+		}
+	}
+	
+	public void calcularCostoPorUnidad() {
+		for (int i = 0; i < productos.length; i++) {
+			productos[i].setCostoPorUnidad(productos[i].getCosto() / productos[i].getUnidades());
+		}
+	}
+	
+	public void calcularVolumenAnualDinero() {
+		for (int i = 0; i < productos.length; i++) {
+			productos[i].setVolumenAnualDinero(productos[i].getCostoPorUnidad() * productos[i].getVolumenPorUnidad());
+		}
+	}
+	
+	public double calcularTotalVolumenAnualDinero() {
+		double total = 0;
+		for (int i = 0; i < productos.length; i++) {
+			total += productos[i].getVolumenAnualDinero();
+		}
+		return total;
+	}
+	
+	public void calcularPorcentajeVolumenAnualDinero() {
+		for (int i = 0; i < productos.length; i++) {
+			productos[i].setPorcentajeVolumenAnualDinero(productos[i].getVolumenAnualDinero() / calcularTotalVolumenAnualDinero());
+		}
+	}
+	
+	public void ordenarPorPorcentaje() {
+		Arrays.sort(productos);
+	}
+	
+	public void calcularAcumuladoPorcentaje() {
+		for (int i = 0; i < productos.length; i++) {
+			if(i == 0) {
+				productos[i].setAcumuladoPorcentaje(productos[i].getPorcentajeVolumenAnualDinero());
+			}else {
+				productos[i].setAcumuladoPorcentaje(productos[i].getPorcentajeVolumenAnualDinero() + productos[i-1].getAcumuladoPorcentaje());
+			}
+		}
+	}
+	
+	public void clasificar() {
+		for (int i = 0; i < productos.length; i++) {
+			if(productos[i].getAcumuladoPorcentaje() < 0.8) {
+				productos[i].setClasificacion("A");
+			}else if(productos[i].getAcumuladoPorcentaje() >= 0.8 && productos[i].getAcumuladoPorcentaje() < 0.95) {
+				productos[i].setClasificacion("B");
+			}else {
+				productos[i].setClasificacion("C");
+			}
+		}
+	}
+	
+	public int[] representacionUnidadesABC() {
+		int unidadesA = 0, unidadesB = 0, unidadesC = 0;
+		for (int i = 0; i < productos.length; i++) {
+			if(productos[i].getClasificacion().equals("A")) {
+				unidadesA += productos[i].getVolumenPorUnidad();
+			}else if(productos[i].getClasificacion().equals("B")) {
+				unidadesB += productos[i].getVolumenPorUnidad();
+			}else {
+				unidadesC += productos[i].getVolumenPorUnidad();
+			}
+		}
+		int total = unidadesA + unidadesB + unidadesC;
+		int resultado[] = {unidadesA, unidadesB, unidadesC, total};
+		return resultado;
+	}
+	
+	public double[] representacionPorcentajesABC() {
+		int[] representacionUnidadesABC = representacionUnidadesABC();
+		double porcentajeA = representacionUnidadesABC[0]/representacionUnidadesABC[3];
+		double porcentajeB = representacionUnidadesABC[1]/representacionUnidadesABC[3];
+		double porcentajeC = representacionUnidadesABC[2]/representacionUnidadesABC[3];
+		double resultado[] = {porcentajeA, porcentajeB, porcentajeC};
+		return resultado;
 	}
 	
 	public ArrayList<String> getSemana(String nomProd) {
