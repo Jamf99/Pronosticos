@@ -12,7 +12,6 @@ import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Scanner;
 
 public class Innova {
@@ -723,7 +722,6 @@ public class Innova {
 		ArrayList<ProductoDiario> prods = new ArrayList<ProductoDiario>();
 		try {
 			for (int i = ventasne.size()-1; i >= 0; i--) {
-				System.out.println(ventasne.get(i).getSemana());
 				ArrayList<ProductoDiario> arProd = ventasne.get(i).getProductosVendidos();
 				if (!arProd.isEmpty()) {
 					for (int j = 0; j < arProd.size(); j++) {
