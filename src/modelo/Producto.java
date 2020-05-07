@@ -1,16 +1,24 @@
 package modelo;
 
-public class Producto {
+public class Producto implements Comparable<Producto>{
 	
 	private String nombre;
-	private int cantidad;
-	private int dia;
+	private int volumenAnual;
+	private double costo;
+	private int unidades;
+	private int volumenPorUnidad;
+	private double costoPorUnidad;
+	private double volumenAnualDinero;
+	private double porcentajeVolumenAnualDinero;
+	private double acumuladoPorcentaje;
+	private String clasificacion;
 	
-	public Producto(String nombre, int cantidad, int dia) {
+	public Producto(String nombre, int volumenAnual, double costo, int unidades) {
 		super();
-		this.dia = dia;
 		this.nombre = nombre;
-		this.cantidad = cantidad;
+		this.volumenAnual = volumenAnual;
+		this.costo = costo;
+		this.unidades = unidades;
 	}
 
 	public String getNombre() {
@@ -21,20 +29,86 @@ public class Producto {
 		this.nombre = nombre;
 	}
 
-	public int getCantidad() {
-		return cantidad;
+	public int getVolumenAnual() {
+		return volumenAnual;
 	}
 
-	public void setCantidad(int cantidad) {
-		this.cantidad = cantidad;
+	public void setVolumenAnual(int volumenAnual) {
+		this.volumenAnual = volumenAnual;
 	}
 
-	public int getDia() {
-		return dia;
+	public double getCosto() {
+		return costo;
 	}
 
-	public void setDia(int dia) {
-		this.dia = dia;
+	public void setCosto(double costo) {
+		this.costo = costo;
 	}
 
+	public int getUnidades() {
+		return unidades;
+	}
+
+	public void setUnidades(int unidades) {
+		this.unidades = unidades;
+	}
+
+	public int getVolumenPorUnidad() {
+		return volumenPorUnidad;
+	}
+
+	public void setVolumenPorUnidad(int volumenPorUnidad) {
+		this.volumenPorUnidad = volumenPorUnidad;
+	}
+
+	public double getCostoPorUnidad() {
+		return costoPorUnidad;
+	}
+
+	public void setCostoPorUnidad(double costoPorUnidad) {
+		this.costoPorUnidad = costoPorUnidad;
+	}
+
+	public double getVolumenAnualDinero() {
+		return volumenAnualDinero;
+	}
+
+	public void setVolumenAnualDinero(double volumenAnualDinero) {
+		this.volumenAnualDinero = volumenAnualDinero;
+	}
+
+	public double getPorcentajeVolumenAnualDinero() {
+		return porcentajeVolumenAnualDinero;
+	}
+
+	public void setPorcentajeVolumenAnualDinero(double porcentajeVolumenAnualDinero) {
+		this.porcentajeVolumenAnualDinero = porcentajeVolumenAnualDinero;
+	}
+
+	public double getAcumuladoPorcentaje() {
+		return acumuladoPorcentaje;
+	}
+
+	public void setAcumuladoPorcentaje(double acumuladoPorcentaje) {
+		this.acumuladoPorcentaje = acumuladoPorcentaje;
+	}
+
+	public String getClasificacion() {
+		return clasificacion;
+	}
+
+	public void setClasificacion(String clasificacion) {
+		this.clasificacion = clasificacion;
+	}
+
+	@Override
+	public int compareTo(Producto p) {
+		if(porcentajeVolumenAnualDinero > p.getPorcentajeVolumenAnualDinero()) {
+			return -1;
+		}else if(porcentajeVolumenAnualDinero < p.getPorcentajeVolumenAnualDinero()) {
+			return 1;
+		}
+		return 0;
+	}
+	
 }
