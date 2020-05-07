@@ -26,27 +26,27 @@ public class Innova {
 		inicializarVentas();
 		leerDatos();
 		PrintStream original = System.out;
-//		try {
-//			PrintStream fileStream = new PrintStream("datos/reporte.txt");
-//			System.setOut(fileStream);
-//		} catch (FileNotFoundException e) {
-//			e.printStackTrace();
-//		}
+		try {
+			PrintStream fileStream = new PrintStream("datos/reporte.txt");
+			System.setOut(fileStream);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
 		dividirProductos();
 		productos = new Producto[57];
 		leerDatosProductoExcel();
-//		punto1();
-//		punto2();
+		punto1();
+		punto2();
 		punto3();
-//		System.setOut(original);
-//		calcularVolumenPorUnidad();
-//		calcularCostoPorUnidad();
-//		calcularVolumenAnualDinero();
-//		calcularTotalVolumenAnualDinero();
-//		calcularPorcentajeVolumenAnualDinero();
-//		ordenarPorPorcentaje();
-//		calcularAcumuladoPorcentaje();
-//		clasificar();
+		System.setOut(original);
+		calcularVolumenPorUnidad();
+		calcularCostoPorUnidad();
+		calcularVolumenAnualDinero();
+		calcularTotalVolumenAnualDinero();
+		calcularPorcentajeVolumenAnualDinero();
+		ordenarPorPorcentaje();
+		calcularAcumuladoPorcentaje();
+		clasificar();
 	}
 	
 	public Producto[] getProductos() {
@@ -135,6 +135,8 @@ public class Innova {
 			productos[i].setPorcentajeVolumenAnualDinero(productos[i].getVolumenAnualDinero() / calcularTotalVolumenAnualDinero());
 		}
 	}
+	
+	
 	
 	public void ordenarPorPorcentaje() {
 		Arrays.sort(productos);
@@ -749,7 +751,7 @@ public class Innova {
 			ArrayList<ProductoDiario> f = new ArrayList<ProductoDiario>();
 			VentasSemanal v = new VentasSemanal((i+1)+"", f);
 			arVentas.add(v);
-		}
+		}	
 		for (int i = 0; i < ventas.length; i++) {
 			HashMap<String, ProductoDiario> map = unificar(arVentas.get(i).getProductosVendidos());
 			System.out.println("|| Para la semana "+(i+1)+" de 2020: ||");
@@ -782,6 +784,8 @@ public class Innova {
 			arVentas.set(len, arProd);
 			System.out.println("=========================================");
 		}
+		
+		
 		System.out.println("== Para los patrones erráticos se recomiendan seguir las diferentes técnicas y métodos de pronóstico ==" );
 		System.out.println("\t<<Método de Delphi>>");
 		System.out.println("\t\t- Consiste en la selección de un grupo de expertos a los que se les pregunta si opinión sobre cuestiones"
