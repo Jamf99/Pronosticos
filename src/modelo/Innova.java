@@ -26,27 +26,27 @@ public class Innova {
 		inicializarVentas();
 		leerDatos();
 		PrintStream original = System.out;
-		try {
-			PrintStream fileStream = new PrintStream("datos/reporte.txt");
-			System.setOut(fileStream);
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
+//		try {
+//			PrintStream fileStream = new PrintStream("datos/reporte.txt");
+//			System.setOut(fileStream);
+//		} catch (FileNotFoundException e) {
+//			e.printStackTrace();
+//		}
 		dividirProductos();
 		productos = new Producto[57];
 		leerDatosProductoExcel();
-		punto1();
-		punto2();
+//		punto1();
+//		punto2();
 		punto3();
-		System.setOut(original);
-		calcularVolumenPorUnidad();
-		calcularCostoPorUnidad();
-		calcularVolumenAnualDinero();
-		calcularTotalVolumenAnualDinero();
-		calcularPorcentajeVolumenAnualDinero();
-		ordenarPorPorcentaje();
-		calcularAcumuladoPorcentaje();
-		clasificar();
+//		System.setOut(original);
+//		calcularVolumenPorUnidad();
+//		calcularCostoPorUnidad();
+//		calcularVolumenAnualDinero();
+//		calcularTotalVolumenAnualDinero();
+//		calcularPorcentajeVolumenAnualDinero();
+//		ordenarPorPorcentaje();
+//		calcularAcumuladoPorcentaje();
+//		clasificar();
 	}
 	
 	public Producto[] getProductos() {
@@ -135,8 +135,6 @@ public class Innova {
 			productos[i].setPorcentajeVolumenAnualDinero(productos[i].getVolumenAnualDinero() / calcularTotalVolumenAnualDinero());
 		}
 	}
-	
-	
 	
 	public void ordenarPorPorcentaje() {
 		Arrays.sort(productos);
