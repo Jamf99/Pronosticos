@@ -135,7 +135,7 @@ public class DialogoABC extends JDialog implements ActionListener{
 		
 		matriz[57][0] = "TOTAL";
 		matriz[57][1] = numero.format(principal.darTotalVolumenAnual());
-		matriz[57][3] = numero.format(principal.darTotalVolumenPorUnidad());
+		matriz[57][4] = numero.format(principal.darTotalVolumenPorUnidad());
 		matriz[57][5] = pesos.format(principal.darTotalVolumenAnualDinero());
 		matriz[57][7] = porcentaje.format(principal.darTotalPorcentaje());
 		
