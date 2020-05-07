@@ -107,11 +107,37 @@ public class Innova {
 		return total;
 	}
 	
+	public int calcularTotalVolumenAnual() {
+		int total = 0;
+		for (int i = 0; i < productos.length; i++) {
+			total += productos[i].getVolumenAnual();
+		}
+		return total;
+	}
+	
+	public int calcularTotalVolumenPorUnidad() {
+		int total = 0;
+		for (int i = 0; i < productos.length; i++) {
+			total += productos[i].getVolumenPorUnidad();
+		}
+		return total;
+	}
+	
+	public double calcularTotalPorcentaje() {
+		double total = 0;
+		for (int i = 0; i < productos.length; i++) {
+			total += productos[i].getPorcentajeVolumenAnualDinero();
+		}
+		return total;
+	}
+	
 	public void calcularPorcentajeVolumenAnualDinero() {
 		for (int i = 0; i < productos.length; i++) {
 			productos[i].setPorcentajeVolumenAnualDinero(productos[i].getVolumenAnualDinero() / calcularTotalVolumenAnualDinero());
 		}
 	}
+	
+	
 	
 	public void ordenarPorPorcentaje() {
 		Arrays.sort(productos);
@@ -129,9 +155,9 @@ public class Innova {
 	
 	public void clasificar() {
 		for (int i = 0; i < productos.length; i++) {
-			if(productos[i].getAcumuladoPorcentaje() < 0.8) {
+			if(productos[i].getAcumuladoPorcentaje() < 0.80) {
 				productos[i].setClasificacion("A");
-			}else if(productos[i].getAcumuladoPorcentaje() >= 0.8 && productos[i].getAcumuladoPorcentaje() < 0.95) {
+			}else if(productos[i].getAcumuladoPorcentaje() >= 0.80 && productos[i].getAcumuladoPorcentaje() < 0.95) {
 				productos[i].setClasificacion("B");
 			}else {
 				productos[i].setClasificacion("C");
@@ -139,7 +165,7 @@ public class Innova {
 		}
 	}
 	
-	public int[] representacionUnidadesABC() {
+	public double[] representacionUnidadesABC() {
 		int unidadesA = 0, unidadesB = 0, unidadesC = 0;
 		for (int i = 0; i < productos.length; i++) {
 			if(productos[i].getClasificacion().equals("A")) {
@@ -151,16 +177,17 @@ public class Innova {
 			}
 		}
 		int total = unidadesA + unidadesB + unidadesC;
-		int resultado[] = {unidadesA, unidadesB, unidadesC, total};
+		double resultado[] = {unidadesA, unidadesB, unidadesC, total};
 		return resultado;
 	}
 	
 	public double[] representacionPorcentajesABC() {
-		int[] representacionUnidadesABC = representacionUnidadesABC();
+		double[] representacionUnidadesABC = representacionUnidadesABC();
 		double porcentajeA = representacionUnidadesABC[0]/representacionUnidadesABC[3];
 		double porcentajeB = representacionUnidadesABC[1]/representacionUnidadesABC[3];
 		double porcentajeC = representacionUnidadesABC[2]/representacionUnidadesABC[3];
-		double resultado[] = {porcentajeA, porcentajeB, porcentajeC};
+		double total = porcentajeA + porcentajeB + porcentajeC;
+		double resultado[] = {porcentajeA, porcentajeB, porcentajeC, total};
 		return resultado;
 	}
 	
@@ -445,7 +472,6 @@ public class Innova {
 		int demandaPromedio = Math.round(totalDemandas/demandas.length);
 		double eoq = Math.round(Math.sqrt((2*demandaPromedio*costoOrdenarPorPedido)/costoMantenerPorPedido));
 		int periodos = (int) Math.ceil(eoq/demandaPromedio);
-		System.out.println(periodos);
 		for (int i = 0; i < demandas.length; i++) {
 			if(i%periodos == 0) {
 				for (int j = 0; j < periodos; j++) {

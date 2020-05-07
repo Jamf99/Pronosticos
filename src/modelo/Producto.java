@@ -103,9 +103,9 @@ public class Producto implements Comparable<Producto>{
 
 	@Override
 	public int compareTo(Producto p) {
-		if(porcentajeVolumenAnualDinero < p.getPorcentajeVolumenAnualDinero()) {
+		if(porcentajeVolumenAnualDinero > p.getPorcentajeVolumenAnualDinero()) {
 			return -1;
-		}else if(porcentajeVolumenAnualDinero > p.getPorcentajeVolumenAnualDinero()) {
+		}else if(porcentajeVolumenAnualDinero < p.getPorcentajeVolumenAnualDinero()) {
 			return 1;
 		}
 		return 0;

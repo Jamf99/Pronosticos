@@ -29,7 +29,7 @@ public class InterfazInnova extends JFrame implements ActionListener, ListSelect
 	
 	public static final String POLITICA_NUMEROS_ENTEROS = "Política números enteros";
 	public static final String PROVISION_PERIODICA = "Provisión periódica";
-	public static final String INVENTARIO_ABC = "Inventario ABC";
+	public static final String INVENTARIO_ABC = "Clasificación ABC";
 	
 	private JButton butPoliticaNum, butProvisionPeriodica, butInventarioABC;
 	private JList<String> listaProductos;
@@ -68,7 +68,7 @@ public class InterfazInnova extends JFrame implements ActionListener, ListSelect
 		border.setTitleFont(font);
 		panelListaProductos.setBorder(border);
 		panelListaProductos.setLayout(new BorderLayout());
-		panelListaProductos.setPreferredSize(new Dimension(0,400));
+		panelListaProductos.setPreferredSize(new Dimension(0,390));
 		
 		listaProductos = new JList<String>(modelo.darProductos());
 		scroll = new JScrollPane(listaProductos);
@@ -85,6 +85,7 @@ public class InterfazInnova extends JFrame implements ActionListener, ListSelect
 		aux3.add(butPoliticaNum);
 		aux3.add(butProvisionPeriodica);
 		aux3.add(butInventarioABC);
+		listaProductos.setSelectedIndex(0);
 		
 		add(panelListaProductos, BorderLayout.NORTH);
 		add(aux3, BorderLayout.SOUTH);
@@ -135,6 +136,30 @@ public class InterfazInnova extends JFrame implements ActionListener, ListSelect
 	
 	public Producto[] getProductos() {
 		return modelo.getProductos();
+	}
+	
+	public int darTotalVolumenAnual() {
+		return modelo.calcularTotalVolumenAnual();
+	}
+	
+	public int darTotalVolumenPorUnidad() {
+		return modelo.calcularTotalVolumenPorUnidad();
+	}
+	
+	public double darTotalVolumenAnualDinero() {
+		return modelo.calcularTotalVolumenAnualDinero();
+	}
+	
+	public double darTotalPorcentaje() {
+		return modelo.calcularTotalPorcentaje();
+	}
+	
+	public double[] darRepresentacionUnidadesABC() {
+		return modelo.representacionUnidadesABC();
+	}
+	
+	public double[] darRepresentacionPorcentajesABC() {
+		return modelo.representacionPorcentajesABC();
 	}
 
 	@Override
