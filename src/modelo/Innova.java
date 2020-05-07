@@ -718,7 +718,7 @@ public class Innova {
 		}
 	}
 	
-	private ArrayList<ProductoDiario> buscarOchoAnteriores(ArrayList<VentasSemanal> ventasne, ProductoDiario prod) {
+	private ArrayList<ProductoDiario> buscarOchoAnteriores(ArrayList<VentasSemanal> ventasne, String prod) {
 		ArrayList<ProductoDiario> prods = new ArrayList<ProductoDiario>();
 		try {
 			for (int i = ventasne.size()-1; i >= 0; i--) {
@@ -728,7 +728,7 @@ public class Innova {
 						if (prods.size() == 8) {
 							return prods;
 						}
-						if (arProd.get(j).getNombre().equals(prod.getNombre())) {
+						if (arProd.get(j).getNombre().equals(prod)) {
 							prods.add(arProd.get(j));
 						}
 					}
@@ -756,28 +756,28 @@ public class Innova {
 			HashMap<String, ProductoDiario> map = unificar(arVentas.get(i).getProductosVendidos());
 			System.out.println("|| Para la semana "+(i+1)+" de 2020: ||");
 			System.out.println("=========================================");
-			for(ProductoDiario producto : map.values()) {
-				System.out.println("- Para el producto: "+producto.getNombre());
-				double cvd = calcularCVD(arVentas.get(i), producto.getNombre());
-				String patron = patron(cvd, arVentas.get(i), producto.getNombre());
+			for(String producto : mapProductos.keySet()) {
+				System.out.println("- Para el producto: "+producto);
+				double cvd = calcularCVD(arVentas.get(i), producto);
+				String patron = patron(cvd, arVentas.get(i), producto);
 				ArrayList<ProductoDiario> eigthBefore = buscarOchoAnteriores(arVentas, producto);
 				if(patron.equals("Horizontal")) {
 					System.out.println("\t<< Método de pronóstico Suavización Exponencial Simple>>");
-					double[] suavizacionSimple = suavizacionExponencialSimple(producto.getNombre(), i, eigthBefore);
-					System.out.println("\t\tPara la semana "+(i+2)+" la cantidad de ventas será para un alfa de 0.1 son: "+suavizacionSimple[0]+" unidades y un MAD de: +"+suavizacionSimple[1]+". Para un alfa de 0.3 son: "+suavizacionSimple[2]+" unidades y un MAD de: "+suavizacionSimple[3]);
+					double[] suavizacionSimple = suavizacionExponencialSimple(producto, i, eigthBefore);
+					System.out.println("\t\tLa cantidad de ventas será para un alfa de 0.1 son: "+suavizacionSimple[0]+" unidades y un MAD de: +"+suavizacionSimple[1]+". Para un alfa de 0.3 son: "+suavizacionSimple[2]+" unidades y un MAD de: "+suavizacionSimple[3]);
 					System.out.println("\t<< Método de pronóstico Promedio Móvil Simple>>");
-					double[] movilSimple = promedioMovilSimple(producto.getNombre(), i, eigthBefore);
-					System.out.println("\t\tPara la semana "+(i+2)+" la cantidad de ventas será para un N = 2, de:  "+movilSimple[0]+" unidades. MAD = "+movilSimple[1]);
+					double[] movilSimple = promedioMovilSimple(producto, i, eigthBefore);
+					System.out.println("\t\tLa cantidad de ventas será de:  "+movilSimple[0]+" unidades. MAD = "+movilSimple[1]);
 					System.out.println("\t<< Método de pronóstico Promedio Móvil Ponderado>>");
-					double[] movilPonderado = promedioMovilPonderado(producto.getNombre(), i, eigthBefore);
-					System.out.println("\t\tPara la semana "+(i+2)+" la cantidad de ventas será para un N = 2, de:  "+movilPonderado[0]+" unidades. MAD = "+movilPonderado[1]);
+					double[] movilPonderado = promedioMovilPonderado(producto, i, eigthBefore);
+					System.out.println("\t\tLa cantidad de ventas será de:  "+movilPonderado[0]+" unidades. MAD = "+movilPonderado[1]);
 				}else if(patron.equals("Tendencia Creciente") || patron.equals("Tendencia Decreciente")) {
 					System.out.println("\t<< Método de pronóstico Suavización Exponencial Doble>>");
-					double suavizacionDoble[] = suavizacionExponencialDoble(producto.getNombre(), i, eigthBefore);
-					System.out.println("\t\tPara la semana "+(i+2)+" la cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: "+suavizacionDoble[0]+" unidades. MAD = "+suavizacionDoble[1]);
+					double suavizacionDoble[] = suavizacionExponencialDoble(producto, i, eigthBefore);
+					System.out.println("\t\tLa cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: "+suavizacionDoble[0]+" unidades. MAD = "+suavizacionDoble[1]);
 					System.out.println("\t<< Método de Proyección de Tendencia>>");
-					double tendencia[] = proyeccionTendencia(producto.getNombre(), i, eigthBefore);
-					System.out.println("\t\tPara la semana "+(i+2)+" la cantidad de ventas serán "+tendencia[0]+" unidades.");
+					double tendencia[] = proyeccionTendencia(producto, i, eigthBefore);
+					System.out.println("\t\tLa cantidad de ventas serán "+tendencia[0]+" unidades.");
 				}
 			}
 			VentasSemanal arProd = new VentasSemanal((len+2)+"", new ArrayList<ProductoDiario>(map.values()));
