@@ -1,4 +1,4 @@
-Reporte hecho: 04:07:12 PM  07/05/2020
+Reporte hecho: 04:25:16 PM  07/05/2020
 
 
 ======================= VENTAS DE PRODUCTOS SEMANALES ============================
@@ -1090,10 +1090,10 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 =========================================
 
 
-======================= MÉTODOS DE PRONÓSTICO POR CADA PRODUCTO EN CADA SEMANA  ============================
+======================= MÉTODOS DE PRONÓSTICO POR CADA PRODUCTO PARA EL AÑO 2020 TENIENDO EN CUENTA 8 SEMANAS DE ANTICIPACIÓN  ============================
 
 
-|| Para la semana 1: ||
+|| Para la semana 1 de 2020: ||
 =========================================
 - Para el producto: PACA ENVASE GALON REDONDO X 24 UND                
 	<< Método de pronóstico Suavización Exponencial Simple>>
@@ -1103,7 +1103,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de pronóstico Promedio Móvil Ponderado>>
 		Para la semana 2 la cantidad de ventas será para un N = 2, de:  138.0 unidades. MAD = 8155.52
 =========================================
-|| Para la semana 2: ||
+|| Para la semana 2 de 2020: ||
 =========================================
 - Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
 	<< Método de pronóstico Suavización Exponencial Doble>>
@@ -1132,7 +1132,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de pronóstico Promedio Móvil Ponderado>>
 		Para la semana 3 la cantidad de ventas será para un N = 2, de:  14089.6 unidades. MAD = 13710.52
 =========================================
-|| Para la semana 3: ||
+|| Para la semana 3 de 2020: ||
 =========================================
 - Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
 - Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
@@ -1157,7 +1157,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de pronóstico Promedio Móvil Ponderado>>
 		Para la semana 4 la cantidad de ventas será para un N = 2, de:  5281.6 unidades. MAD = 4620.92
 =========================================
-|| Para la semana 4: ||
+|| Para la semana 4 de 2020: ||
 =========================================
 - Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
 	<< Método de pronóstico Suavización Exponencial Doble>>
@@ -1184,7 +1184,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de pronóstico Promedio Móvil Ponderado>>
 		Para la semana 5 la cantidad de ventas será para un N = 2, de:  4080.0 unidades. MAD = 15893.0
 =========================================
-|| Para la semana 5: ||
+|| Para la semana 5 de 2020: ||
 =========================================
 - Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
 	<< Método de pronóstico Suavización Exponencial Simple>>
@@ -1220,7 +1220,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de pronóstico Promedio Móvil Ponderado>>
 		Para la semana 6 la cantidad de ventas será para un N = 2, de:  14089.6 unidades. MAD = 13710.52
 =========================================
-|| Para la semana 6: ||
+|| Para la semana 6 de 2020: ||
 =========================================
 - Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
 	<< Método de pronóstico Suavización Exponencial Simple>>
@@ -1256,7 +1256,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de pronóstico Promedio Móvil Ponderado>>
 		Para la semana 7 la cantidad de ventas será para un N = 2, de:  20616.4 unidades. MAD = 10980.4
 =========================================
-|| Para la semana 7: ||
+|| Para la semana 7 de 2020: ||
 =========================================
 - Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
 	<< Método de pronóstico Suavización Exponencial Simple>>
@@ -1287,7 +1287,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de pronóstico Promedio Móvil Ponderado>>
 		Para la semana 8 la cantidad de ventas será para un N = 2, de:  20616.4 unidades. MAD = 11319.76
 =========================================
-|| Para la semana 8: ||
+|| Para la semana 8 de 2020: ||
 =========================================
 - Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
 	<< Método de pronóstico Suavización Exponencial Simple>>
@@ -1325,7 +1325,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de pronóstico Promedio Móvil Ponderado>>
 		Para la semana 9 la cantidad de ventas será para un N = 2, de:  20616.4 unidades. MAD = 10854.24
 =========================================
-|| Para la semana 9: ||
+|| Para la semana 9 de 2020: ||
 =========================================
 - Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
 	<< Método de pronóstico Suavización Exponencial Doble>>
@@ -1354,7 +1354,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de pronóstico Promedio Móvil Ponderado>>
 		Para la semana 10 la cantidad de ventas será para un N = 2, de:  20616.4 unidades. MAD = 11814.24
 =========================================
-|| Para la semana 10: ||
+|| Para la semana 10 de 2020: ||
 =========================================
 - Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
 	<< Método de pronóstico Suavización Exponencial Simple>>
@@ -1390,7 +1390,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de pronóstico Promedio Móvil Ponderado>>
 		Para la semana 11 la cantidad de ventas será para un N = 2, de:  20616.4 unidades. MAD = 10854.96
 =========================================
-|| Para la semana 11: ||
+|| Para la semana 11 de 2020: ||
 =========================================
 - Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
 	<< Método de pronóstico Suavización Exponencial Simple>>
@@ -1408,7 +1408,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de pronóstico Promedio Móvil Ponderado>>
 		Para la semana 12 la cantidad de ventas será para un N = 2, de:  1218.0 unidades. MAD = 0.0
 =========================================
-|| Para la semana 12: ||
+|| Para la semana 12 de 2020: ||
 =========================================
 - Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
 	<< Método de pronóstico Suavización Exponencial Simple>>
@@ -1444,7 +1444,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de pronóstico Promedio Móvil Ponderado>>
 		Para la semana 13 la cantidad de ventas será para un N = 2, de:  170.0 unidades. MAD = 0.0
 =========================================
-|| Para la semana 13: ||
+|| Para la semana 13 de 2020: ||
 =========================================
 - Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
 	<< Método de pronóstico Suavización Exponencial Doble>>
@@ -1473,7 +1473,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de pronóstico Promedio Móvil Ponderado>>
 		Para la semana 14 la cantidad de ventas será para un N = 2, de:  4080.0 unidades. MAD = 15893.0
 =========================================
-|| Para la semana 14: ||
+|| Para la semana 14 de 2020: ||
 =========================================
 - Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
 	<< Método de pronóstico Suavización Exponencial Doble>>
@@ -1500,7 +1500,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de pronóstico Promedio Móvil Ponderado>>
 		Para la semana 15 la cantidad de ventas será para un N = 2, de:  138.0 unidades. MAD = 8155.52
 =========================================
-|| Para la semana 15: ||
+|| Para la semana 15 de 2020: ||
 =========================================
 - Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
 	<< Método de pronóstico Suavización Exponencial Simple>>
@@ -1545,7 +1545,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de pronóstico Promedio Móvil Ponderado>>
 		Para la semana 16 la cantidad de ventas será para un N = 2, de:  14089.6 unidades. MAD = 13710.52
 =========================================
-|| Para la semana 16: ||
+|| Para la semana 16 de 2020: ||
 =========================================
 - Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
 	<< Método de pronóstico Suavización Exponencial Simple>>
@@ -1569,7 +1569,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de pronóstico Promedio Móvil Ponderado>>
 		Para la semana 17 la cantidad de ventas será para un N = 2, de:  1049.2 unidades. MAD = 779.72
 =========================================
-|| Para la semana 17: ||
+|| Para la semana 17 de 2020: ||
 =========================================
 - Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
 	<< Método de pronóstico Suavización Exponencial Doble>>
@@ -1605,7 +1605,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de pronóstico Promedio Móvil Ponderado>>
 		Para la semana 18 la cantidad de ventas será para un N = 2, de:  50.0 unidades. MAD = 0.0
 =========================================
-|| Para la semana 18: ||
+|| Para la semana 18 de 2020: ||
 =========================================
 - Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
 - Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
@@ -1623,7 +1623,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de pronóstico Promedio Móvil Ponderado>>
 		Para la semana 19 la cantidad de ventas será para un N = 2, de:  5281.6 unidades. MAD = 4620.92
 =========================================
-|| Para la semana 19: ||
+|| Para la semana 19 de 2020: ||
 =========================================
 - Para el producto: PACA ENVASE LITRO REDONDO X60UND                  
 	<< Método de pronóstico Suavización Exponencial Simple>>
@@ -1659,7 +1659,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de pronóstico Promedio Móvil Ponderado>>
 		Para la semana 20 la cantidad de ventas será para un N = 2, de:  138.0 unidades. MAD = 8155.52
 =========================================
-|| Para la semana 20: ||
+|| Para la semana 20 de 2020: ||
 =========================================
 - Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
 	<< Método de pronóstico Suavización Exponencial Simple>>
@@ -1684,7 +1684,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de pronóstico Promedio Móvil Ponderado>>
 		Para la semana 21 la cantidad de ventas será para un N = 2, de:  5281.6 unidades. MAD = 4620.92
 =========================================
-|| Para la semana 21: ||
+|| Para la semana 21 de 2020: ||
 =========================================
 - Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
 	<< Método de pronóstico Suavización Exponencial Simple>>
@@ -1720,7 +1720,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de pronóstico Promedio Móvil Ponderado>>
 		Para la semana 22 la cantidad de ventas será para un N = 2, de:  14089.6 unidades. MAD = 13710.52
 =========================================
-|| Para la semana 22: ||
+|| Para la semana 22 de 2020: ||
 =========================================
 - Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
 - Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
@@ -1745,7 +1745,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de pronóstico Promedio Móvil Ponderado>>
 		Para la semana 23 la cantidad de ventas será para un N = 2, de:  138.0 unidades. MAD = 8155.52
 =========================================
-|| Para la semana 23: ||
+|| Para la semana 23 de 2020: ||
 =========================================
 - Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
 	<< Método de pronóstico Suavización Exponencial Doble>>
@@ -1767,7 +1767,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de pronóstico Promedio Móvil Ponderado>>
 		Para la semana 24 la cantidad de ventas será para un N = 2, de:  12356.2 unidades. MAD = 7038.0
 =========================================
-|| Para la semana 24: ||
+|| Para la semana 24 de 2020: ||
 =========================================
 - Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
 	<< Método de pronóstico Suavización Exponencial Simple>>
@@ -1803,7 +1803,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de pronóstico Promedio Móvil Ponderado>>
 		Para la semana 25 la cantidad de ventas será para un N = 2, de:  14089.6 unidades. MAD = 13710.52
 =========================================
-|| Para la semana 25: ||
+|| Para la semana 25 de 2020: ||
 =========================================
 - Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
 	<< Método de pronóstico Suavización Exponencial Doble>>
@@ -1830,7 +1830,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de pronóstico Promedio Móvil Ponderado>>
 		Para la semana 26 la cantidad de ventas será para un N = 2, de:  20616.4 unidades. MAD = 10843.44
 =========================================
-|| Para la semana 26: ||
+|| Para la semana 26 de 2020: ||
 =========================================
 - Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
 	<< Método de pronóstico Suavización Exponencial Simple>>
@@ -1848,7 +1848,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 		Para la semana 27 la cantidad de ventas será para un N = 2, de:  1049.2 unidades. MAD = 779.56
 - Para el producto: PACA ENVASE TALCO GRANDE X100UND                  
 =========================================
-|| Para la semana 27: ||
+|| Para la semana 27 de 2020: ||
 =========================================
 - Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
 	<< Método de pronóstico Suavización Exponencial Simple>>
@@ -1877,7 +1877,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de pronóstico Promedio Móvil Ponderado>>
 		Para la semana 28 la cantidad de ventas será para un N = 2, de:  14089.6 unidades. MAD = 13710.52
 =========================================
-|| Para la semana 28: ||
+|| Para la semana 28 de 2020: ||
 =========================================
 - Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
 	<< Método de pronóstico Suavización Exponencial Doble>>
@@ -1899,7 +1899,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de pronóstico Promedio Móvil Ponderado>>
 		Para la semana 29 la cantidad de ventas será para un N = 2, de:  41.6 unidades. MAD = 839.8
 =========================================
-|| Para la semana 29: ||
+|| Para la semana 29 de 2020: ||
 =========================================
 - Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
 	<< Método de pronóstico Suavización Exponencial Simple>>
@@ -1937,7 +1937,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de pronóstico Promedio Móvil Ponderado>>
 		Para la semana 30 la cantidad de ventas será para un N = 2, de:  7716.6 unidades. MAD = 8593.16
 =========================================
-|| Para la semana 30: ||
+|| Para la semana 30 de 2020: ||
 =========================================
 - Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
 	<< Método de pronóstico Suavización Exponencial Simple>>
@@ -1973,7 +1973,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de Proyección de Tendencia>>
 		Para la semana 31 la cantidad de ventas serán 6986.195068983137 unidades.
 =========================================
-|| Para la semana 31: ||
+|| Para la semana 31 de 2020: ||
 =========================================
 - Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
 	<< Método de pronóstico Suavización Exponencial Doble>>
@@ -1993,7 +1993,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de pronóstico Promedio Móvil Ponderado>>
 		Para la semana 32 la cantidad de ventas será para un N = 2, de:  138.0 unidades. MAD = 8155.52
 =========================================
-|| Para la semana 32: ||
+|| Para la semana 32 de 2020: ||
 =========================================
 - Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
 	<< Método de pronóstico Suavización Exponencial Doble>>
@@ -2022,7 +2022,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de pronóstico Promedio Móvil Ponderado>>
 		Para la semana 33 la cantidad de ventas será para un N = 2, de:  14089.6 unidades. MAD = 13710.52
 =========================================
-|| Para la semana 33: ||
+|| Para la semana 33 de 2020: ||
 =========================================
 - Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
 	<< Método de pronóstico Suavización Exponencial Doble>>
@@ -2058,7 +2058,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de pronóstico Promedio Móvil Ponderado>>
 		Para la semana 34 la cantidad de ventas será para un N = 2, de:  7716.6 unidades. MAD = 8593.16
 =========================================
-|| Para la semana 34: ||
+|| Para la semana 34 de 2020: ||
 =========================================
 - Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
 	<< Método de pronóstico Suavización Exponencial Doble>>
@@ -2078,7 +2078,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de pronóstico Promedio Móvil Ponderado>>
 		Para la semana 35 la cantidad de ventas será para un N = 2, de:  14089.6 unidades. MAD = 13710.52
 =========================================
-|| Para la semana 35: ||
+|| Para la semana 35 de 2020: ||
 =========================================
 - Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
 	<< Método de pronóstico Suavización Exponencial Simple>>
@@ -2103,7 +2103,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de pronóstico Promedio Móvil Ponderado>>
 		Para la semana 36 la cantidad de ventas será para un N = 2, de:  3869.2 unidades. MAD = 3513.36
 =========================================
-|| Para la semana 36: ||
+|| Para la semana 36 de 2020: ||
 =========================================
 - Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
 	<< Método de pronóstico Suavización Exponencial Simple>>
@@ -2132,7 +2132,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de Proyección de Tendencia>>
 		Para la semana 37 la cantidad de ventas serán 6986.195068983137 unidades.
 =========================================
-|| Para la semana 37: ||
+|| Para la semana 37 de 2020: ||
 =========================================
 - Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
 - Para el producto: CUCHARA 130ML NUTRA                               
@@ -2150,7 +2150,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de pronóstico Promedio Móvil Ponderado>>
 		Para la semana 38 la cantidad de ventas será para un N = 2, de:  20616.4 unidades. MAD = 11546.0
 =========================================
-|| Para la semana 38: ||
+|| Para la semana 38 de 2020: ||
 =========================================
 - Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
 	<< Método de pronóstico Suavización Exponencial Simple>>
@@ -2186,7 +2186,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de pronóstico Promedio Móvil Ponderado>>
 		Para la semana 39 la cantidad de ventas será para un N = 2, de:  20616.4 unidades. MAD = 10846.32
 =========================================
-|| Para la semana 39: ||
+|| Para la semana 39 de 2020: ||
 =========================================
 - Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
 	<< Método de pronóstico Suavización Exponencial Simple>>
@@ -2231,7 +2231,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de pronóstico Promedio Móvil Ponderado>>
 		Para la semana 40 la cantidad de ventas será para un N = 2, de:  20616.4 unidades. MAD = 10846.24
 =========================================
-|| Para la semana 40: ||
+|| Para la semana 40 de 2020: ||
 =========================================
 - Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
 	<< Método de pronóstico Suavización Exponencial Simple>>
@@ -2260,7 +2260,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de pronóstico Promedio Móvil Ponderado>>
 		Para la semana 41 la cantidad de ventas será para un N = 2, de:  20616.4 unidades. MAD = 11548.8
 =========================================
-|| Para la semana 41: ||
+|| Para la semana 41 de 2020: ||
 =========================================
 - Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
 	<< Método de pronóstico Suavización Exponencial Simple>>
@@ -2305,7 +2305,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de pronóstico Promedio Móvil Ponderado>>
 		Para la semana 42 la cantidad de ventas será para un N = 2, de:  5751.8 unidades. MAD = 7062.28
 =========================================
-|| Para la semana 42: ||
+|| Para la semana 42 de 2020: ||
 =========================================
 - Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
 	<< Método de pronóstico Suavización Exponencial Doble>>
@@ -2325,7 +2325,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de Proyección de Tendencia>>
 		Para la semana 43 la cantidad de ventas serán 484.939696485623 unidades.
 =========================================
-|| Para la semana 43: ||
+|| Para la semana 43 de 2020: ||
 =========================================
 - Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
 	<< Método de pronóstico Suavización Exponencial Doble>>
@@ -2343,7 +2343,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de Proyección de Tendencia>>
 		Para la semana 44 la cantidad de ventas serán 6986.195068983137 unidades.
 =========================================
-|| Para la semana 44: ||
+|| Para la semana 44 de 2020: ||
 =========================================
 - Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
 	<< Método de pronóstico Suavización Exponencial Doble>>
@@ -2379,7 +2379,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de pronóstico Promedio Móvil Ponderado>>
 		Para la semana 45 la cantidad de ventas será para un N = 2, de:  20616.4 unidades. MAD = 12630.72
 =========================================
-|| Para la semana 45: ||
+|| Para la semana 45 de 2020: ||
 =========================================
 - Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
 	<< Método de pronóstico Suavización Exponencial Doble>>
@@ -2401,7 +2401,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de pronóstico Promedio Móvil Ponderado>>
 		Para la semana 46 la cantidad de ventas será para un N = 2, de:  20616.4 unidades. MAD = 10847.52
 =========================================
-|| Para la semana 46: ||
+|| Para la semana 46 de 2020: ||
 =========================================
 - Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
 	<< Método de pronóstico Suavización Exponencial Doble>>
@@ -2430,7 +2430,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de pronóstico Promedio Móvil Ponderado>>
 		Para la semana 47 la cantidad de ventas será para un N = 2, de:  20616.4 unidades. MAD = 12400.8
 =========================================
-|| Para la semana 47: ||
+|| Para la semana 47 de 2020: ||
 =========================================
 - Para el producto: PACA ENVASE TALCO MEDIANO X 100                   
 	<< Método de pronóstico Suavización Exponencial Simple>>
@@ -2466,7 +2466,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de Proyección de Tendencia>>
 		Para la semana 48 la cantidad de ventas serán 2048.5366841353025 unidades.
 =========================================
-|| Para la semana 48: ||
+|| Para la semana 48 de 2020: ||
 =========================================
 - Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
 	<< Método de pronóstico Suavización Exponencial Doble>>
@@ -2502,7 +2502,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de pronóstico Promedio Móvil Ponderado>>
 		Para la semana 49 la cantidad de ventas será para un N = 2, de:  20616.4 unidades. MAD = 10835.84
 =========================================
-|| Para la semana 49: ||
+|| Para la semana 49 de 2020: ||
 =========================================
 - Para el producto: PACA ENVASE GALON CUADRADO LACTEOS X 30 UNDS      
 	<< Método de pronóstico Suavización Exponencial Simple>>
@@ -2538,7 +2538,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de pronóstico Promedio Móvil Ponderado>>
 		Para la semana 50 la cantidad de ventas será para un N = 2, de:  20616.4 unidades. MAD = 10872.32
 =========================================
-|| Para la semana 50: ||
+|| Para la semana 50 de 2020: ||
 =========================================
 - Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
 	<< Método de pronóstico Suavización Exponencial Simple>>
@@ -2563,7 +2563,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de pronóstico Promedio Móvil Ponderado>>
 		Para la semana 51 la cantidad de ventas será para un N = 2, de:  20616.4 unidades. MAD = 10860.08
 =========================================
-|| Para la semana 51: ||
+|| Para la semana 51 de 2020: ||
 =========================================
 - Para el producto: PACA ENVASE LITRO JH66 X 96 UND                   
 	<< Método de pronóstico Suavización Exponencial Doble>>
@@ -2583,7 +2583,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de Proyección de Tendencia>>
 		Para la semana 52 la cantidad de ventas serán 2048.5366841353025 unidades.
 =========================================
-|| Para la semana 52: ||
+|| Para la semana 52 de 2020: ||
 =========================================
 - Para el producto: PACA ENVASE 2 LITROS JH66 X60 UNDS                
 	<< Método de pronóstico Suavización Exponencial Simple>>

@@ -741,7 +741,7 @@ public class Innova {
 	}
 	
 	public void punto3() {
-		System.out.println("\n\n======================= MÉTODOS DE PRONÓSTICO POR CADA PRODUCTO EN CADA SEMANA  ============================\n\n");
+		System.out.println("\n\n======================= MÉTODOS DE PRONÓSTICO POR CADA PRODUCTO PARA EL AÑO 2020 TENIENDO EN CUENTA 8 SEMANAS DE ANTICIPACIÓN  ============================\n\n");
 		ArrayList<VentasSemanal> arVentas = new ArrayList<VentasSemanal>();
 		for (int i = 0; i < ventas.length; i++) {
 			arVentas.add(ventas[i]);
@@ -754,7 +754,7 @@ public class Innova {
 		}
 		for (int i = 0; i < ventas.length; i++) {
 			HashMap<String, ProductoDiario> map = unificar(arVentas.get(i).getProductosVendidos());
-			System.out.println("|| Para la semana "+(i+1)+": ||");
+			System.out.println("|| Para la semana "+(i+1)+" de 2020: ||");
 			System.out.println("=========================================");
 			for(ProductoDiario producto : map.values()) {
 				System.out.println("- Para el producto: "+producto.getNombre());
