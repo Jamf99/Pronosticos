@@ -136,8 +136,6 @@ public class Innova {
 		}
 	}
 	
-	
-	
 	public void ordenarPorPorcentaje() {
 		Arrays.sort(productos);
 	}
@@ -718,10 +716,10 @@ public class Innova {
 		}
 	}
 	
-	private ArrayList<ProductoDiario> buscarOchoAnteriores(ArrayList<VentasSemanal> ventasne, String prod) {
+	private ArrayList<ProductoDiario> buscarOchoAnteriores(ArrayList<VentasSemanal> ventasne, String prod, int len) {
 		ArrayList<ProductoDiario> prods = new ArrayList<ProductoDiario>();
 		try {
-			for (int i = ventasne.size()-1; i >= 0; i--) {
+			for (int i = len-1; i >= len-9; i--) {
 				ArrayList<ProductoDiario> arProd = ventasne.get(i).getProductosVendidos();
 				if (!arProd.isEmpty()) {
 					for (int j = 0; j < arProd.size(); j++) {
@@ -760,7 +758,7 @@ public class Innova {
 				System.out.println("- Para el producto: "+producto);
 				double cvd = calcularCVD(arVentas.get(i), producto);
 				String patron = patron(cvd, arVentas.get(i), producto);
-				ArrayList<ProductoDiario> eigthBefore = buscarOchoAnteriores(arVentas, producto);
+				ArrayList<ProductoDiario> eigthBefore = buscarOchoAnteriores(arVentas, producto, len);
 				if(patron.equals("Horizontal")) {
 					System.out.println("\t<< Método de pronóstico Suavización Exponencial Simple>>");
 					double[] suavizacionSimple = suavizacionExponencialSimple(producto, i, eigthBefore);
@@ -772,20 +770,19 @@ public class Innova {
 					double[] movilPonderado = promedioMovilPonderado(producto, i, eigthBefore);
 					System.out.println("\t\tLa cantidad de ventas será de:  "+movilPonderado[0]+" unidades. MAD = "+movilPonderado[1]);
 				}else if(patron.equals("Tendencia Creciente") || patron.equals("Tendencia Decreciente")) {
-					System.out.println("\t<< Método de pronóstico Suavización Exponencial Doble>>");
-					double suavizacionDoble[] = suavizacionExponencialDoble(producto, i, eigthBefore);
-					System.out.println("\t\tLa cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: "+suavizacionDoble[0]+" unidades. MAD = "+suavizacionDoble[1]);
 					System.out.println("\t<< Método de Proyección de Tendencia>>");
 					double tendencia[] = proyeccionTendencia(producto, i, eigthBefore);
 					System.out.println("\t\tLa cantidad de ventas serán "+tendencia[0]+" unidades.");
+					System.out.println("\t<< Método de pronóstico Suavización Exponencial Doble>>");
+					double suavizacionDoble[] = suavizacionExponencialDoble(producto, i, eigthBefore);
+					System.out.println("\t\tLa cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: "+(suavizacionDoble[0] < 0 ? (((suavizacionDoble[0] * -1) + tendencia[0])/2) : suavizacionDoble[0])+" unidades. MAD = "+suavizacionDoble[1]);
 				}
 			}
 			VentasSemanal arProd = new VentasSemanal((len+2)+"", new ArrayList<ProductoDiario>(map.values()));
 			arVentas.set(len, arProd);
+			len++;
 			System.out.println("=========================================");
 		}
-		
-		
 		System.out.println("== Para los patrones erráticos se recomiendan seguir las diferentes técnicas y métodos de pronóstico ==" );
 		System.out.println("\t<<Método de Delphi>>");
 		System.out.println("\t\t- Consiste en la selección de un grupo de expertos a los que se les pregunta si opinión sobre cuestiones"
