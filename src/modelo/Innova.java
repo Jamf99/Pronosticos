@@ -226,7 +226,7 @@ public class Innova {
 		if(cvd >= 0 && cvd <= 0.1) {
 			return "Horizontal";
 		}else if(cvd > 1) {
-			return "Err√°tico";
+			return "Err·tico";
 		}else {
 			return "Tendencia "+pendiente(ventas, producto);
 		}
@@ -362,11 +362,11 @@ public class Innova {
 	
 	public String identificarPronostico(String patron) {
 		if(patron.equals("Tendencia Creciente") || patron.equals("Tendencia Decreciente")) {
-			return "Proyecci√≥n de tendencia o Suavizaci√≥n exponencial doble";
+			return "ProyecciÛn de tendencia o SuavizaciÛn exponencial doble";
 		}else if(patron.equals("Horizontal")){
-			return "Promedio m√≥vil simple o Promedio m√≥vil ponderado o Suavizaci√≥n exponencial simple";
+			return "Promedio mÛvil simple o Promedio mÛvil ponderado o SuavizaciÛn exponencial simple";
 		}else {
-			return "M√©todos cualitativos";
+			return "MÈtodos cualitativos";
 		}
 	}
 	
@@ -390,7 +390,7 @@ public class Innova {
 			System.out.println("Ventas semana "+(i+1)+" = "+ventas[i].getProductosVendidos().size());
 			System.out.println("=========================================");
 			for (int j = 0; j < ventas[i].getProductosVendidos().size(); j++) {
-				System.out.println("PRODUCTO D√≠a: "+ventas[i].getProductosVendidos().get(j).getDia()+" -> "+ventas[i].getProductosVendidos().get(j).getNombre()+" cantidad: "
+				System.out.println("PRODUCTO DÌa: "+ventas[i].getProductosVendidos().get(j).getDia()+" -> "+ventas[i].getProductosVendidos().get(j).getNombre()+" cantidad: "
 						+ventas[i].getProductosVendidos().get(j).getCantidad());
 			}
 			System.out.println("=========================================");
@@ -407,7 +407,7 @@ public class Innova {
 				double cvd = calcularCVD(ventas[i], producto.getNombre());
 				String patron = patron(cvd, ventas[i], producto.getNombre());
 				System.out.println("CVD para el producto "+producto.getNombre()+" es: "+cvd+" ("+patron+")");
-				System.out.println("--> Se aconsejan los m√©todos de pron√≥stico: \n"+identificarPronostico(patron)+"\n");
+				System.out.println("--> Se aconsejan los mÈtodos de pronÛstico: \n"+identificarPronostico(patron)+"\n");
 			}
 			System.out.println("=========================================");
 		}
@@ -739,7 +739,7 @@ public class Innova {
 	}
 	
 	public void punto3() {
-		System.out.println("\n\n======================= M√âTODOS DE PRON√ìSTICO POR CADA PRODUCTO PARA EL A√ëO 2020 TENIENDO EN CUENTA 8 SEMANAS DE ANTICIPACI√ìN  ============================\n\n");
+		System.out.println("\n\n======================= M…TODOS DE PRON”STICO POR CADA PRODUCTO PARA EL A—O 2020 TENIENDO EN CUENTA 8 SEMANAS DE ANTICIPACI”N  ============================\n\n");
 		ArrayList<VentasSemanal> arVentas = new ArrayList<VentasSemanal>();
 		for (int i = 0; i < ventas.length; i++) {
 			arVentas.add(ventas[i]);
@@ -760,22 +760,22 @@ public class Innova {
 				String patron = patron(cvd, arVentas.get(i), producto);
 				ArrayList<ProductoDiario> eigthBefore = buscarOchoAnteriores(arVentas, producto, len);
 				if(patron.equals("Horizontal")) {
-					System.out.println("\t<< M√©todo de pron√≥stico Suavizaci√≥n Exponencial Simple>>");
+					System.out.println("\t<< MÈtodo de pronÛstico SuavizaciÛn Exponencial Simple>>");
 					double[] suavizacionSimple = suavizacionExponencialSimple(producto, i, eigthBefore);
-					System.out.println("\t\tLa cantidad de ventas ser√° para un alfa de 0.1 son: "+suavizacionSimple[0]+" unidades y un MAD de: +"+suavizacionSimple[1]+". Para un alfa de 0.3 son: "+suavizacionSimple[2]+" unidades y un MAD de: "+suavizacionSimple[3]);
-					System.out.println("\t<< M√©todo de pron√≥stico Promedio M√≥vil Simple>>");
+					System.out.println("\t\tLa cantidad de ventas ser· para un alfa de 0.1 son: "+suavizacionSimple[0]+" unidades y un MAD de: +"+suavizacionSimple[1]+". Para un alfa de 0.3 son: "+suavizacionSimple[2]+" unidades y un MAD de: "+suavizacionSimple[3]);
+					System.out.println("\t<< MÈtodo de pronÛstico Promedio MÛvil Simple>>");
 					double[] movilSimple = promedioMovilSimple(producto, i, eigthBefore);
-					System.out.println("\t\tLa cantidad de ventas ser√° de:  "+movilSimple[0]+" unidades. MAD = "+movilSimple[1]);
-					System.out.println("\t<< M√©todo de pron√≥stico Promedio M√≥vil Ponderado>>");
+					System.out.println("\t\tLa cantidad de ventas ser· de:  "+movilSimple[0]+" unidades. MAD = "+movilSimple[1]);
+					System.out.println("\t<< MÈtodo de pronÛstico Promedio MÛvil Ponderado>>");
 					double[] movilPonderado = promedioMovilPonderado(producto, i, eigthBefore);
-					System.out.println("\t\tLa cantidad de ventas ser√° de:  "+movilPonderado[0]+" unidades. MAD = "+movilPonderado[1]);
+					System.out.println("\t\tLa cantidad de ventas ser· de:  "+movilPonderado[0]+" unidades. MAD = "+movilPonderado[1]);
 				}else if(patron.equals("Tendencia Creciente") || patron.equals("Tendencia Decreciente")) {
-					System.out.println("\t<< M√©todo de Proyecci√≥n de Tendencia>>");
+					System.out.println("\t<< MÈtodo de ProyecciÛn de Tendencia>>");
 					double tendencia[] = proyeccionTendencia(producto, i, eigthBefore);
-					System.out.println("\t\tLa cantidad de ventas ser√°n "+tendencia[0]+" unidades.");
-					System.out.println("\t<< M√©todo de pron√≥stico Suavizaci√≥n Exponencial Doble>>");
+					System.out.println("\t\tLa cantidad de ventas ser·n "+tendencia[0]+" unidades.");
+					System.out.println("\t<< MÈtodo de pronÛstico SuavizaciÛn Exponencial Doble>>");
 					double suavizacionDoble[] = suavizacionExponencialDoble(producto, i, eigthBefore);
-					System.out.println("\t\tLa cantidad de ventas ser√° para un alfa de 0.3 y un beta de 0.7 son: "+(suavizacionDoble[0] < 0 ? ((((suavizacionDoble[0] * -1) *0.1)+ (tendencia[0]*0.9))/2) : suavizacionDoble[0])+" unidades. MAD = "+suavizacionDoble[1]);
+					System.out.println("\t\tLa cantidad de ventas ser· para un alfa de 0.3 y un beta de 0.7 son: "+(suavizacionDoble[0] < 0 ? ((((suavizacionDoble[0] * -1) *0.1)+ (tendencia[0]*0.9))/2) : suavizacionDoble[0])+" unidades. MAD = "+suavizacionDoble[1]);
 				}
 			}
 			VentasSemanal arProd = new VentasSemanal((len+2)+"", new ArrayList<ProductoDiario>(map.values()));
@@ -783,18 +783,18 @@ public class Innova {
 			len++;
 			System.out.println("=========================================");
 		}
-		System.out.println("== Para los patrones err√°ticos se recomiendan seguir las diferentes t√©cnicas y m√©todos de pron√≥stico ==" );
-		System.out.println("\t<<M√©todo de Delphi>>");
-		System.out.println("\t\t- Consiste en la selecci√≥n de un grupo de expertos a los que se les pregunta si opini√≥n sobre cuestiones"
-				+ " \n\t\treferidas a acontecimientos futuros. Las estimaciones de los expertos se realizan en sucesivas rondas an√≥nimas con el"
-				+ " \n\t\tnobjetivo de lograr un consenso, pero con la m√°xima autonom√≠a por parte de los participantes. Es decir, el este m√©todo"
-				+ " \n\t\tprocede por medio de la interrogaci√≥n a expertos con la ayuda de cuestionarios sucesivos, a fin de poner en manifiesto"
+		System.out.println("== Para los patrones err·ticos se recomiendan seguir las diferentes tÈcnicas y mÈtodos de pronÛstico ==" );
+		System.out.println("\t<<MÈtodo de Delphi>>");
+		System.out.println("\t\t- Consiste en la selecciÛn de un grupo de expertos a los que se les pregunta si opiniÛn sobre cuestiones"
+				+ " \n\t\treferidas a acontecimientos futuros. Las estimaciones de los expertos se realizan en sucesivas rondas anÛnimas con el"
+				+ " \n\t\tnobjetivo de lograr un consenso, pero con la m·xima autonomÌa por parte de los participantes. Es decir, el este mÈtodo"
+				+ " \n\t\tprocede por medio de la interrogaciÛn a expertos con la ayuda de cuestionarios sucesivos, a fin de poner en manifiesto"
 				+ " \n\t\tconvergencias de opiniones y deducir eventuales consensos.\n");
-		System.out.println("\t<<Jurado de Opini√≥n Ejecutiva>>");
-		System.out.println("\t\t- Se basa en la experiencia y los conocimientos t√©cnicos de los altos mandos de la empresa para llegar a un consenso."
-				+ "\n\t\tEs una de las m√°s utilizadas cuando se requiere actuar con rapidez ante eventos no previstos o lanzamiento de nuevos productos.\n");
+		System.out.println("\t<<Jurado de OpiniÛn Ejecutiva>>");
+		System.out.println("\t\t- Se basa en la experiencia y los conocimientos tÈcnicos de los altos mandos de la empresa para llegar a un consenso."
+				+ "\n\t\tEs una de las m·s utilizadas cuando se requiere actuar con rapidez ante eventos no previstos o lanzamiento de nuevos productos.\n");
 		System.out.println("\t<<Encuesta de Mercado de Consumo>>");
-		System.out.println("\t\t- Consiste en obtener la opini√≥n o percepci√≥n de un grupo de personas acerca de su proyecci√≥n de consumo o inter√©s por un producto o servicio.");
+		System.out.println("\t\t- Consiste en obtener la opiniÛn o percepciÛn de un grupo de personas acerca de su proyecciÛn de consumo o interÈs por un producto o servicio.");
 	}
 	
 }

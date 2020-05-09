@@ -1,4 +1,4 @@
-Reporte hecho: 08:23:59 p. m.  07/05/2020
+Reporte hecho: 08:33:19 PM  08/05/2020
 
 
 ======================= VENTAS DE PRODUCTOS SEMANALES ============================
@@ -1740,7 +1740,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de Proyección de Tendencia>>
 		La cantidad de ventas serán 208.14404536862006 unidades.
 	<< Método de pronóstico Suavización Exponencial Doble>>
-		La cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 1372.06702268431 unidades. MAD = 2311.93
+		La cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 220.464320415879 unidades. MAD = 2311.93
 - Para el producto: PACA ENVASE GALON CUADRADO LACTEOS X 30 UNDS      
 	<< Método de Proyección de Tendencia>>
 		La cantidad de ventas serán NaN unidades.
@@ -2206,7 +2206,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de Proyección de Tendencia>>
 		La cantidad de ventas serán 95.62960504480583 unidades.
 	<< Método de pronóstico Suavización Exponencial Doble>>
-		La cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 1141.729802522403 unidades. MAD = 1813.7
+		La cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 152.42482227016262 unidades. MAD = 1813.7
 - Para el producto: PACA ENVASE 2 LITROS RECTANGULAR X 60             
 	<< Método de Proyección de Tendencia>>
 		La cantidad de ventas serán 0.0 unidades.
@@ -2558,7 +2558,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de Proyección de Tendencia>>
 		La cantidad de ventas serán 223.8 unidades.
 	<< Método de pronóstico Suavización Exponencial Doble>>
-		La cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 1475.525 unidades. MAD = 6578.32
+		La cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 237.07250000000002 unidades. MAD = 6578.32
 - Para el producto: PACA ENVASE 2 LITROS RECTANGULAR X 60             
 	<< Método de Proyección de Tendencia>>
 		La cantidad de ventas serán 4928.0 unidades.
@@ -2796,7 +2796,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de Proyección de Tendencia>>
 		La cantidad de ventas serán 2783.3999999999996 unidades.
 	<< Método de pronóstico Suavización Exponencial Doble>>
-		La cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 3764.27 unidades. MAD = 4581.35
+		La cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 1489.787 unidades. MAD = 4581.35
 - Para el producto: PACA ENVASE GALON CUADRADO LACTEOS X 30 UNDS      
 	<< Método de pronóstico Suavización Exponencial Simple>>
 		La cantidad de ventas será para un alfa de 0.1 son: 192.0 unidades y un MAD de: +0.0. Para un alfa de 0.3 son: 192.0 unidades y un MAD de: 0.0
@@ -4229,7 +4229,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de Proyección de Tendencia>>
 		La cantidad de ventas serán 157.34174185232922 unidades.
 	<< Método de pronóstico Suavización Exponencial Doble>>
-		La cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 1218.1308709261646 unidades. MAD = 2291.45
+		La cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 184.74978383354818 unidades. MAD = 2291.45
 - Para el producto: PACA ENVASE GALON ACEITERO X 20 UNDS              
 	<< Método de Proyección de Tendencia>>
 		La cantidad de ventas serán 0.0 unidades.
@@ -5738,7 +5738,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de Proyección de Tendencia>>
 		La cantidad de ventas serán 195.55976845151952 unidades.
 	<< Método de pronóstico Suavización Exponencial Doble>>
-		La cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 1553.2798842257598 unidades. MAD = 2944.79
+		La cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 233.5518958031838 unidades. MAD = 2944.79
 - Para el producto: PACA ENVASE GALON CUADRADO LACTEOS X 30 UNDS      
 	<< Método de Proyección de Tendencia>>
 		La cantidad de ventas serán NaN unidades.
@@ -5783,7 +5783,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de Proyección de Tendencia>>
 		La cantidad de ventas serán 537.5494550688875 unidades.
 	<< Método de pronóstico Suavización Exponencial Doble>>
-		La cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 4566.6847275344435 unidades. MAD = 7897.49
+		La cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 671.6882547809994 unidades. MAD = 7897.49
 - Para el producto: PACA ENVASE GALON ACEITERO X 20 UNDS              
 	<< Método de Proyección de Tendencia>>
 		La cantidad de ventas serán 0.0 unidades.
@@ -5910,7 +5910,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de Proyección de Tendencia>>
 		La cantidad de ventas serán 212.06508135168963 unidades.
 	<< Método de pronóstico Suavización Exponencial Doble>>
-		La cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 368.4875406758448 unidades. MAD = 3175.5
+		La cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 121.67478660826035 unidades. MAD = 3175.5
 - Para el producto: PACA ENVASE GALON CUADRADO LACTEOS X 30 UNDS      
 	<< Método de Proyección de Tendencia>>
 		La cantidad de ventas serán 452.0 unidades.
@@ -6309,7 +6309,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de Proyección de Tendencia>>
 		La cantidad de ventas serán 7093.013996138996 unidades.
 	<< Método de pronóstico Suavización Exponencial Doble>>
-		La cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 6202.241998069498 unidades. MAD = 6740.79
+		La cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 3457.429798262548 unidades. MAD = 6740.79
 - Para el producto: PACA ENVASE GALON ACEITERO X 20 UNDS              
 	<< Método de Proyección de Tendencia>>
 		La cantidad de ventas serán 159.0 unidades.
@@ -6436,7 +6436,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de Proyección de Tendencia>>
 		La cantidad de ventas serán 2331.5114802149487 unidades.
 	<< Método de pronóstico Suavización Exponencial Doble>>
-		La cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 4383.095740107475 unidades. MAD = 7196.14
+		La cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 1370.914166096727 unidades. MAD = 7196.14
 - Para el producto: PACA ENVASE GALON CUADRADO LACTEOS X 30 UNDS      
 	<< Método de Proyección de Tendencia>>
 		La cantidad de ventas serán NaN unidades.
@@ -6479,7 +6479,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de Proyección de Tendencia>>
 		La cantidad de ventas serán 9036.672932330826 unidades.
 	<< Método de pronóstico Suavización Exponencial Doble>>
-		La cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 5385.091466165413 unidades. MAD = 7310.32
+		La cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 4153.178319548872 unidades. MAD = 7310.32
 - Para el producto: PACA ENVASE GALON ACEITERO X 20 UNDS              
 	<< Método de Proyección de Tendencia>>
 		La cantidad de ventas serán 159.0 unidades.
@@ -8023,7 +8023,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de Proyección de Tendencia>>
 		La cantidad de ventas serán 4824.996282527882 unidades.
 	<< Método de pronóstico Suavización Exponencial Doble>>
-		La cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 2591.9281412639407 unidades. MAD = 5533.13
+		La cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 2189.191327137547 unidades. MAD = 5533.13
 - Para el producto: ENVASE 2 LITROS COLAGENO BLANCO NUTRA             
 	<< Método de Proyección de Tendencia>>
 		La cantidad de ventas serán 10979.0 unidades.
@@ -8516,7 +8516,7 @@ Promedio móvil simple o Promedio móvil ponderado o Suavización exponencial simpl
 	<< Método de Proyección de Tendencia>>
 		La cantidad de ventas serán 2183.8381782945735 unidades.
 	<< Método de pronóstico Suavización Exponencial Doble>>
-		La cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 3590.1890891472867 unidades. MAD = 7457.67
+		La cantidad de ventas será para un alfa de 0.3 y un beta de 0.7 son: 1232.554180232558 unidades. MAD = 7457.67
 - Para el producto: PACA ENVASE GALON CUADRADO LACTEOS X 30 UNDS      
 	<< Método de Proyección de Tendencia>>
 		La cantidad de ventas serán 1183.0 unidades.
